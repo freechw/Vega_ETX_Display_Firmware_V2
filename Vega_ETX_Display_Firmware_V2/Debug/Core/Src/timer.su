@@ -1,0 +1,2 @@
+../Core/Src/timer.c:9:6:tick_clear	16	static
+../Core/Src/timer.c:25:6:tick_count	16	static

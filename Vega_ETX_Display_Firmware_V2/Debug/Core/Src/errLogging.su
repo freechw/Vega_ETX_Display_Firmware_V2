@@ -1,0 +1,2 @@
+../Core/Src/errLogging.c:10:6:readErrorLog	4	static
+../Core/Src/errLogging.c:16:6:setError	4	static

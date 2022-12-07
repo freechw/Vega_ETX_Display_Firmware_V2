@@ -1,0 +1,10 @@
+../Core/Src/menu.c:3:6:navigation	8	static
+../Core/Src/menu.c:46:6:front_mainPage	4	static
+../Core/Src/menu.c:82:6:trip_mainPage	8	static
+../Core/Src/menu.c:117:6:after_charge_mainPage	4	static
+../Core/Src/menu.c:145:6:info_mainPage	8	static
+../Core/Src/menu.c:252:6:settings_mainPage	8	static
+../Core/Src/menu.c:343:6:vehicle_page	8	static
+../Core/Src/menu.c:360:6:system_page	8	static
+../Core/Src/menu.c:379:6:bluetooth_page	8	static
+../Core/Src/menu.c:396:6:errors_page	8	static

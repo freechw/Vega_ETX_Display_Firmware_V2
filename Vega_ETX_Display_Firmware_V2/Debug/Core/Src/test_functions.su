@@ -1,0 +1,3 @@
+../Core/Src/test_functions.c:19:6:buttonTest	8	static
+../Core/Src/test_functions.c:103:6:canTest	4	static
+../Core/Src/test_functions.c:121:6:uartTest	4	static
