@@ -203,8 +203,9 @@ uint8_t BluetoothOFFLit[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x88, 0x01, 0xD8 };
 
 //System Menu
 uint8_t TimeSelect[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x84, 0x01, 0xDA };
-uint8_t BrightnessSelect[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x86, 0x01, 0xDA };
-
+uint8_t TimeSelectOff[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x84, 0x01, 0x00 };
+uint8_t BrightnessSelect[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x86, 0x01, 0xDC };
+uint8_t BrightnessSelectOff[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x86, 0x01, 0x00 };
 //Charging Menu
 uint8_t SlowCharging[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x12, 0x85, 0x01, 0xDA };
 uint8_t FastCharging[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x12, 0x85, 0x01, 0xDA };
@@ -359,6 +360,9 @@ uint8_t check1 = 0;
 
 //#define VEGA_TX
 //#define DMA
+#define IconSize 8
+#define PageSize 10
+
 #define No_DMA
 
 #ifdef No_DMA
@@ -395,6 +399,12 @@ uint8_t check1 = 0;
 #define System_Menu_Page HAL_UART_Transmit(&huart3, System, sizeof(System), HAL_MAX_DELAY)
 #define Bluetooth_Menu_Page HAL_UART_Transmit(&huart3, Bluetooth, sizeof(Bluetooth),HAL_MAX_DELAY)
 #define Error_Menu_Page HAL_UART_Transmit(&huart3, Errors, sizeof(Errors), HAL_MAX_DELAY)
+
+#define TimeSetting_Button HAL_UART_Transmit(&huart3,TimeSelect,sizeof(TimeSelect),HAL_MAX_DELAY)
+#define TimeSetting_Button_OFF HAL_UART_Transmit(&huart3,TimeSelectOff,sizeof(TimeSelectOff),HAL_MAX_DELAY)
+
+#define BrightnessSetting_Button HAL_UART_Transmit(&huart3,BrightnessSelect,sizeof(BrightnessSelect),HAL_MAX_DELAY)
+#define BrightnessSetting_Button_OFF HAL_UART_Transmit(&huart3,BrightnessSelectOff,sizeof(BrightnessSelectOff),HAL_MAX_DELAY)
 
 #define Battery_Info_Page HAL_UART_Transmit(&huart3, VehicleInfoBat, sizeof(VehicleInfoBat),HAL_MAX_DELAY)
 #define Motor_Info_Page HAL_UART_Transmit(&huart3, VehicleInfoMot, sizeof(VehicleInfoMot),HAL_MAX_DELAY)
@@ -542,6 +552,8 @@ uint8_t check1 = 0;
 #define Bluetooth_Menu_Page HAL_UART_Transmit_DMA(&huart3, Bluetooth, sizeof(Bluetooth))
 #define Error_Menu_Page HAL_UART_Transmit_DMA(&huart3, Errors, sizeof(Errors))
 
+#define TimeSetting HAL_UART_Trasmit_DMA(&huart3,TimeSelect,IconSize)
+
 #define Battery_Info_Page HAL_UART_Transmit_DMA(&huart3, VehicleInfoBat, sizeof(VehicleInfoBat))
 #define Motor_Info_Page HAL_UART_Transmit_DMA(&huart3, VehicleInfoMot, sizeof(VehicleInfoMot))
 #define Inverter_Info_Page HAL_UART_Transmit_DMA(&huart3, VehicleInfoInv, sizeof(VehicleInfoInv))
@@ -682,6 +694,7 @@ uint8_t check1 = 0;
 #define System_Menu_Page transmitPageHandler( System, sizeof(System))
 #define Bluetooth_Menu_Page transmitPageHandler( Bluetooth, sizeof(Bluetooth))
 #define Error_Menu_Page transmitPageHandler( Errors, sizeof(Errors))
+#define TimeSetting transmitPageHandler(TimeSelect,IconSize)
 
 #define Battery_Info_Page transmitPageHandler( VehicleInfoBat, sizeof(VehicleInfoBat))
 #define Motor_Info_Page transmitPageHandler( VehicleInfoMot, sizeof(VehicleInfoMot))
@@ -1050,13 +1063,32 @@ void charging_UI(uitype_t ChargeUI) {
 	}
 }
 
-void settings_UI(uitype_t SettingsMenu) {
+void settings_UI(uitype_t SettingsMenu, uint8_t selectedOption) {
 	switch (SettingsMenu) {
 	case vehicleMenu:
 		General_Menu_Page;
 		break;
 	case systemMenu:
 		System_Menu_Page;
+		if(selectedOption == 0) {
+			TimeSetting_Button;
+			BrightnessSetting_Button_OFF;
+
+			selectedOption = 10;
+		}
+		if(selectedOption == 1)
+		{
+			BrightnessSetting_Button;
+			TimeSetting_Button_OFF;
+			selectedOption = 10;
+		}
+		if (selectedOption == 3) {
+
+		}
+		if (selectedOption == 4) {
+
+		}
+
 		break;
 	case bluetoothMenu:
 		Bluetooth_Menu_Page;

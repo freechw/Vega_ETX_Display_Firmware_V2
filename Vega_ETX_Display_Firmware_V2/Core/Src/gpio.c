@@ -153,7 +153,7 @@ void setInputs() {
 	{
 		buttonCounterBackward++;
 		if (buttonCounterBackward < 2) {
-			forward = true;
+			backward = true;
 		}
 	} else {
 		buttonCounterBackward = 0;
@@ -216,7 +216,6 @@ void setInputs() {
 void buttonOkay(void) {
 	if (gpio.buttonInputs.bit.in6 == 1) {
 		buttonCounterLongPress++;
-		HAL_Delay(1);
 	} else {
 		buttonCounterLongPress = 0;
 		okay = false;

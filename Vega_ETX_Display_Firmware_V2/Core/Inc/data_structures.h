@@ -161,21 +161,38 @@ extern bool _Inverter_Info_Page;
 extern bool _Charging_Page;
 extern bool _ChargeComplete_Page;
 extern bool _Charge_Error_Page;
+
+extern bool _menuChanged;
+extern uint8_t menuCounter;
+extern uint8_t subMenuCounter;
+extern bool inSystemSubMenu;
+
+
+
 extern uint8_t _fireModeEnable;
 extern bool _firePage;
 extern volatile uitype_t _drivePageSet;
 //extern uint8_t navigationCount;
 //Menu Flags
 extern volatile uitype_t currentMenu;
+extern volatile uint8_t currentSubMenu;
 extern volatile uitype_t previousMenuBack;
 extern volatile uitype_t previousMenuForward;
+
+extern volatile uint8_t previousSubMenuBack;
+extern volatile uint8_t previousSubMenuForward;
+
 extern uint8_t _menupage;
 
 extern bool menuAccess;
 extern bool inVehicleMenu;
 extern bool inSystemMenu;
+extern bool inTimeSettings;
+extern uint8_t vpCounter;
+extern uint8_t timerSetValue;
 extern bool inBluetoothMenu;
 extern bool inErrorsMenu;
+extern bool inTheMenu;
 
 //Mode Flags
 extern volatile uimode_t currentMode;

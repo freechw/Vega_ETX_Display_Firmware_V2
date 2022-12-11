@@ -85,7 +85,10 @@ void startUpState(void) {
 		_navigation = false;
 		currentMode = mode_evcu;
 		currentPage = front;
+
 		inInfoBat = false;
+		inSettings = false;
+
 		_trasmitGlobal = Disengage_Page;
 	}
 

@@ -166,7 +166,7 @@ void info_mainPage(void) {
 			vehicleInfo_UI(currentMenu);
 		}
 		if (forward == true) {
-			//currentMenu++;
+
 			if (currentMenu == infoinv && previousMenuBack == infomot) {
 				currentMenu = infobat;
 				previousMenuBack = infoinv;
@@ -251,50 +251,121 @@ void info_mainPage(void) {
 
 void settings_mainPage(void) {
 
-	selection_UI(front);
+	//selection_UI(front);
 	//drivePageSetter(settings);
 	_drivePageSet = settings;
 	_trasmitGlobal = MainMenuPages;
 
-
 	if (!(inSettings)) {
+		selection_UI(front);
 		if (okay == true) {
 			inSettings = true;
 			okay = false;
 		}
-	}
-
-	else {
+	} else {
 		if (page_entry == true) {
 			currentMenu = vehicleMenu;
+			previousMenuForward = errorsMenu;
+			previousMenuBack = systemMenu;
+			_menuChanged = true;
 			page_entry = false;
 		}
+		if(menuCounter>2)
+		{
+			if (_menuChanged) {
+				_menuChanged = false;
+				selection_UI(currentMenu);
+			}
+			menuCounter = 0;
+		}
+
 
 		if (!(menuAccess)) {
-			selection_UI(currentMenu);
-
+			menuCounter++;
 			if (forward == true) {
-				currentMenu--;
-				if (currentMenu <= 7) {
-					currentMenu = errorsMenu;
+//				currentMenu--;
+//				if (currentMenu <= 7) {
+//					currentMenu = errorsMenu;
+//				}
+				if (currentMenu == errorsMenu && previousMenuBack == vehicleMenu) {
+					currentMenu = bluetoothMenu;
+					previousMenuForward = systemMenu;
+					previousMenuBack = errorsMenu;
+					_menuChanged = true;
+					forward = false;
+					return;
 				}
-				forward = false;
-				//return;
+				if (currentMenu == vehicleMenu && previousMenuBack == systemMenu) {
+					currentMenu = errorsMenu;
+					previousMenuForward = bluetoothMenu;
+					previousMenuBack = vehicleMenu;
+					_menuChanged = true;
+					forward = false;
+					return;
+				}
+				if (currentMenu == systemMenu && previousMenuBack == bluetoothMenu) {
+					currentMenu = vehicleMenu;
+					previousMenuForward = errorsMenu;
+					previousMenuBack = systemMenu;
+					_menuChanged = true;
+					forward = false;
+					return;
+				}
+				if (currentMenu == bluetoothMenu && previousMenuBack == errorsMenu) {
+					currentMenu = systemMenu;
+					previousMenuForward = vehicleMenu;
+					previousMenuBack = bluetoothMenu;
+					_menuChanged = true;
+					forward = false;
+					return;
+				}
 			}
 
 			if (backward == true) {
-				currentMenu++;
-				if (currentMenu >= 12) {
-					currentMenu = vehicleMenu;
+//				currentMenu++;
+//				if (currentMenu >= 12) {
+//					currentMenu = vehicleMenu;
+//				}
+				if (currentMenu == vehicleMenu && previousMenuForward == errorsMenu) {
+					currentMenu = systemMenu;
+					previousMenuForward = vehicleMenu;
+
+					previousMenuBack = bluetoothMenu;
+					_menuChanged = true;
+					backward = false;
+					return;
 				}
-				backward = false;
-				//return;
+				if (currentMenu == errorsMenu && previousMenuForward == bluetoothMenu) {
+					currentMenu = vehicleMenu;
+					previousMenuForward = errorsMenu;
+
+					previousMenuBack = systemMenu;
+					_menuChanged = true;
+					backward = false;
+					return;
+				}
+				if (currentMenu == bluetoothMenu && previousMenuForward == systemMenu) {
+					currentMenu = errorsMenu;
+					previousMenuForward = bluetoothMenu;
+
+					previousMenuBack = vehicleMenu;
+					_menuChanged = true;
+					backward = false;
+					return;
+				}
+				if (currentMenu == systemMenu && previousMenuForward == vehicleMenu) {
+					currentMenu = bluetoothMenu;
+					previousMenuForward = systemMenu;
+
+					previousMenuBack = errorsMenu;
+					_menuChanged = true;
+					backward = false;
+					return;
+				}
 
 			}
-		}
-if (!inVehicleMenu || !inSystemMenu || !inErrorsMenu || !inBluetoothMenu) {
 
-}
+		}
 		switch (currentMenu) {
 		case vehicleMenu:
 			vehicle_page();
@@ -315,6 +386,7 @@ if (!inVehicleMenu || !inSystemMenu || !inErrorsMenu || !inBluetoothMenu) {
 		if (back == true) {
 			page_entry = true;
 			inSettings = false;
+			selection_UI(front);
 			_menupage = 0;
 			back = false;
 		}
@@ -345,14 +417,24 @@ void vehicle_page(void) {
 		if (okay == true) {
 			menuAccess = true;
 			inVehicleMenu = true;
+			inTheMenu = true;
 			okay = false;
 		}
 	} else {
-		settings_UI(vehicleMenu);
+		if (subMenuCounter>2) {
+			if (inTheMenu) {
+				inTheMenu = false;
+				//settings_UI(vehicleMenu);
+			}
+			subMenuCounter = 0;
+		}
+		settings_UI(vehicleMenu,10);
+
 
 		if (back == true) {
 			menuAccess = false;
 			inVehicleMenu = false;
+			_menuChanged = true;
 			back = false;
 		}
 	}
@@ -362,15 +444,115 @@ void system_page(void) {
 		if (okay == true) {
 			menuAccess = true;
 			inSystemMenu = true;
+			inTheMenu = true;
 			okay = false;
+			currentSubMenu = 0;
+			previousSubMenuBack = 1;
+			previousSubMenuForward = 1;
 		}
 	} else {
-		settings_UI(systemMenu);
+		if (subMenuCounter>2) {
+			if (inTheMenu) {
+				inTheMenu = false;
+				//settings_UI(systemMenu);
+			}
+			subMenuCounter = 0;
+		}
+		settings_UI(systemMenu,currentSubMenu);
+		//if (!inTimeSettings) {
+			if (forward == true) {
+				if (currentSubMenu == 0 && previousSubMenuBack == 1) {
+					currentSubMenu = 1;
+					previousSubMenuForward = 0;
+					previousSubMenuBack = 0;
+					//_menuChanged = true;
+					forward = false;
+					return;
+				}
+				if (currentSubMenu == 1 && previousSubMenuBack == 0) {
+					currentSubMenu = 0;
+					previousSubMenuForward = 1;
+					previousSubMenuBack = 1;
+					//_menuChanged = true;
+					forward = false;
+					return;
+				}
+			}
+
+			if (backward == true) {
+				if (currentSubMenu == 0 && previousSubMenuForward == 1) {
+					currentSubMenu = 1;
+					previousSubMenuForward = 0;
+
+					previousSubMenuBack = 0;
+					//_menuChanged = true;
+					backward = false;
+					return;
+				}
+				if (currentSubMenu == 1 && previousSubMenuForward == 0) {
+					currentSubMenu = 0;
+					previousSubMenuForward = 1;
+
+					previousSubMenuBack = 1;
+					//_menuChanged = true;
+					backward = false;
+					return;
+				}
+
+			}
+//			if (okay) {
+//				inTimeSettings = true;
+//				okay = false;
+//			}
+
+		//}
+//		else
+//		{
+//			if (okay) {
+//				vpCounter++;
+//				currentSubMenu = vpCounter;
+//				okay = false;
+//				if (vpCounter>4) {
+//					vpCounter = 3;
+//				}
+//			}
+//			if (forward) {
+//			forward = false;
+//			timerSetValue++;
+//			}
+//			if (backward) {
+//			backward = false;
+//			timerSetValue--;
+//			}
+//			if (back == true) {
+//				inTimeSettings = true;
+//				//Trasmit time
+//				currentSubMenu = 0;
+//				previousSubMenuForward = 1;
+//				previousSubMenuBack = 1;
+//				back = false;
+//			}
+//			if (timerSetValue>23)
+//			{
+//				timerSetValue = 0;
+//			}
+//
+//		}
+
+		if (!(inSystemSubMenu)) {
+			if (okay == true) {
+				inSystemSubMenu = true;
+				okay = false;
+			}
+		} else {
+
+		}
 	}
 
 	if (back == true) {
 		menuAccess = false;
 		inSystemMenu = false;
+		_menuChanged = true;
 		back = false;
 
 	}
@@ -381,14 +563,25 @@ void bluetooth_page(void) {
 		if (okay == true) {
 			menuAccess = true;
 			inBluetoothMenu = true;
+			inTheMenu = true;
 			okay = false;
 		}
 	} else {
-		settings_UI(bluetoothMenu);
+		if (subMenuCounter>2) {
+			if (inTheMenu) {
+				inTheMenu = false;
+				//settings_UI(bluetoothMenu);
+			}
+			subMenuCounter = 0;
+		}
+		settings_UI(bluetoothMenu,10);
+
+
 
 		if (back == true) {
 			menuAccess = false;
 			inBluetoothMenu = false;
+			_menuChanged = true;
 			back = false;
 		}
 	}
@@ -398,14 +591,25 @@ void errors_page(void) {
 		if (okay == true) {
 			menuAccess = true;
 			inErrorsMenu = true;
+			inTheMenu = true;
 			okay = false;
 		}
 	} else {
-		settings_UI(errorsMenu);
+		if (subMenuCounter>2) {
+			if (inTheMenu) {
+				inTheMenu = false;
+				//settings_UI(errorsMenu);
+			}
+			subMenuCounter = 0;
+		}
+		settings_UI(errorsMenu,10);
+
+
 
 		if (back == true) {
 			menuAccess = false;
 			inErrorsMenu = false;
+			_menuChanged = true;
 			back = false;
 		}
 	}

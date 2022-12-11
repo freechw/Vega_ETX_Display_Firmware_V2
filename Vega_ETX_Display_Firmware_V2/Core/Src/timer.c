@@ -9,7 +9,7 @@
 void tick_clear(volatile tick_tock *timer_ptr)
 {
 	timer_ptr->counter = 0;
-	timer_ptr->timeout_0_1s = 0;
+	timer_ptr->timeout_50ms = 0;
 	timer_ptr->timeout_0_5s = 0;
 	timer_ptr->timeout_1s = 0;
 	timer_ptr->timeout_2s = 0;
@@ -28,9 +28,9 @@ void tick_count(volatile tick_tock *timer_ptr)
 
 	switch (timer_ptr->counter)
 	{
-//		case 2:
-//			timer_ptr->timeout_0_1s = true;
-//			break;
+		case 1:
+			timer_ptr->timeout_50ms = true;
+			break;
 		case 10:
 			timer_ptr->timeout_0_5s = true;
 			break;

@@ -14,10 +14,12 @@
 #include "transmitDefinitions.h"
 
 extern void drivePageSetter(uitype_t page);
+
 extern void charging_UI(uitype_t ChargeUI);
 extern void vehicleInfo_UI(uitype_t InfoUI);
-extern void settings_UI(uitype_t SettingsMenu);
+extern void settings_UI(uitype_t SettingsMenu,uint8_t selectedOption);
 extern void selection_UI(uitype_t SettingsMenu);
+
 extern void errorIcon(void);
 extern void oneTimeData(void);
 extern void realTimeData(void);

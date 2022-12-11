@@ -15,7 +15,7 @@
 typedef struct tick_tock_struct
 {
 	uint32_t counter;
-	bool timeout_0_1s;
+	bool timeout_50ms;
 	bool timeout_0_5s;
 	bool timeout_1s;
 	bool timeout_2s;

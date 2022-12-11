@@ -103,8 +103,14 @@ volatile uism_t currentStateSM = startingup_state;
 volatile uism_t previousStateSM = startingup_state;
 //Menu States
 volatile uitype_t currentMenu = vehicleMenu;
+volatile uint8_t currentSubMenu = 0;
+
 volatile uitype_t previousMenuBack = vehicleMenu;
 volatile uitype_t previousMenuForward = vehicleMenu;
+
+volatile uint8_t previousSubMenuBack = 0;
+volatile uint8_t previousSubMenuForward = 0;
+
 uint8_t _menupage = 0;
 //Inital Mode
 volatile uimode_t currentMode = normalMode;
@@ -119,8 +125,12 @@ bool error_entry = false;
 bool menuAccess = false;
 bool inVehicleMenu = false;
 bool inSystemMenu = false;
+bool inTimeSettings = false;
+uint8_t vpCounter = 3;
+uint8_t timerSetValue = 0;
 bool inBluetoothMenu = false;
 bool inErrorsMenu = false;
+bool inTheMenu = false;
 
 //Error Flags
 bool error_on = false;
@@ -179,6 +189,11 @@ uint8_t modePopup = 0;
 bool _modeChanged = false;
 bool _gearCleared = false;
 bool _gearChanged = false;
+bool _menuChanged = false;
+uint8_t  menuCounter = 0;
+uint8_t subMenuCounter = 0;
+
+bool inSystemSubMenu = false;
 
 //Page Flags
 bool _Disengage_KillSwitch_Page = false;
