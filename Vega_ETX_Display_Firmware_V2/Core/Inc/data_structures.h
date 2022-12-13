@@ -145,12 +145,14 @@ extern uint8_t modePopup;
 extern bool _modeChanged;
 extern bool _gearCleared;
 extern bool _gearChanged;
+extern bool _setPage;
 //Page Flags
 extern bool _Disengage_KillSwitch_Page;
 extern bool _Press_Brake_Page;
 extern bool _Gear_Error_Page;
 extern bool _System_Check_Okay_No_Icon_Page;
 extern bool _System_Check_All_Icon_Page;
+extern bool _testPage;
 extern bool _After_Charge_Page;
 extern bool _Vehicle_Settings_Page;
 extern bool _Trip_Summary_Page;
@@ -189,7 +191,10 @@ extern bool inVehicleMenu;
 extern bool inSystemMenu;
 extern bool inTimeSettings;
 extern uint8_t vpCounter;
-extern uint8_t timerSetValue;
+
+extern uint8_t timerSetValueH;
+extern uint8_t timerSetValueMin;
+extern bool timeChanged;
 extern bool inBluetoothMenu;
 extern bool inErrorsMenu;
 extern bool inTheMenu;

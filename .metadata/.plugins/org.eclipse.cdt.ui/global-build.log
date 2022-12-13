@@ -1,4 +1,4 @@
-14:41:27 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+16:17:30 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/menu.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/menu.d" -MT"Core/Src/menu.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/menu.o"
 arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -7,14 +7,99 @@ Finished building target: Vega_ETX_Display_Firmware_V2.elf
 arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
 arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
    text	   data	    bss	    dec	    hex	filename
-  33500	    992	   2168	  36660	   8f34	Vega_ETX_Display_Firmware_V2.elf
+  33760	   1008	   2168	  36936	   9048	Vega_ETX_Display_Firmware_V2.elf
 Finished building: default.size.stdout
  
 Finished building: Vega_ETX_Display_Firmware_V2.list
  
-14:54:37 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+16:17:55 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33760	   1008	   2168	  36936	   9048	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+16:21:02 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/menu.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/menu.d" -MT"Core/Src/menu.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/menu.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33760	   1008	   2168	  36936	   9048	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+16:28:53 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/can.d" -MT"Core/Src/can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can.o"
+arm-none-eabi-gcc "../Core/Src/can_matrix.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/can_matrix.d" -MT"Core/Src/can_matrix.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can_matrix.o"
+arm-none-eabi-gcc "../Core/Src/data_structures.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/data_structures.d" -MT"Core/Src/data_structures.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/data_structures.o"
+arm-none-eabi-gcc "../Core/Src/dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/dma.d" -MT"Core/Src/dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/dma.o"
+arm-none-eabi-gcc "../Core/Src/errLogging.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/errLogging.d" -MT"Core/Src/errLogging.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/errLogging.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/menu.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/menu.d" -MT"Core/Src/menu.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/menu.o"
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/test_functions.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/test_functions.d" -MT"Core/Src/test_functions.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/test_functions.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/timer.d" -MT"Core/Src/timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/timer.o"
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc "../Core/Src/vehicleControl.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/vehicleControl.d" -MT"Core/Src/vehicleControl.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/vehicleControl.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33784	   1008	   2168	  36960	   9060	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+09:20:05 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33784	   1008	   2168	  36960	   9060	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+09:21:48 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33784	   1008	   2168	  36960	   9060	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+09:36:30 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33784	   1008	   2168	  36960	   9060	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+09:37:58 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/can_matrix.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/can_matrix.d" -MT"Core/Src/can_matrix.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can_matrix.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33796	   1008	   2168	  36972	   906c	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+09:38:36 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
 arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
 arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Vega_ETX_Display_Firmware_V2.elf
@@ -22,46 +107,508 @@ Finished building target: Vega_ETX_Display_Firmware_V2.elf
 arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
 arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
    text	   data	    bss	    dec	    hex	filename
-  33500	    992	   2168	  36660	   8f34	Vega_ETX_Display_Firmware_V2.elf
+  33784	   1008	   2168	  36960	   9060	Vega_ETX_Display_Firmware_V2.elf
 Finished building: default.size.stdout
  
 Finished building: Vega_ETX_Display_Firmware_V2.list
  
-14:57:32 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+09:39:38 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/menu.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/menu.d" -MT"Core/Src/menu.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/menu.o"
+arm-none-eabi-gcc "../Core/Src/can_matrix.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/can_matrix.d" -MT"Core/Src/can_matrix.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can_matrix.o"
 arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Vega_ETX_Display_Firmware_V2.elf
  
 arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
 arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
    text	   data	    bss	    dec	    hex	filename
-  33500	    992	   2168	  36660	   8f34	Vega_ETX_Display_Firmware_V2.elf
+  33772	   1008	   2168	  36948	   9054	Vega_ETX_Display_Firmware_V2.elf
 Finished building: default.size.stdout
  
 Finished building: Vega_ETX_Display_Firmware_V2.list
  
-15:00:21 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+19:13:01 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/menu.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/menu.d" -MT"Core/Src/menu.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/menu.o"
-../Core/Src/menu.c:552:2: error: expected identifier or '(' before 'if'
-  552 |  if (back == true) {
-      |  ^~
-../Core/Src/menu.c:559:1: error: expected identifier or '(' before '}' token
-  559 | }
-      | ^
-make: *** [Core/Src/subdir.mk:79: Core/Src/menu.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-15:01:47 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33772	   1008	   2168	  36948	   9054	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+19:16:43 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/menu.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/menu.d" -MT"Core/Src/menu.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/menu.o"
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
 arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Vega_ETX_Display_Firmware_V2.elf
  
 arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
 arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
    text	   data	    bss	    dec	    hex	filename
-  33300	    992	   2168	  36460	   8e6c	Vega_ETX_Display_Firmware_V2.elf
+  33816	   1008	   2168	  36992	   9080	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+19:27:01 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33808	   1008	   2168	  36984	   9078	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+19:32:07 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/can.d" -MT"Core/Src/can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can.o"
+arm-none-eabi-gcc "../Core/Src/can_matrix.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/can_matrix.d" -MT"Core/Src/can_matrix.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can_matrix.o"
+arm-none-eabi-gcc "../Core/Src/data_structures.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/data_structures.d" -MT"Core/Src/data_structures.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/data_structures.o"
+arm-none-eabi-gcc "../Core/Src/dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/dma.d" -MT"Core/Src/dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/dma.o"
+arm-none-eabi-gcc "../Core/Src/errLogging.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/errLogging.d" -MT"Core/Src/errLogging.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/errLogging.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/menu.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/menu.d" -MT"Core/Src/menu.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/menu.o"
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/test_functions.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/test_functions.d" -MT"Core/Src/test_functions.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/test_functions.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/timer.d" -MT"Core/Src/timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/timer.o"
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc "../Core/Src/vehicleControl.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/vehicleControl.d" -MT"Core/Src/vehicleControl.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/vehicleControl.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33828	   1008	   2176	  37012	   9094	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+19:34:51 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33836	   1008	   2176	  37020	   909c	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+19:39:06 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33840	   1008	   2176	  37024	   90a0	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+19:40:23 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33828	   1008	   2176	  37012	   9094	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+19:42:50 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33828	   1008	   2176	  37012	   9094	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+19:45:54 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33800	   1008	   2176	  36984	   9078	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+19:48:06 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33828	   1008	   2176	  37012	   9094	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+19:50:50 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33820	   1008	   2176	  37004	   908c	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+19:58:36 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33808	   1008	   2176	  36992	   9080	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+20:05:07 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33808	   1008	   2176	  36992	   9080	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+20:10:11 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33808	   1008	   2176	  36992	   9080	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+20:39:15 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33812	   1008	   2176	  36996	   9084	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+20:45:04 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33812	   1008	   2176	  36996	   9084	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+20:50:29 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33804	   1008	   2176	  36988	   907c	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+20:51:45 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33820	   1008	   2176	  37004	   908c	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+21:02:46 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33808	   1008	   2176	  36992	   9080	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+21:04:20 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33792	   1008	   2176	  36976	   9070	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+21:05:26 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33800	   1008	   2176	  36984	   9078	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+21:08:20 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc "../Core/Src/vehicleControl.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/vehicleControl.d" -MT"Core/Src/vehicleControl.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/vehicleControl.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33764	   1008	   2176	  36948	   9054	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+21:09:09 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33756	   1008	   2176	  36940	   904c	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+21:10:54 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33764	   1008	   2176	  36948	   9054	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+21:21:10 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/can.d" -MT"Core/Src/can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can.o"
+arm-none-eabi-gcc "../Core/Src/can_matrix.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/can_matrix.d" -MT"Core/Src/can_matrix.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can_matrix.o"
+arm-none-eabi-gcc "../Core/Src/data_structures.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/data_structures.d" -MT"Core/Src/data_structures.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/data_structures.o"
+arm-none-eabi-gcc "../Core/Src/dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/dma.d" -MT"Core/Src/dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/dma.o"
+arm-none-eabi-gcc "../Core/Src/errLogging.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/errLogging.d" -MT"Core/Src/errLogging.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/errLogging.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/menu.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/menu.d" -MT"Core/Src/menu.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/menu.o"
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/test_functions.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/test_functions.d" -MT"Core/Src/test_functions.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/test_functions.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/timer.d" -MT"Core/Src/timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/timer.o"
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc "../Core/Src/vehicleControl.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/vehicleControl.d" -MT"Core/Src/vehicleControl.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/vehicleControl.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33820	   1008	   2176	  37004	   908c	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+22:01:25 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33740	    996	   2172	  36908	   902c	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+22:04:55 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33748	    996	   2172	  36916	   9034	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+22:09:35 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33728	    996	   2172	  36896	   9020	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+22:13:51 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33764	    996	   2172	  36932	   9044	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+22:15:35 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33756	    996	   2172	  36924	   903c	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+22:26:31 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33724	    996	   2172	  36892	   901c	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+22:27:45 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33744	    996	   2172	  36912	   9030	Vega_ETX_Display_Firmware_V2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Vega_ETX_Display_Firmware_V2.list
+ 
+22:29:37 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
+arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Vega_ETX_Display_Firmware_V2.elf
+ 
+arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
+arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
+   text	   data	    bss	    dec	    hex	filename
+  33756	    996	   2172	  36924	   903c	Vega_ETX_Display_Firmware_V2.elf
 Finished building: default.size.stdout
  
 Finished building: Vega_ETX_Display_Firmware_V2.list

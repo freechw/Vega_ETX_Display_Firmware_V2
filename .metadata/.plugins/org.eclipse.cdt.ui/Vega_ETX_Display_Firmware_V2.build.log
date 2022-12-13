@@ -1,17 +1,18 @@
-15:01:47 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
+22:29:37 **** Incremental Build of configuration Debug for project Vega_ETX_Display_Firmware_V2 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/menu.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/menu.d" -MT"Core/Src/menu.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/menu.o"
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
+arm-none-eabi-gcc "../Core/Src/transmit.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F105xC -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/transmit.d" -MT"Core/Src/transmit.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/transmit.o"
 arm-none-eabi-gcc -o "Vega_ETX_Display_Firmware_V2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\STM32F105RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vega_ETX_Display_Firmware_V2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Vega_ETX_Display_Firmware_V2.elf
  
 arm-none-eabi-size   Vega_ETX_Display_Firmware_V2.elf 
 arm-none-eabi-objdump -h -S  Vega_ETX_Display_Firmware_V2.elf  > "Vega_ETX_Display_Firmware_V2.list"
    text	   data	    bss	    dec	    hex	filename
-  33300	    992	   2168	  36460	   8e6c	Vega_ETX_Display_Firmware_V2.elf
+  33756	    996	   2172	  36924	   903c	Vega_ETX_Display_Firmware_V2.elf
 Finished building: default.size.stdout
  
 Finished building: Vega_ETX_Display_Firmware_V2.list
  
 
-15:01:49 Build Finished. 0 errors, 0 warnings. (took 2s.339ms)
+22:29:39 Build Finished. 0 errors, 0 warnings. (took 1s.758ms)
 

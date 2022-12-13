@@ -1,0 +1,315 @@
+/*
+ * State_Machine.c
+ *
+ *  Created on: Sep 27, 2022
+ *      Author: Akila
+ */
+
+#include <state_machine.h>
+
+uint8_t dataCounter = 0;
+
+void mainStateMachine(void) {
+	switch (currentStateSM) {
+	case startingup_state:
+		startUpState();
+		break;
+	case driving_state:
+		driveState();
+		break;
+	case charging_state:
+		chargeState();
+		break;
+	case Error_state:
+		errorState();
+		break;
+	default:
+		break;
+	}
+}
+
+void startUpState(void) {
+
+	dataCounter++;
+
+	if (state_entry) {
+		state_entry = false;
+		currentPage = front; //Set front Page in every startup
+		//_chargingUI = true;
+		okay = false;
+		_trasmitGlobal = 0;
+		if (err_or_not != 0) {
+			_errorSetIcon = false;
+		}
+	}
+
+	//	fillandTransmit();
+	if (dataCounter > 2) {
+		_oneTimeData = true;
+		dataCounter = 0;
+	}
+
+	//	fillandTransmitCommon();
+	_realTimeData = true;
+
+	if (err_error != 0) {
+		if ((err_or_not == 0) && (err_fullerror != err_previous)) {
+			currentStateSM = Error_state;
+			previousStateSM = startingup_state;
+			state_entry = true;
+			_errorClear = false;
+		}
+		return; //Will exit from the function
+	}
+
+	if (currentstate == 4) {
+		currentStateSM = charging_state;
+		previousStateSM = startingup_state;
+		state_entry = true;
+		return;
+	}
+	if (accessory == 1) {
+		navigation(); //enable navigation in Accessory Mode
+		//_trasmitGlobal = Disengage_Page;
+
+		if (err_or_not != 0) {
+			entry = true;
+			startup = true;
+			checklit = true;
+			_startingUp = true;
+		}
+		//return;
+	} else { //No buttons support when in the Press Brake
+		forward = false;
+		backward = false;
+		_navigation = false;
+		currentMode = mode_evcu;
+		currentPage = front;
+
+		inInfoBat = false;
+		inSettings = false;
+
+		_trasmitGlobal = Disengage_Page;
+	}
+
+	//StartingUp Transmit flag
+	//Fill and Transmit
+	//startingUp();
+	_startingUp = true;
+
+	//All clear transmit function called through flag
+	if (!(readytodrive == 1)) {
+		return;
+	}
+
+	currentStateSM = driving_state;
+	previousStateSM = startingup_state;
+	_modeSelection = true;
+	_modeChanged = true;
+	if (readytodrive == 1) {
+		_testPage = true;
+	}
+	state_entry = true;
+}
+
+void driveState(void) {
+	if (state_entry) {
+		state_entry = false;
+		currentPage = front;
+		mode_count = 0;
+		_trasmitGlobal = 0;
+		_realTimeData = true;
+		///////////////////////
+		_oneTimeData = true;
+		//////////////////////
+		if (err_or_not != 0) {
+			_errorSetIcon = false;
+		}
+	}
+	if ((err_or_not == 0) && (err_fullerror != err_previous)) {
+		currentStateSM = Error_state;
+		previousStateSM = driving_state;
+		state_entry = true;
+		_errorClear = false;
+		return;
+	}
+
+	if (accessory == 1) {
+		currentStateSM = startingup_state;
+		previousStateSM = driving_state;
+		state_entry = true;
+		return;
+	}
+
+	if (currentstate == 2) {
+		evcuMode();
+
+	}
+
+	//Function to track changes of currentstate
+	if (previousState != currentstate) {
+		_gearChanged = true;
+		previousState = currentstate;
+	}
+
+	_modeSelection = true;
+
+	//fillandTransmitCommon();
+	_realTimeData = true;
+	_oneTimeData = true;
+	_driverPageSet = true;
+//	if (_modeChanged) {
+//		modeSelection(currentMode);	//This should be called using a flag _modeSelection
+//	}
+	if (rtn) { //rtn True when there is a error
+		_allowNavigation = true;
+		return;
+	}
+}
+
+void chargeState(void) {
+	if (state_entry) {
+		state_entry = false;
+		_trasmitGlobal = 0;
+		_startingUp = false;
+		if (err_or_not != 0) {
+			_errorSetIcon = false;
+		}
+	}
+	_charingState = true;
+	_realTimeData = true;
+	///////////////////////
+	_oneTimeData = true;
+	//////////////////////
+
+	if (!(currentstate == 4)) {
+		currentStateSM = startingup_state;
+		previousStateSM = charging_state;
+		state_entry = true;
+		return;
+	}
+
+	if ((err_or_not == 0)) {
+		currentStateSM = Error_state;
+		previousStateSM = charging_state;
+		state_entry = true;
+		_errorClear = false;
+
+		if (err_or_not != 0) {
+			_errorSetIcon = false;
+		}
+		return;
+	}
+	//_chargeComplete = false;
+
+//	if (_trasmitGlobal == 3) {
+//		return;
+//	}
+
+	if (chargingcomp == 1) {
+		_chargeComplete = true;
+		_chargingUI = false;
+		return;
+	}
+//
+//	if (_trasmitGlobal == 2) {
+//		return;
+//	}
+	if (!_chargingUI) {
+		_chargingUI = true; //this has been set to false from startup and error state
+	}
+
+}
+
+void errorState(void) {
+
+	if (state_entry) {
+		state_entry = false;
+		currentPage = front;
+		error_check = true;
+		err_State_Navigation = false;
+		rtn = true;
+		_chargingUI = false;
+		_trasmitGlobal = front;
+		if (err_or_not != 0) {
+			_errorSetIcon = false;
+		}
+	}
+	_realTimeData = true; //Real-time Data Update
+
+	setError();
+
+	_errorSetPopup = true; //Transmit pop-up
+	_errorSetIcon = true; //set error icon
+	_errorSetCode = true;
+
+	if (_errorClear) {
+		_errorSetPopup = false;
+		_errorSetCode = false;
+	}
+	evcuMode();
+
+	if (previousStateSM == driving_state) {
+		modeSelection(currentMode);
+		//Press Okay to Disable PopUp
+		if (okay) {
+			err_previous = err_fullerror;
+			currentStateSM = driving_state;
+			previousStateSM = Error_state;
+			state_entry = true;
+			okay = false;
+
+			_errorSetPopup = false;
+			_errorSetCode = false;
+			_errorClear = true;
+			return;
+		}
+	}
+
+	//Error Selection for Charging State
+	if (previousStateSM == charging_state && error_check) {
+		charge_error = true;
+		state_entry = true;
+		charging_UI(chargingerr_ui);
+		return;
+	}
+
+	if (accessory == 1) {
+		err_previous = err_fullerror;
+		currentStateSM = startingup_state;
+		previousStateSM = Error_state;
+		state_entry = true;
+
+		_errorSetPopup = false;
+		//navigation();
+		return;
+	}
+
+	if (okay) {
+		okay = false;
+		err_State_Navigation = true;
+
+		_errorSetPopup = false;
+		_errorSetCode = false;
+		_errorClear = true;
+	}
+
+	if (rtn) { //rtn true when there is an error
+		if (err_State_Navigation) {
+			navigation(); //this should be replaced with _navigation flag
+			_errorSetPopup = false;
+			_errorSetCode = false;
+		} else {
+			if (mode) {
+				mode = false;
+
+				_errorSetPopup = false;
+				_errorSetCode = false;
+				modeSelection(currentMode);
+			} else {
+				_errorSetCode = true;
+			}
+		}
+		return;
+	}
+}

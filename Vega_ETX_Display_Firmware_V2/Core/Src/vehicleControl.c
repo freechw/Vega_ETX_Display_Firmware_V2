@@ -35,7 +35,7 @@ void evcuMode() {
 				currentMode = normalMode;
 				mode = false;
 				modeMenu = true;
-				_modeSelection = true;
+				//_modeSelection = true;
 				rtn = false;
 			}
 		} else if (currentMode == normalMode) {
@@ -44,7 +44,7 @@ void evcuMode() {
 			if (check_ack()) {
 				currentMode = sportMode;
 				modeMenu = true;
-				_modeSelection = true;
+				//_modeSelection = true;
 				mode = false;
 				rtn = false;
 				modeChangeOK = false;
@@ -56,7 +56,7 @@ void evcuMode() {
 				currentMode = ecoMode;
 				mode = false;
 				modeMenu = true;
-				_modeSelection = true;
+				//_modeSelection = true;
 				rtn = false;
 				modeChangeOK = false;
 				currentMode = ecoMode;
@@ -70,7 +70,7 @@ void evcuMode() {
 		targetMode = ecoMode;
 		if (mode == true) {
 			mode = false;
-			_modeSelection = true;
+			//_modeSelection = true;
 			modeMenu = true;
 			rtn = false;
 		}

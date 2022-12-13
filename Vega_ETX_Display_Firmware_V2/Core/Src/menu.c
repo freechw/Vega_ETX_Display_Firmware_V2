@@ -1,5 +1,6 @@
 #include <menu.h>
 
+
 void navigation(void) {
 
 	if (accessory == 1) {
@@ -459,8 +460,10 @@ void system_page(void) {
 			subMenuCounter = 0;
 		}
 		settings_UI(systemMenu,currentSubMenu);
-		//if (!inTimeSettings) {
+		//Time Settings Menu
+		if (!inTimeSettings) {
 			if (forward == true) {
+
 				if (currentSubMenu == 0 && previousSubMenuBack == 1) {
 					currentSubMenu = 1;
 					previousSubMenuForward = 0;
@@ -478,7 +481,6 @@ void system_page(void) {
 					return;
 				}
 			}
-
 			if (backward == true) {
 				if (currentSubMenu == 0 && previousSubMenuForward == 1) {
 					currentSubMenu = 1;
@@ -500,53 +502,84 @@ void system_page(void) {
 				}
 
 			}
-//			if (okay) {
-//				inTimeSettings = true;
-//				okay = false;
-//			}
-
-		//}
-//		else
-//		{
-//			if (okay) {
-//				vpCounter++;
-//				currentSubMenu = vpCounter;
-//				okay = false;
-//				if (vpCounter>4) {
-//					vpCounter = 3;
-//				}
-//			}
-//			if (forward) {
-//			forward = false;
-//			timerSetValue++;
-//			}
-//			if (backward) {
-//			backward = false;
-//			timerSetValue--;
-//			}
-//			if (back == true) {
-//				inTimeSettings = true;
-//				//Trasmit time
-//				currentSubMenu = 0;
-//				previousSubMenuForward = 1;
-//				previousSubMenuBack = 1;
-//				back = false;
-//			}
-//			if (timerSetValue>23)
-//			{
-//				timerSetValue = 0;
-//			}
-//
-//		}
-
-		if (!(inSystemSubMenu)) {
-			if (okay == true) {
-				inSystemSubMenu = true;
+			if (okay) {
+				inTimeSettings = true;
 				okay = false;
 			}
-		} else {
 
 		}
+		else
+		{
+			if (okay) {
+				okay = false;
+				if (vpCounter == 3) {
+					currentSubMenu = vpCounter;
+					vpCounter = 4;
+					return;
+				}
+				if (vpCounter == 4) {
+					currentSubMenu = vpCounter;
+					vpCounter = 3;
+					return;
+				}
+			}
+			if (forward) {
+			forward = false;
+				if (vpCounter == 3) {
+					timerSetValueH++;
+				}
+				if (vpCounter == 4) {
+					timerSetValueMin++;
+				}
+			}
+
+			if (backward) {
+			backward = false;
+			if (vpCounter == 3) {
+				timerSetValueH--;
+			}
+			if (vpCounter == 4) {
+				timerSetValueMin--;
+			}
+
+				if (timerSetValueH == 0) {
+					timerSetValueH = 23;
+				}
+				if (timerSetValueMin == 0) {
+					timerSetValueMin = 59;
+				}
+			}
+
+			if (timerSetValueH > 24) {
+				timerSetValueH = 0;
+			}
+
+			if (timerSetValueMin > 60) {
+				timerSetValueMin = 0;
+			}
+
+
+			if (back) {
+				inTimeSettings = false;
+				//Trasmit time
+				currentSubMenu = 0;
+				previousSubMenuForward = 1;
+				previousSubMenuBack = 1;
+				timeChanged = true;
+				back = false;
+			}
+
+
+		}
+
+//		if (!(inSystemSubMenu)) {
+//			if (okay == true) {
+//				inSystemSubMenu = true;
+//				okay = false;
+//			}
+//		} else {
+//
+//		}
 	}
 
 	if (back == true) {

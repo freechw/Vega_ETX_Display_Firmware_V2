@@ -28,6 +28,13 @@ uint8_t buttonCounterBackward = 0;
 uint8_t buttonCounterBack = 0;
 uint8_t buttonCounterOkay = 0;
 uint8_t buttonCounterMode = 0;
+//P2 Buttons
+//  3 - Okay
+//	4 - Back
+//	5 - Forward
+//	6 - Backward
+//	7 - Mode
+
 /* USER CODE END 0 */
 
 /*----------------------------------------------------------------------------*/

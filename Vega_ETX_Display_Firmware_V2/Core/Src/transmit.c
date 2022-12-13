@@ -13,6 +13,9 @@
 
 //TIME SET 5A A5 0B 82 00 9C 5A A5 12 06 1B 0D 08 00
 // 											H  M  S
+
+uint8_t timeSet[14]={0x5A,0xA5,0x0B,0x82,0x00,0x9C,0x5A,0xA5,0x12,0x06,0x1B,0x00,0x00,0x00};
+																		 // H      M    S
 uint8_t DisenKillSwitch[10] = { 0x5A, 0xA5, 0x07, 0x82, 0x00, 0x84, 0x5A, 0x01,
 		0x01, 0x2C }; //Page
 uint8_t PressBrake[10] = { 0x5A, 0xA5, 0x07, 0x82, 0x00, 0x84, 0x5A, 0x01, 0x01,
@@ -851,7 +854,7 @@ void transmit() {
 	}
 
 	if (_transmit_Function == 5) {
-		_transmit_Function = 0;
+		//_transmit_Function = 0;
 		if (_modeSelection && currentStateSM == driving_state) {
 			if (_modeChanged) {
 				modeSelection(currentMode);
@@ -865,20 +868,20 @@ void transmit() {
 //			return;
 		}
 		if (_modeSelection && currentStateSM == startingup_state) {
-			modeSelection(currentMode);
+			modeSelection(modeCleared);
 			_modeSelection = false;
 			return;
 		}
 	}
 
-//	if (_transmit_Function == 9) {
-//		_transmit_Function = 0;
-//		if (_driverPageSet) {
-//			_driverPageSet = false;
-//			drivePageSetter(currentPage);
-//			return;
-//		}
-//	}
+	if (_transmit_Function == 6) {
+		_transmit_Function = 0;
+		if (currentStateSM == driving_state) {
+			drivePageSetter(_driverPageSet);
+			return;
+		}
+
+	}
 
 	if (_errorSetIcon) {
 		errorIcon();
@@ -983,11 +986,12 @@ void drivePageSetter(uitype_t page) {
 				}
 
 			}
-			if (readytodrive == 1) {
-				if (drivePageTransmit == 1) {
-					HAL_UART_Transmit_DMA(&huart3, Test, sizeof(Test));
-					drivePageTransmit = 0;
-				}
+			if (_testPage) {
+				//if (drivePageTransmit == 4) {
+				_testPage = false;
+				HAL_UART_Transmit_DMA(&huart3, Test, sizeof(Test));
+				//drivePageTransmit = 0;
+				//}
 			}
 		}
 		break;
@@ -1070,6 +1074,13 @@ void settings_UI(uitype_t SettingsMenu, uint8_t selectedOption) {
 		break;
 	case systemMenu:
 		System_Menu_Page;
+		if(timeChanged)
+		{
+			timeChanged = false;
+			timeSet[11] = timerSetValueH;
+			timeSet[12] = timerSetValueMin;
+			HAL_UART_Transmit(&huart3, timeSet, sizeof(timeSet), HAL_MAX_DELAY);
+		}
 		if(selectedOption == 0) {
 			TimeSetting_Button;
 			BrightnessSetting_Button_OFF;
@@ -1082,11 +1093,19 @@ void settings_UI(uitype_t SettingsMenu, uint8_t selectedOption) {
 			TimeSetting_Button_OFF;
 			selectedOption = 10;
 		}
-		if (selectedOption == 3) {
-
-		}
 		if (selectedOption == 4) {
-
+			strDATA[4] = 0x13;
+			strDATA[5] = 0x22;
+			strDATA[6] = 0;
+			strDATA[7] = (timerSetValueH);
+			Transmit_strDATA;
+		}
+		if (selectedOption == 3) {
+			strDATA[4] = 0x13;
+			strDATA[5] = 0x21;
+			strDATA[6] = 0;
+			strDATA[7] = (timerSetValueMin);
+			Transmit_strDATA;
 		}
 
 		break;
@@ -1379,11 +1398,6 @@ void startingUp(void) {
 			_navigation = false;
 			return;
 		}
-
-//		if (_trasmitGlobal == 4) {
-//			return;
-//		}
-//		_trasmitGlobal = 4;
 		Press_Brake_Page;
 	}
 
@@ -1400,6 +1414,7 @@ void startingUp(void) {
 			//If ready to drive is ok, Then run this Gimmick Part//
 			if (startup == true) {
 				ReadytoDrive_Page;
+				_testPage = true;
 				startup = false;
 			}
 		} else {
@@ -1415,11 +1430,11 @@ void startingUp(void) {
 		/////////////////////////////////////////////////////////
 
 	} else { //if Start == 0//
-		if (mode) {
-			startupModeChange(); //Show Tuk Page as Mode Change Unavailable
-			//Final: Mode Change unavailable before ignition
-			mode = false;
-		}
+//		if (mode) {
+//			startupModeChange(); //Show Tuk Page as Mode Change Unavailable
+//			//Final: Mode Change unavailable before ignition
+//			mode = false;
+//		}
 		if (warning == 1) {
 			Press_Brake_Page;
 		}
@@ -1472,7 +1487,7 @@ void realTimeData(void) { //Realtime updatable data sending
 	}
 //Power Bar
 	powerBarTransmit++;
-	if (realTime_counter == 10) {
+	if (realTime_counter == 4) {
 
 		if (rpm_meter >= 1) {
 			if (powerBarTransmit == 9) {
@@ -1967,6 +1982,7 @@ void oneTimeData(void) {
 	}
 //Range
 	if (oneTime_counter == 3) {
+		oneTime_counter = 0;
 		strDATA[4] = 0x11;
 		strDATA[5] = 0x30;
 		strDATA[7] = (distance.range);
@@ -1975,7 +1991,8 @@ void oneTimeData(void) {
 		;
 	}
 	//Battery Data
-	if (oneTime_counter == 4) {
+	//if (oneTime_counter == 4) {
+
 		switch (transferCount) {
 		case 1: //SOC - Battery Percentage
 			strDATA[4] = 0x11;
@@ -2056,7 +2073,7 @@ void oneTimeData(void) {
 		if (transferCount >= 8) {
 			transferCount = 1;
 		}
-	}
+	//}
 }
 
 void gearUpdate(void) {
