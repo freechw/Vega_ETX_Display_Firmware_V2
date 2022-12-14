@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Mode"/>
+		<item key="selection" value="_transmit_Function"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="mode"/>
-			<item value="Test"/>
-			<item value="8F"/>
-			<item value="TimeSelect"/>
-			<item value="Time"/>
-			<item value="0xDC"/>
-			<item value="settings_UI"/>
-			<item value="0xDA"/>
-			<item value="selection_UI"/>
-			<item value="inInfoBat"/>
-			<item value="inSettings"/>
+			<item value="_transmit_Function"/>
+			<item value="popUp_OFF"/>
+			<item value="popOff"/>
+			<item value="6C"/>
+			<item value="Sport"/>
+			<item value="OFF"/>
+			<item value="_popUptransmitOff"/>
+			<item value="modeSetAvailable"/>
+			<item value="_modeSelection"/>
+			<item value="60"/>
+			<item value="DriveModeErr"/>
+			<item value="6E"/>
+			<item value="_gearChanged"/>
+			<item value="if (currentStateSM == driving_state) {"/>
+			<item value="DriveUnit_ON_Icon"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -1,5 +1,5 @@
 ../Core/Src/state_machine.c:12:6:mainStateMachine	8	static
 ../Core/Src/state_machine.c:31:6:startUpState	8	static
-../Core/Src/state_machine.c:115:6:driveState	8	static
-../Core/Src/state_machine.c:183:6:chargeState	4	static
-../Core/Src/state_machine.c:237:6:errorState	8	static
+../Core/Src/state_machine.c:119:6:driveState	8	static
+../Core/Src/state_machine.c:187:6:chargeState	4	static
+../Core/Src/state_machine.c:241:6:errorState	8	static

@@ -1,4 +1,4 @@
-../Core/Src/gpio.c:54:6:MX_GPIO_Init	40	static
-../Core/Src/gpio.c:107:6:getInputs	8	static
-../Core/Src/gpio.c:138:6:setInputs	4	static
-../Core/Src/gpio.c:223:6:buttonOkay	4	static
+../Core/Src/gpio.c:49:6:MX_GPIO_Init	40	static
+../Core/Src/gpio.c:102:6:getInputs	8	static
+../Core/Src/gpio.c:133:6:setInputs	4	static
+../Core/Src/gpio.c:242:6:buttonOkay	4	static

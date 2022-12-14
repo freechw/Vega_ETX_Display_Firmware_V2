@@ -101,7 +101,7 @@ extern volatile uiTrasnmittype_t _trasmitGlobal;
 
 //Mode States
 typedef enum {
-	normalMode = 0, turtleMode, ecoMode, sportMode, modeCleared
+	normalMode = 0, turtleMode, ecoMode, sportMode, modeCleared,modeSetError
 } uimode_t;
 
 //typedef enum {
@@ -128,8 +128,8 @@ extern bool _startingUp;
 extern bool _realTimeData;
 extern bool _oneTimeData;
 extern bool _navigation;
-extern bool _driverPageSet;
-extern bool _modeSelection;
+extern bool _setDriverPage;
+extern uint8_t _modeSelection;
 extern bool _allowNavigation;
 extern bool _errorSetPopup;
 extern bool _errorSetCode;
@@ -153,13 +153,15 @@ extern bool _Gear_Error_Page;
 extern bool _System_Check_Okay_No_Icon_Page;
 extern bool _System_Check_All_Icon_Page;
 extern bool _testPage;
-extern bool _After_Charge_Page;
-extern bool _Vehicle_Settings_Page;
-extern bool _Trip_Summary_Page;
-extern bool _Vehicle_Info_Page;
-extern bool _Battery_Info_Page;
-extern bool _Motor_Info_Page;
-extern bool _Inverter_Info_Page;
+extern bool _setPoup;
+
+//extern bool _After_Charge_Page;
+//extern bool _Vehicle_Settings_Page;
+//extern bool _Trip_Summary_Page;
+//extern bool _Vehicle_Info_Page;
+//extern bool _Battery_Info_Page;
+//extern bool _Motor_Info_Page;
+//extern bool _Inverter_Info_Page;
 extern bool _Charging_Page;
 extern bool _ChargeComplete_Page;
 extern bool _Charge_Error_Page;
@@ -169,7 +171,13 @@ extern uint8_t menuCounter;
 extern uint8_t subMenuCounter;
 extern bool inSystemSubMenu;
 
+extern uint8_t realTime_counter;
+extern uint8_t oneTime_counter;
+extern uint8_t _transmit_Function;
 
+extern uint8_t popUpCounter;
+extern uint8_t popUpNumber;
+extern bool inPopup;
 
 extern uint8_t _fireModeEnable;
 extern bool _firePage;
@@ -202,7 +210,7 @@ extern bool inTheMenu;
 //Mode Flags
 extern volatile uimode_t currentMode;
 extern volatile uimode_t targetMode;
-
+extern bool starupMode;
 //Flags
 extern bool espDataRequest;
 extern bool state_entry;
@@ -349,7 +357,7 @@ extern bool error_check;
 
 //Mode Change
 extern bool modeChangeOK;
-extern bool modeMenu;
+extern bool modeIcon;
 extern bool mode_err;
 //extern volatile uimode_t previousMode;
 //Charing Errors

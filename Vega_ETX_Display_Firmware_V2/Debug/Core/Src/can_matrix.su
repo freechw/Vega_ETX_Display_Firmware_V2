@@ -1,4 +1,4 @@
 ../Core/Src/can_matrix.c:15:6:EVCU_setData_write	16	static
 ../Core/Src/can_matrix.c:36:6:EVCU_getData_read_40	16	static
-../Core/Src/can_matrix.c:57:6:EVCU_getData_read_41	16	static
-../Core/Src/can_matrix.c:108:6:EVCU_getData_read_43	16	static
+../Core/Src/can_matrix.c:60:6:EVCU_getData_read_41	16	static
+../Core/Src/can_matrix.c:111:6:EVCU_getData_read_43	16	static

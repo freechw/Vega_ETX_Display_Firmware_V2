@@ -156,7 +156,7 @@ int main(void) {
 	HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING);
 	//HAL_CAN_ActivateNotification(&hcan2, CAN_IT_RX_FIFO1_MSG_PENDING);
 	_fireModeEnable = 1;
-	currentMode = mode_evcu;
+
 	HAL_TIM_Base_Start_IT(&htim2);
 
 //	HAL_DMA_RegisterCallback(&hdma_usart3_tx, HAL_DMA_XFER_CPLT_CB_ID,

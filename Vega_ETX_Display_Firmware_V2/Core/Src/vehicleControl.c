@@ -34,8 +34,11 @@ void evcuMode() {
 			if (check_ack()) {
 				currentMode = normalMode;
 				mode = false;
-				modeMenu = true;
-				//_modeSelection = true;
+				modeIcon = true;
+				//_setPoup = true;
+				popUpNumber = 1;
+
+				_modeSelection = 1;
 				rtn = false;
 			}
 		} else if (currentMode == normalMode) {
@@ -43,8 +46,11 @@ void evcuMode() {
 			targetMode = sportMode;
 			if (check_ack()) {
 				currentMode = sportMode;
-				modeMenu = true;
-				//_modeSelection = true;
+				modeIcon = true;
+				//_setPoup = true;
+				popUpNumber = 3;
+
+				_modeSelection = 1;
 				mode = false;
 				rtn = false;
 				modeChangeOK = false;
@@ -55,8 +61,11 @@ void evcuMode() {
 			if (check_ack()) {
 				currentMode = ecoMode;
 				mode = false;
-				modeMenu = true;
-				//_modeSelection = true;
+				modeIcon = true;
+				//_setPoup = true;
+				popUpNumber = 2;
+
+				_modeSelection = 1;
 				rtn = false;
 				modeChangeOK = false;
 				currentMode = ecoMode;
@@ -70,8 +79,8 @@ void evcuMode() {
 		targetMode = ecoMode;
 		if (mode == true) {
 			mode = false;
-			//_modeSelection = true;
-			modeMenu = true;
+			_modeSelection = 1;
+			modeIcon = true;
 			rtn = false;
 		}
 	}

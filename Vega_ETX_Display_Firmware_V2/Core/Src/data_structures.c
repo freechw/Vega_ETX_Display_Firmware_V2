@@ -115,6 +115,7 @@ uint8_t _menupage = 0;
 //Inital Mode
 volatile uimode_t currentMode = normalMode;
 volatile uimode_t targetMode = normalMode;
+bool starupMode = true;
 
 //Entry Flags
 bool state_entry = true;
@@ -153,7 +154,7 @@ bool error_check = 0;
 
 //Mode Change
 bool modeChangeOK = false;
-bool modeMenu = 0;
+bool modeIcon = 0;
 bool mode_err = false;
 
 //Charging Error
@@ -173,9 +174,9 @@ uint8_t longPress_Time = 30;
 bool _startingUp = false;
 bool _navigation = false;
 bool _realTimeData = false;
-bool _driverPageSet = front;
+bool _setDriverPage = false;
 bool _oneTimeData = false;
-bool _modeSelection = false;
+uint8_t _modeSelection = 0;
 bool _allowNavigation = false;
 bool _errorSetPopup = false;
 bool _errorSetCode = false;
@@ -188,6 +189,8 @@ bool _charingState = false;
 bool _chargingUI = false;
 bool _chargeComplete = false;
 uint8_t modePopup = 0;
+
+
 bool _modeChanged = false;
 bool _gearCleared = false;
 bool _gearChanged = false;
@@ -206,23 +209,32 @@ bool _System_Check_Okay_No_Icon_Page = false;
 bool _System_Check_All_Icon_Page = false;
 bool _testPage = false;
 
+bool _setPoup = false;
+
 bool _SysError_Shutdown_Page = false;
 bool _SysError_StopDrive_Page = false;
 bool _ModeChangeOFF_Page = false;
 
-bool _After_Charge_Page = false;
-bool _Vehicle_Settings_Page = false;
-bool _Trip_Summary_Page = false;
-//Vehicle Info
-bool _Vehicle_Info_Page = false;
-bool _Battery_Info_Page = false;
-bool _Motor_Info_Page = false;
-bool _Inverter_Info_Page = false;
+//bool _After_Charge_Page = false;
+//bool _Vehicle_Settings_Page = false;
+//bool _Trip_Summary_Page = false;
+////Vehicle Info
+//bool _Vehicle_Info_Page = false;
+//bool _Battery_Info_Page = false;
+//bool _Motor_Info_Page = false;
+//bool _Inverter_Info_Page = false;
 //Vehicle Charging
 bool _Charging_Page = false;
 bool _ChargeComplete_Page = false;
 bool _Charge_Error_Page = false;
 
+uint8_t realTime_counter = 0;
+uint8_t oneTime_counter = 0;
+uint8_t _transmit_Function = 0;
+
+uint8_t popUpCounter = 0;
+uint8_t popUpNumber = 0;
+bool inPopup = true;
 //uint8_t navigationCount = 0;
 
 uint8_t _fireModeEnable = 0;

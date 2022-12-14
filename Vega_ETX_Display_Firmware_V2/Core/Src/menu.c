@@ -8,35 +8,107 @@ void navigation(void) {
 	} else {
 		_navigation = false;
 	}
+
+	if (currentStateSM == driving_state) {
+		_testPage = true;
+	}
+
 	switch (currentPage) {
 	case front:
 		front_mainPage();
-		_realTimeData = true;
-		_oneTimeData = true;
-		previousPage = front;
+		if (currentStateSM == driving_state) {
+			_realTimeData = true;
+			_oneTimeData = true;
+		}
+		if (currentPage != previousPage) {
+			previousPage = front;
+			_setDriverPage = true;
+			_realTimeData = false;
+			_oneTimeData = false;
+			if (currentStateSM == driving_state) {
+				_transmit_Function = 5;
+			}
+			if (currentStateSM == startingup_state) {
+				_transmit_Function = 2;
+			}
+
+		}
 		break;
 	case trip:
 		trip_mainPage();
-		_realTimeData = true;
-		_oneTimeData = true;
-		previousPage = trip;
+		if (currentStateSM == driving_state) {
+			_realTimeData = true;
+			_oneTimeData = true;
+		}
+		if (currentPage != previousPage) {
+			previousPage = trip;
+			_setDriverPage = true;
+			_realTimeData = false;
+			_oneTimeData = false;
+			if (currentStateSM == driving_state) {
+				_transmit_Function = 5;
+			}
+			if (currentStateSM == startingup_state) {
+				_transmit_Function = 2;
+			}
+		}
 		break;
 	case after_charge:
 		after_charge_mainPage();
-		_realTimeData = true;
-		_oneTimeData = true;
-		previousPage = after_charge;
+		if (currentStateSM == driving_state) {
+			_realTimeData = true;
+			_oneTimeData = true;
+		}
+		if (currentPage != previousPage) {
+			previousPage = after_charge;
+			_setDriverPage = true;
+			_realTimeData = false;
+			_oneTimeData = false;
+			if (currentStateSM == driving_state) {
+				_transmit_Function = 5;
+			}
+			if (currentStateSM == startingup_state) {
+				_transmit_Function = 2;
+			}
+		}
 		break;
 	case info:
 		info_mainPage();
-		_realTimeData = true;
-		_oneTimeData = true;
-		previousPage = info;
+		if (currentStateSM == driving_state) {
+			_realTimeData = true;
+			_oneTimeData = true;
+		}
+		if (currentPage != previousPage) {
+			previousPage = info;
+			_setDriverPage = true;
+			_realTimeData = false;
+			_oneTimeData = false;
+			if (currentStateSM == driving_state) {
+				_transmit_Function = 5;
+			}
+			if (currentStateSM == startingup_state) {
+				_transmit_Function = 2;
+			}
+		}
 		break;
 	case settings:
 		settings_mainPage();
-		_realTimeData = true;
-		previousPage = settings;
+		if (currentStateSM == driving_state) {
+			_realTimeData = true;
+			_oneTimeData = true;
+		}
+		if (currentPage != previousPage) {
+			previousPage = settings;
+			_setDriverPage = true;
+			_realTimeData = false;
+			_oneTimeData = false;
+			if (currentStateSM == driving_state) {
+				_transmit_Function = 5;
+			}
+			if (currentStateSM == startingup_state) {
+				_transmit_Function = 2;
+			}
+		}
 		break;
 	default:
 		break;
@@ -47,7 +119,6 @@ void navigation(void) {
 void front_mainPage(void) {
 	if (page_entry) {
 		page_entry = false;
-		currentMode = modeCleared;
 		_modeSelection = true;
 		_gearCleared = true;
 		_gearChanged = true;
@@ -55,6 +126,7 @@ void front_mainPage(void) {
 	//drivePageSetter(front);
 	_drivePageSet = front;
 	_trasmitGlobal = Disengage_Page;
+
 	//One time Run
 //Run only if something has changed
 	//
@@ -69,12 +141,11 @@ void front_mainPage(void) {
 	}
 
 	if (backward == true) {
-
+		backward = false;
 		currentPage = settings;
 		page_entry = true;
 		forward = false;
 		_menupage = 0;
-		backward = false;
 		_trasmitGlobal = Disengage_Page;
 		return;
 	}
@@ -365,6 +436,14 @@ void settings_mainPage(void) {
 				}
 
 			}
+			if (back == true) {
+				page_entry = true;
+				inSettings = false;
+				selection_UI(front);
+				_menupage = 0;
+				back = false;
+			}
+
 
 		}
 		switch (currentMenu) {
@@ -384,13 +463,7 @@ void settings_mainPage(void) {
 			break;
 		}
 
-		if (back == true) {
-			page_entry = true;
-			inSettings = false;
-			selection_UI(front);
-			_menupage = 0;
-			back = false;
-		}
+
 		return;
 	}
 

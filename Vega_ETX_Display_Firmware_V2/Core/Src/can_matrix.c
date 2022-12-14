@@ -15,11 +15,11 @@ struct EVCU_setData EVCU_setData_i;
 void EVCU_setData_write(uint8_t *canTX) {
 	//timeStampSend();6
 //	testFlag_1 = true;
-//	EVCU_setData_i.dataID = 0;
-//	EVCU_setData_i.fixSetS.bit.mode = targetMode;
-//	EVCU_setData_i.fixSetS.bit.trip_rst = tripreset;
-//	EVCU_setData_i.fixSetS.bit.currentMenu = currentMenu;
-//	EVCU_setData_i.fixSetS.bit.espRequest = espDataRequest;
+	EVCU_setData_i.dataID = 0;
+	EVCU_setData_i.fixSetS.bit.mode = targetMode;
+	EVCU_setData_i.fixSetS.bit.trip_rst = tripreset;
+	EVCU_setData_i.fixSetS.bit.currentMenu = currentMenu;
+	//EVCU_setData_i.fixSetS.bit.espRequest = espDataRequest;
 	canTX[0] = EVCU_setData_i.dataID;
 	canTX[1] = EVCU_setData_i.fixSetS.all;
 	//Time Stamp: Call time Stamp Here
@@ -49,7 +49,10 @@ void EVCU_getData_read_40(uint8_t *canRX) {
 	power = ((canRX[4] << 8) | canRX[3]);
 	test_speed = canRX[5];
 	rpm_meter = ((canRX[7] << 8) | canRX[6]);
-
+	if (starupMode) {
+		starupMode = false;
+		currentMode = mode_evcu;
+	}
 
 
 }

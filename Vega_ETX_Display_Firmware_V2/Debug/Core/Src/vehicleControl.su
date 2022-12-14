@@ -1,3 +1,3 @@
 ../Core/Src/vehicleControl.c:10:6:check_ack	4	static
 ../Core/Src/vehicleControl.c:29:6:evcuMode	8	static
-../Core/Src/vehicleControl.c:82:6:trip_reset	4	static
+../Core/Src/vehicleControl.c:91:6:trip_reset	4	static

@@ -32,13 +32,16 @@ extern void driveState(void);
 extern void resetThings(void);
 extern void timeStampSend(void);
 extern void timeStampReceive(void);
+
 extern void errorCode(void);
 extern void errorPopup(void);
 extern void sideMenuPopup(void);
+extern void popUpHandler(void);
+
 extern void transmitTest(void);
 //Mode Selection
-extern void modeSetAvailable(void);
 extern void modeSelection(uimode_t currentMode);
+
 extern void startupModeChange(void);
 extern void transmit(void);
 extern void bootAnimation(void);

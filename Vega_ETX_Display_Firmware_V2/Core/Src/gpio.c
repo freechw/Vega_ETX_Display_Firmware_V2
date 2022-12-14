@@ -28,12 +28,7 @@ uint8_t buttonCounterBackward = 0;
 uint8_t buttonCounterBack = 0;
 uint8_t buttonCounterOkay = 0;
 uint8_t buttonCounterMode = 0;
-//P2 Buttons
-//  3 - Okay
-//	4 - Back
-//	5 - Forward
-//	6 - Backward
-//	7 - Mode
+
 
 /* USER CODE END 0 */
 
@@ -146,31 +141,47 @@ void setInputs() {
 //		door = true;
 //		HAL_Delay(50);
 //	}
-	if (gpio.buttonInputs.bit.in7) //pageUp
+
+	//P2 Buttons
+	//  3 - Okay
+	//	4 - Back
+	//	5 - Forward
+	//	6 - Backward
+	//	7 - Mode
+	if (gpio.buttonInputs.bit.in5) //pageUp
 	{
 		buttonCounterForward++;
 		if (buttonCounterForward < 2) {
 			forward = true;
 		}
+		else {
+			forward = false;
+		}
 	} else {
 		buttonCounterForward = 0;
 	}
 
-	if (gpio.buttonInputs.bit.in5) //pageDown
+	if (gpio.buttonInputs.bit.in6) //pageDown
 	{
 		buttonCounterBackward++;
 		if (buttonCounterBackward < 2) {
 			backward = true;
 		}
+		else {
+			backward = false;
+		}
 	} else {
 		buttonCounterBackward = 0;
 	}
 
-	if (gpio.buttonInputs.bit.in8) //back
+	if (gpio.buttonInputs.bit.in4) //back
 	{
 		buttonCounterBack++;
 		if (buttonCounterBack < 2) {
 			back = true;
+		}
+		else {
+			back = false;
 		}
 	}
 	else
@@ -178,24 +189,32 @@ void setInputs() {
 		buttonCounterBack = 0;
 	}
 
-	if (gpio.buttonInputs.bit.in4) //mode //After fixing the okay button change mode to okay
+	if (gpio.buttonInputs.bit.in7) //mode //After fixing the okay button change mode to okay
 	{
 		buttonCounterMode++;
 		if (buttonCounterMode<2) {
 			mode = true;
-			_modeChanged = true;
+			//_modeChanged = true;
 		}
+		//else
+		//{
+			//mode = false;
+		//}
 	}
 	else
 	{
 		buttonCounterMode = 0;
 	}
 
-	if (gpio.buttonInputs.bit.in6 == 1) //okay
+	if (gpio.buttonInputs.bit.in3 == 1) //okay
 	{
 		buttonCounterOkay++;
 		if (buttonCounterOkay<2) {
 			okay = true;
+		}
+		else
+		{
+			okay = false;
 		}
 	}
 	else
@@ -221,7 +240,7 @@ void setInputs() {
 }
 
 void buttonOkay(void) {
-	if (gpio.buttonInputs.bit.in6 == 1) {
+	if (gpio.buttonInputs.bit.in3 == 1) {
 		buttonCounterLongPress++;
 	} else {
 		buttonCounterLongPress = 0;

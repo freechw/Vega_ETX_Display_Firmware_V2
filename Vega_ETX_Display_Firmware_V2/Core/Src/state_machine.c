@@ -38,19 +38,22 @@ void startUpState(void) {
 		//_chargingUI = true;
 		okay = false;
 		_trasmitGlobal = 0;
+		_modeSelection = 2;//Clear Mode
+		_setDriverPage = false;
 		if (err_or_not != 0) {
 			_errorSetIcon = false;
 		}
 	}
 
 	//	fillandTransmit();
-	if (dataCounter > 2) {
+	if (dataCounter > 3) {
 		_oneTimeData = true;
+		_realTimeData = true;
 		dataCounter = 0;
 	}
 
 	//	fillandTransmitCommon();
-	_realTimeData = true;
+
 
 	if (err_error != 0) {
 		if ((err_or_not == 0) && (err_fullerror != err_previous)) {
@@ -70,6 +73,7 @@ void startUpState(void) {
 	}
 	if (accessory == 1) {
 		navigation(); //enable navigation in Accessory Mode
+		//_modeSelection = 2;//Clear Mode
 		//_trasmitGlobal = Disengage_Page;
 
 		if (err_or_not != 0) {
@@ -83,13 +87,14 @@ void startUpState(void) {
 		forward = false;
 		backward = false;
 		_navigation = false;
-		currentMode = mode_evcu;
+		//currentMode = mode_evcu;
 		currentPage = front;
 
 		inInfoBat = false;
 		inSettings = false;
 
 		_trasmitGlobal = Disengage_Page;
+		//_modeSelection = 2;//Clear Mode
 	}
 
 	//StartingUp Transmit flag
@@ -105,7 +110,6 @@ void startUpState(void) {
 	currentStateSM = driving_state;
 	previousStateSM = startingup_state;
 	//_modeSelection = true;
-	_modeChanged = true;
 	if (readytodrive == 1) {
 
 	}
@@ -119,9 +123,11 @@ void driveState(void) {
 		mode_count = 0;
 		_trasmitGlobal = 0;
 		dataCounter = 0;
+		_drivePageSet = front;
 		///////////////////////
 		//_oneTimeData = true;
-		//_gearChanged = true;
+		_gearChanged = true;
+		_modeSelection = 1;
 		//_realTimeData = true;
 		//////////////////////
 		if (err_or_not != 0) {
@@ -146,7 +152,10 @@ void driveState(void) {
 
 	if (currentstate == 2) {
 		evcuMode();
-
+	}
+	else
+	{
+		mode = false;
 	}
 
 	//Function to track changes of currentstate
@@ -155,25 +164,20 @@ void driveState(void) {
 		previousState = currentstate;
 	}
 
-	//if () {
-		//_modeSelection = true;
-	//}
-
-
 	//fillandTransmitCommon();
+	navigation();
+	//_realTimeData = true;
+//	if (dataCounter>2) {
+//		_oneTimeData = true;
+//		dataCounter = 0;
+//	}
 
-	_realTimeData = true;
-	if (dataCounter>2) {
-		_oneTimeData = true;
-		dataCounter = 0;
-	}
+	//_driverPageSet = front;
 
-	_driverPageSet = front;
-
-	if (_modeChanged) {
-		//modeSelection(currentMode);	//This should be called using a flag _modeSelection
-		_modeSelection = true;
-	}
+//	if (_modeChanged) {
+//		//modeSelection(currentMode);	//This should be called using a flag _modeSelection
+//		_modeSelection = true;
+//	}
 	if (rtn) { //rtn True when there is a error
 		_allowNavigation = true;
 		return;
