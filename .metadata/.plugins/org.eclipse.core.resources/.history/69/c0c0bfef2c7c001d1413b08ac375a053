@@ -2110,15 +2110,15 @@ void oneTimeData(void) {
 		;
 	}
 //Range
-//	if (oneTime_counter == 9) {
-//		oneTime_counter = 0;
-//		strDATA[4] = 0x11;
-//		strDATA[5] = 0x30;
-//		strDATA[7] = (distance.range);
-//		strDATA[6] = 0;
-//		Transmit_strDATA
-//		;
-//	}
+	if (oneTime_counter == 9) {
+		oneTime_counter = 0;
+		strDATA[4] = 0x11;
+		strDATA[5] = 0x30;
+		strDATA[7] = (distance.range);
+		strDATA[6] = 0;
+		Transmit_strDATA
+		;
+	}
 	//Battery Data
 	//if (oneTime_counter == 10) {
 
@@ -2136,8 +2136,8 @@ void oneTimeData(void) {
 			strDATA[4] = 0x12;
 			strDATA[5] = 0x10;
 		} else {
-			strDATA[4] = 0x12;
-			strDATA[5] = 0x10;
+			strDATA[4] = 0x11;
+			strDATA[5] = 0x64;
 		}
 		strDATA[7] = (pack_voltage & 0xFF);
 		strDATA[6] = (pack_voltage >> 8);

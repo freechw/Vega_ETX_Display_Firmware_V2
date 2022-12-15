@@ -128,7 +128,6 @@ void driveState(void) {
 		//_oneTimeData = true;
 		_gearChanged = true;
 		_modeSelection = 1;
-		modeIcon = true;
 		//_realTimeData = true;
 		//////////////////////
 		if (err_or_not != 0) {

@@ -238,7 +238,7 @@ extern CAN_TxHeaderTypeDef txHeader;
 struct distanceCAN {
 	uint32_t ODO;
 	uint16_t trip;
-	uint16_t range;
+	uint8_t range;
 	uint16_t tripAvgSpeed;
 	uint16_t trip_Economy;
 	uint16_t trip_Power;

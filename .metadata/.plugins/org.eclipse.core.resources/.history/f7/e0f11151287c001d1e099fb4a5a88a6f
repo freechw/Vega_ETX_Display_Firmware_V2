@@ -1514,8 +1514,8 @@ void realTimeData(void) { //Realtime updatable data sending
 		strDATA[5] = 0x00; //
 		strDATA[7] = (test_speed & 0xFF);
 		strDATA[6] = (test_speed >> 8);
-//		Transmit_strDATA
-//		;
+		Transmit_strDATA
+		;
 		testFlag_2 = true;
 	}
 //ODO
@@ -1526,8 +1526,8 @@ void realTimeData(void) { //Realtime updatable data sending
 		strDATA2[8] = (distance.ODO >> 8);
 		strDATA2[7] = (distance.ODO >> 16);
 		strDATA2[6] = (distance.ODO >> 24);
-//		Transmit_strDATA2
-//		;
+		Transmit_strDATA2
+		;
 	}
 ////Trip
 	if (realTime_counter == 3) {
@@ -1537,201 +1537,201 @@ void realTimeData(void) { //Realtime updatable data sending
 		strDATA2[8] = (distance.trip >> 8);
 		strDATA2[7] = (distance.trip >> 16);
 		strDATA2[6] = (distance.trip >> 24);
-//		Transmit_strDATA2
-//		;
+		Transmit_strDATA2
+		;
 	}
 //Power Bar
 	powerBarTransmit++;
 	if (realTime_counter == 4) {
 
-//		if (rpm_meter >= 1) {
-//			if (powerBarTransmit == 9) {
-//				if (power_90 <= power) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, power5, sizeof(power5));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, power5, sizeof(power5),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//				powerBarTransmit = 0;
-//			}
-//			if (powerBarTransmit == 8) {
-//				if (power_80 <= power && power < power_90) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, power4, sizeof(power4));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, power4, sizeof(power4),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//			}
-//			if (powerBarTransmit == 7) {
-//				if (power_70 <= power && power < power_80) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, power3, sizeof(power3));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, power3, sizeof(power3),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 6) {
-//				if (power_60 <= power && power < power_70) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, power2, sizeof(power2));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, power2, sizeof(power2),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 5) {
-//				if (eco_50 <= power && power < power_60) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, power1, sizeof(power1));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, power1, sizeof(power1),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 4) {
-//				if (eco_40 <= power && power < eco_50) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, eco5, sizeof(eco5));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, eco5, sizeof(eco5),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 3) {
-//				if (eco_30 <= power && power < eco_40) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, eco4, sizeof(eco4));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, eco4, sizeof(eco4),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 2) {
-//				if (eco_20 <= power && power < eco_30) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, eco3, sizeof(eco3));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, eco3, sizeof(eco3),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 1) {
-//				if (eco_10 <= power && power < eco_20) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, eco2, sizeof(eco2));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, eco2, sizeof(eco2),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 0) {
-//				if (0 <= power && power < eco_10) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, eco1, sizeof(eco1));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, eco1, sizeof(eco1),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 10) {
-//				if (-1 >= power && power >= -50) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, charge1, sizeof(charge1));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, charge1, sizeof(charge1),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 11) {
-//				if (-51 >= power && power >= -101) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, charge2, sizeof(charge2));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, charge2, sizeof(charge2),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//			}
-//			if (powerBarTransmit == 12) {
-//				if (-102 >= power && power >= -152) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, charge3, sizeof(charge3));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, charge3, sizeof(charge3),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//			}
-//			if (powerBarTransmit == 13) {
-//				if (-153 >= power && power >= -203) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, charge4, sizeof(charge4));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, charge4, sizeof(charge4),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//			}
-//			if (powerBarTransmit == 14) {
-//				if (-204 >= power) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, charge5, sizeof(charge5));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, charge5, sizeof(charge5),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//			}
-//
-//		}
+		if (rpm_meter >= 1) {
+			if (powerBarTransmit == 9) {
+				if (power_90 <= power) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, power5, sizeof(power5));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, power5, sizeof(power5),
+					HAL_MAX_DELAY);
+#endif
+				}
+				powerBarTransmit = 0;
+			}
+			if (powerBarTransmit == 8) {
+				if (power_80 <= power && power < power_90) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, power4, sizeof(power4));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, power4, sizeof(power4),
+					HAL_MAX_DELAY);
+#endif
+				}
+			}
+			if (powerBarTransmit == 7) {
+				if (power_70 <= power && power < power_80) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, power3, sizeof(power3));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, power3, sizeof(power3),
+					HAL_MAX_DELAY);
+#endif
+				}
+
+			}
+			if (powerBarTransmit == 6) {
+				if (power_60 <= power && power < power_70) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, power2, sizeof(power2));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, power2, sizeof(power2),
+					HAL_MAX_DELAY);
+#endif
+				}
+
+			}
+			if (powerBarTransmit == 5) {
+				if (eco_50 <= power && power < power_60) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, power1, sizeof(power1));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, power1, sizeof(power1),
+					HAL_MAX_DELAY);
+#endif
+				}
+
+			}
+			if (powerBarTransmit == 4) {
+				if (eco_40 <= power && power < eco_50) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, eco5, sizeof(eco5));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, eco5, sizeof(eco5),
+					HAL_MAX_DELAY);
+#endif
+				}
+
+			}
+			if (powerBarTransmit == 3) {
+				if (eco_30 <= power && power < eco_40) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, eco4, sizeof(eco4));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, eco4, sizeof(eco4),
+					HAL_MAX_DELAY);
+#endif
+				}
+
+			}
+			if (powerBarTransmit == 2) {
+				if (eco_20 <= power && power < eco_30) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, eco3, sizeof(eco3));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, eco3, sizeof(eco3),
+					HAL_MAX_DELAY);
+#endif
+				}
+
+			}
+			if (powerBarTransmit == 1) {
+				if (eco_10 <= power && power < eco_20) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, eco2, sizeof(eco2));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, eco2, sizeof(eco2),
+					HAL_MAX_DELAY);
+#endif
+				}
+
+			}
+			if (powerBarTransmit == 0) {
+				if (0 <= power && power < eco_10) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, eco1, sizeof(eco1));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, eco1, sizeof(eco1),
+					HAL_MAX_DELAY);
+#endif
+				}
+
+			}
+			if (powerBarTransmit == 10) {
+				if (-1 >= power && power >= -50) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, charge1, sizeof(charge1));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, charge1, sizeof(charge1),
+					HAL_MAX_DELAY);
+#endif
+				}
+
+			}
+			if (powerBarTransmit == 11) {
+				if (-51 >= power && power >= -101) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, charge2, sizeof(charge2));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, charge2, sizeof(charge2),
+					HAL_MAX_DELAY);
+#endif
+				}
+			}
+			if (powerBarTransmit == 12) {
+				if (-102 >= power && power >= -152) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, charge3, sizeof(charge3));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, charge3, sizeof(charge3),
+					HAL_MAX_DELAY);
+#endif
+				}
+			}
+			if (powerBarTransmit == 13) {
+				if (-153 >= power && power >= -203) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, charge4, sizeof(charge4));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, charge4, sizeof(charge4),
+					HAL_MAX_DELAY);
+#endif
+				}
+			}
+			if (powerBarTransmit == 14) {
+				if (-204 >= power) {
+#ifdef DMA
+					HAL_UART_Transmit_DMA(&huart3, charge5, sizeof(charge5));
+#endif
+#ifdef No_DMA
+					HAL_UART_Transmit(&huart3, charge5, sizeof(charge5),
+					HAL_MAX_DELAY);
+#endif
+				}
+			}
+
+		}
 		realTime_counter = 0;
 	}
-//	if (rpm_meter == 0) {
-//#ifdef DMA
-//		HAL_UART_Transmit_DMA(&huart3, eco0, sizeof(eco0));
-//#endif
-//#ifdef No_DMA
-//		HAL_UART_Transmit(&huart3, eco0, sizeof(eco0), HAL_MAX_DELAY);
-//#endif
-//	}
+	if (rpm_meter == 0) {
+#ifdef DMA
+		HAL_UART_Transmit_DMA(&huart3, eco0, sizeof(eco0));
+#endif
+#ifdef No_DMA
+		HAL_UART_Transmit(&huart3, eco0, sizeof(eco0), HAL_MAX_DELAY);
+#endif
+	}
 
 //Gear Position
 
@@ -2008,8 +2008,8 @@ void oneTimeData(void) {
 		strDATA[5] = 0x50;
 		strDATA[7] = (rpm_meter & 0xFF);
 		strDATA[6] = (rpm_meter >> 8);
-		//Transmit_strDATA
-		//;
+		Transmit_strDATA
+		;
 	}
 
 //AVG SPEED
@@ -2018,8 +2018,8 @@ void oneTimeData(void) {
 		strDATA[5] = 0x52;
 		strDATA[7] = (distance.tripAvgSpeed & 0xFF);
 		strDATA[6] = (distance.tripAvgSpeed >> 8);
-//		Transmit_strDATA
-//		;
+		Transmit_strDATA
+		;
 	}
 
 	//Trip Economy -------VP
@@ -2030,8 +2030,8 @@ void oneTimeData(void) {
 		strDATA[6] = (distance.trip_Economy >> 8);
 //	strDATA[7] = (distance.trip_Economy >> 16);
 //	strDATA[6] = (distance.trip_Economy >> 24);
-//		Transmit_strDATA
-//		;
+		Transmit_strDATA
+		;
 	}
 
 	//Trip Power----------VP
@@ -2042,8 +2042,8 @@ void oneTimeData(void) {
 		strDATA[6] = (distance.trip_Power >> 8);
 //	strDATA[7] = (distance.trip_Power >> 16);
 //	strDATA[6] = (distance.trip_Power >> 24);
-//		Transmit_strDATA
-//		;
+		Transmit_strDATA
+		;
 	}
 
 	//After charge trip
@@ -2054,8 +2054,8 @@ void oneTimeData(void) {
 		strDATA[6] = (afterChargeData.trip >> 8);
 //	strDATA[7] = (afterChargeData.trip >> 16);
 //	strDATA[6] = (afterChargeData.trip >> 24);
-//		Transmit_strDATA
-//		;
+		Transmit_strDATA
+		;
 	}
 
 	// After charge average speed
@@ -2066,8 +2066,8 @@ void oneTimeData(void) {
 		strDATA[6] = (afterChargeData.avarage_Speed >> 8);
 //	strDATA[7] = (afterChargeData.avarage_Speed >> 16);
 //	strDATA[6] = (afterChargeData.avarage_Speed >> 24);
-//		Transmit_strDATA
-//		;
+		Transmit_strDATA
+		;
 	}
 
 	// After Charge Economy
@@ -2078,8 +2078,8 @@ void oneTimeData(void) {
 		strDATA[6] = (afterChargeData.economy >> 8);
 //	strDATA[7] = (afterChargeData.economy >> 16);
 //	strDATA[6] = (afterChargeData.economy >> 24);
-//		Transmit_strDATA
-//		;
+		Transmit_strDATA
+		;
 	}
 
 	// After charge Power
@@ -2090,8 +2090,8 @@ void oneTimeData(void) {
 		strDATA[6] = (afterChargeData.power >> 8);
 //	strDATA[7] = (afterChargeData.power >> 16);
 //	strDATA[6] = (afterChargeData.power >> 24);
-//		Transmit_strDATA
-//		;
+		Transmit_strDATA
+		;
 	}
 
 
@@ -2110,15 +2110,15 @@ void oneTimeData(void) {
 		;
 	}
 //Range
-//	if (oneTime_counter == 9) {
-//		oneTime_counter = 0;
-//		strDATA[4] = 0x11;
-//		strDATA[5] = 0x30;
-//		strDATA[7] = (distance.range);
-//		strDATA[6] = 0;
-//		Transmit_strDATA
-//		;
-//	}
+	if (oneTime_counter == 9) {
+		oneTime_counter = 0;
+		strDATA[4] = 0x11;
+		strDATA[5] = 0x30;
+		strDATA[7] = (distance.range);
+		strDATA[6] = 0;
+		Transmit_strDATA
+		;
+	}
 	//Battery Data
 	//if (oneTime_counter == 10) {
 
@@ -2136,8 +2136,8 @@ void oneTimeData(void) {
 			strDATA[4] = 0x12;
 			strDATA[5] = 0x10;
 		} else {
-			strDATA[4] = 0x12;
-			strDATA[5] = 0x10;
+			strDATA[4] = 0x11;
+			strDATA[5] = 0x64;
 		}
 		strDATA[7] = (pack_voltage & 0xFF);
 		strDATA[6] = (pack_voltage >> 8);

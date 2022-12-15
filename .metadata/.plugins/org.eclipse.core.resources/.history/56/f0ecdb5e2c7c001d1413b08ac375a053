@@ -71,7 +71,7 @@ void EVCU_getData_read_41(uint8_t *canRX) {
 		//			chargingcomp = (canRX[4] & 0x1);
 		distance.ODO = ((canRX[4] & 0xFF) | (canRX[3] << 8) | (canRX[2] << 16)
 				| (canRX[1] << 24)); //ODO
-		distance.range = 10 *canRX[5];
+		distance.range = canRX[5];
 	}
 
 	if (canRX[0] == 2) {

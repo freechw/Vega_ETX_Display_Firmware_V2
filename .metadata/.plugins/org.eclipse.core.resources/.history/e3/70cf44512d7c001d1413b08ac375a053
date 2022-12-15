@@ -128,7 +128,6 @@ void driveState(void) {
 		//_oneTimeData = true;
 		_gearChanged = true;
 		_modeSelection = 1;
-		modeIcon = true;
 		//_realTimeData = true;
 		//////////////////////
 		if (err_or_not != 0) {
@@ -166,7 +165,7 @@ void driveState(void) {
 	}
 
 	//fillandTransmitCommon();
-	navigation();
+	//navigation();
 	//_realTimeData = true;
 //	if (dataCounter>2) {
 //		_oneTimeData = true;
