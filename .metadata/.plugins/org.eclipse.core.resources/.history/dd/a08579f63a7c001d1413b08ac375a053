@@ -148,7 +148,7 @@ void setInputs() {
 	//	5 - Forward
 	//	6 - Backward
 	//	7 - Mode
-	if (gpio.buttonInputs.bit.in7) //pageUp
+	if (gpio.buttonInputs.bit.in5) //pageUp
 	{
 		buttonCounterForward++;
 		if (buttonCounterForward < 2) {
@@ -161,7 +161,7 @@ void setInputs() {
 		buttonCounterForward = 0;
 	}
 
-	if (gpio.buttonInputs.bit.in5) //pageDown
+	if (gpio.buttonInputs.bit.in6) //pageDown
 	{
 		buttonCounterBackward++;
 		if (buttonCounterBackward < 2) {
@@ -174,7 +174,7 @@ void setInputs() {
 		buttonCounterBackward = 0;
 	}
 
-	if (gpio.buttonInputs.bit.in8) //back
+	if (gpio.buttonInputs.bit.in4) //back
 	{
 		buttonCounterBack++;
 		if (buttonCounterBack < 2) {
@@ -189,7 +189,7 @@ void setInputs() {
 		buttonCounterBack = 0;
 	}
 
-	if (gpio.buttonInputs.bit.in4) //mode //After fixing the okay button change mode to okay
+	if (gpio.buttonInputs.bit.in7) //mode //After fixing the okay button change mode to okay
 	{
 		buttonCounterMode++;
 		if (buttonCounterMode<2) {
@@ -206,7 +206,7 @@ void setInputs() {
 		buttonCounterMode = 0;
 	}
 
-	if (gpio.buttonInputs.bit.in6 == 1) //okay
+	if (gpio.buttonInputs.bit.in3 == 1) //okay
 	{
 		buttonCounterOkay++;
 		if (buttonCounterOkay<2) {
@@ -240,7 +240,7 @@ void setInputs() {
 }
 
 void buttonOkay(void) {
-	if (gpio.buttonInputs.bit.in6 == 1) {
+	if (gpio.buttonInputs.bit.in3 == 1) {
 		buttonCounterLongPress++;
 	} else {
 		buttonCounterLongPress = 0;

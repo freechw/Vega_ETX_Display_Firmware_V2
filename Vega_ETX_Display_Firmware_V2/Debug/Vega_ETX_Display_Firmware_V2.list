@@ -2086,10 +2086,10 @@ void setInputs() {
 	//	5 - Forward
 	//	6 - Backward
 	//	7 - Mode
-	if (gpio.buttonInputs.bit.in5) //pageUp
+	if (gpio.buttonInputs.bit.in7) //pageUp
  80010ac:	4b45      	ldr	r3, [pc, #276]	; (80011c4 <setInputs+0x11c>)
  80010ae:	781b      	ldrb	r3, [r3, #0]
- 80010b0:	f003 0310 	and.w	r3, r3, #16
+ 80010b0:	f003 0340 	and.w	r3, r3, #64	; 0x40
  80010b4:	b2db      	uxtb	r3, r3
  80010b6:	2b00      	cmp	r3, #0
  80010b8:	d011      	beq.n	80010de <setInputs+0x36>
@@ -2126,10 +2126,10 @@ void setInputs() {
  80010e2:	701a      	strb	r2, [r3, #0]
 	}
 
-	if (gpio.buttonInputs.bit.in6) //pageDown
+	if (gpio.buttonInputs.bit.in5) //pageDown
  80010e4:	4b37      	ldr	r3, [pc, #220]	; (80011c4 <setInputs+0x11c>)
  80010e6:	781b      	ldrb	r3, [r3, #0]
- 80010e8:	f003 0320 	and.w	r3, r3, #32
+ 80010e8:	f003 0310 	and.w	r3, r3, #16
  80010ec:	b2db      	uxtb	r3, r3
  80010ee:	2b00      	cmp	r3, #0
  80010f0:	d011      	beq.n	8001116 <setInputs+0x6e>
@@ -2166,10 +2166,10 @@ void setInputs() {
  800111a:	701a      	strb	r2, [r3, #0]
 	}
 
-	if (gpio.buttonInputs.bit.in4) //back
+	if (gpio.buttonInputs.bit.in8) //back
  800111c:	4b29      	ldr	r3, [pc, #164]	; (80011c4 <setInputs+0x11c>)
  800111e:	781b      	ldrb	r3, [r3, #0]
- 8001120:	f003 0308 	and.w	r3, r3, #8
+ 8001120:	f023 037f 	bic.w	r3, r3, #127	; 0x7f
  8001124:	b2db      	uxtb	r3, r3
  8001126:	2b00      	cmp	r3, #0
  8001128:	d011      	beq.n	800114e <setInputs+0xa6>
@@ -2208,10 +2208,10 @@ void setInputs() {
  8001152:	701a      	strb	r2, [r3, #0]
 	}
 
-	if (gpio.buttonInputs.bit.in7) //mode //After fixing the okay button change mode to okay
+	if (gpio.buttonInputs.bit.in4) //mode //After fixing the okay button change mode to okay
  8001154:	4b1b      	ldr	r3, [pc, #108]	; (80011c4 <setInputs+0x11c>)
  8001156:	781b      	ldrb	r3, [r3, #0]
- 8001158:	f003 0340 	and.w	r3, r3, #64	; 0x40
+ 8001158:	f003 0308 	and.w	r3, r3, #8
  800115c:	b2db      	uxtb	r3, r3
  800115e:	2b00      	cmp	r3, #0
  8001160:	d00d      	beq.n	800117e <setInputs+0xd6>
@@ -2244,10 +2244,10 @@ void setInputs() {
  8001182:	701a      	strb	r2, [r3, #0]
 	}
 
-	if (gpio.buttonInputs.bit.in3 == 1) //okay
+	if (gpio.buttonInputs.bit.in6 == 1) //okay
  8001184:	4b0f      	ldr	r3, [pc, #60]	; (80011c4 <setInputs+0x11c>)
  8001186:	781b      	ldrb	r3, [r3, #0]
- 8001188:	f003 0304 	and.w	r3, r3, #4
+ 8001188:	f003 0320 	and.w	r3, r3, #32
  800118c:	b2db      	uxtb	r3, r3
  800118e:	2b00      	cmp	r3, #0
  8001190:	d011      	beq.n	80011b6 <setInputs+0x10e>
@@ -2307,10 +2307,10 @@ void setInputs() {
 void buttonOkay(void) {
  80011f0:	b480      	push	{r7}
  80011f2:	af00      	add	r7, sp, #0
-	if (gpio.buttonInputs.bit.in3 == 1) {
+	if (gpio.buttonInputs.bit.in6 == 1) {
  80011f4:	4b13      	ldr	r3, [pc, #76]	; (8001244 <buttonOkay+0x54>)
  80011f6:	781b      	ldrb	r3, [r3, #0]
- 80011f8:	f003 0304 	and.w	r3, r3, #4
+ 80011f8:	f003 0320 	and.w	r3, r3, #32
  80011fc:	b2db      	uxtb	r3, r3
  80011fe:	2b00      	cmp	r3, #0
  8001200:	d006      	beq.n	8001210 <buttonOkay+0x20>
