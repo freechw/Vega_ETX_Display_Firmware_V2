@@ -26,6 +26,8 @@ extern void realTimeData(void);
 extern void speedUpdate(void);
 extern void startingUp(void);
 extern void gearUpdate(void);
+extern void batteryBar(void);
+extern void powerMeter(void);
 
 extern void chargeState(void);
 extern void driveState(void);

@@ -155,13 +155,13 @@ extern bool _System_Check_All_Icon_Page;
 extern bool _testPage;
 extern bool _setPoup;
 
-//extern bool _After_Charge_Page;
-//extern bool _Vehicle_Settings_Page;
-//extern bool _Trip_Summary_Page;
-//extern bool _Vehicle_Info_Page;
-//extern bool _Battery_Info_Page;
-//extern bool _Motor_Info_Page;
-//extern bool _Inverter_Info_Page;
+extern bool _After_Charge_Page;
+extern bool _Vehicle_Settings_Page;
+extern bool _Trip_Summary_Page;
+extern bool _Vehicle_Info_Page;
+extern bool _Battery_Info_Page;
+extern bool _Motor_Info_Page;
+extern bool _Inverter_Info_Page;
 extern bool _Charging_Page;
 extern bool _ChargeComplete_Page;
 extern bool _Charge_Error_Page;
@@ -172,7 +172,8 @@ extern uint8_t subMenuCounter;
 extern bool inSystemSubMenu;
 
 extern uint8_t realTime_counter;
-extern uint8_t oneTime_counter;
+extern uint8_t priorityLevel1_counter;
+extern uint8_t priorityLevel2_counter;
 extern uint8_t _transmit_Function;
 
 extern uint8_t popUpCounter;

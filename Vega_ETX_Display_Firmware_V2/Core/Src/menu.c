@@ -9,9 +9,7 @@ void navigation(void) {
 		_navigation = false;
 	}
 
-	if (currentStateSM == driving_state) {
-		_testPage = true;
-	}
+
 
 	switch (currentPage) {
 	case front:
@@ -19,6 +17,7 @@ void navigation(void) {
 		if (currentStateSM == driving_state) {
 			_realTimeData = true;
 			_oneTimeData = true;
+			//_testPage = true;
 		}
 		if (currentPage != previousPage) {
 			previousPage = front;
@@ -35,6 +34,7 @@ void navigation(void) {
 		}
 		break;
 	case trip:
+		_Trip_Summary_Page = true;
 		trip_mainPage();
 		if (currentStateSM == driving_state) {
 			_realTimeData = true;
@@ -54,6 +54,7 @@ void navigation(void) {
 		}
 		break;
 	case after_charge:
+		_After_Charge_Page = true;
 		after_charge_mainPage();
 		if (currentStateSM == driving_state) {
 			_realTimeData = true;
@@ -73,6 +74,9 @@ void navigation(void) {
 		}
 		break;
 	case info:
+		_Battery_Info_Page = true;
+		_Motor_Info_Page = false;
+		_Inverter_Info_Page = false;
 		info_mainPage();
 		if (currentStateSM == driving_state) {
 			_realTimeData = true;
@@ -240,6 +244,10 @@ void info_mainPage(void) {
 		if (forward == true) {
 
 			if (currentMenu == infoinv && previousMenuBack == infomot) {
+				_Battery_Info_Page = true;
+				_Motor_Info_Page = false;
+				_Inverter_Info_Page = false;
+
 				currentMenu = infobat;
 				previousMenuBack = infoinv;
 				previousMenuForward = infomot;
@@ -248,6 +256,10 @@ void info_mainPage(void) {
 			}
 
 			if (currentMenu == infobat && previousMenuBack == infoinv) {
+				_Battery_Info_Page = false;
+				_Motor_Info_Page = true;
+				_Inverter_Info_Page = false;
+
 				currentMenu = infomot;
 				previousMenuBack = infobat;
 				previousMenuForward = infoinv;
@@ -256,6 +268,10 @@ void info_mainPage(void) {
 			}
 
 			if (currentMenu == infomot && previousMenuBack == infobat) {
+				_Battery_Info_Page = false;
+				_Motor_Info_Page = false;
+				_Inverter_Info_Page = true;
+
 				currentMenu = infoinv;
 				previousMenuBack = infomot;
 				previousMenuForward = infobat;
@@ -268,6 +284,10 @@ void info_mainPage(void) {
 		if (backward == true) {
 			//currentMenu--;
 			if (currentMenu == infobat && previousMenuForward == infomot) {
+				_Battery_Info_Page = false;
+				_Motor_Info_Page = false;
+				_Inverter_Info_Page = true;
+
 				currentMenu = infoinv;
 				previousMenuForward = infobat;
 				previousMenuBack = infomot;
@@ -276,6 +296,10 @@ void info_mainPage(void) {
 			}
 
 			if (currentMenu == infoinv && previousMenuForward == infobat) {
+				_Battery_Info_Page = false;
+				_Motor_Info_Page = true;
+				_Inverter_Info_Page = false;
+
 				currentMenu = infomot;
 				previousMenuForward = infoinv;
 				previousMenuBack = infobat;
@@ -284,16 +308,23 @@ void info_mainPage(void) {
 			}
 
 			if (currentMenu == infomot && previousMenuForward == infoinv) {
+				_Battery_Info_Page = true;
+				_Motor_Info_Page = false;
+				_Inverter_Info_Page = false;
+
 				currentMenu = infobat;
 				previousMenuForward = infomot;
 				previousMenuBack = infoinv;
 				backward = false;
 				return;
 			}
-
 		}
 
 		if (back == true) {
+			_Battery_Info_Page = true;
+			_Motor_Info_Page = false;
+			_Inverter_Info_Page = false;
+
 			page_entry = true;
 			inInfoBat = false;
 			back = false;
@@ -474,6 +505,7 @@ void settings_mainPage(void) {
 		_menupage = 0;
 		_trasmitGlobal = Disengage_Page;
 		backward = false;
+		return;
 	}
 
 	if (backward == true) {
@@ -482,6 +514,7 @@ void settings_mainPage(void) {
 		forward = false;
 		_menupage = 0;
 		backward = false;
+		return;
 	}
 
 }
@@ -493,6 +526,7 @@ void vehicle_page(void) {
 			inVehicleMenu = true;
 			inTheMenu = true;
 			okay = false;
+			return;
 		}
 	} else {
 		if (subMenuCounter>2) {
@@ -523,6 +557,7 @@ void system_page(void) {
 			currentSubMenu = 0;
 			previousSubMenuBack = 1;
 			previousSubMenuForward = 1;
+			return;
 		}
 	} else {
 		if (subMenuCounter>2) {
@@ -578,6 +613,7 @@ void system_page(void) {
 			if (okay) {
 				inTimeSettings = true;
 				okay = false;
+				return;
 			}
 
 		}

@@ -45,15 +45,6 @@ void startUpState(void) {
 		}
 	}
 
-	//	fillandTransmit();
-	if (dataCounter > 3) {
-		_oneTimeData = true;
-		_realTimeData = true;
-		dataCounter = 0;
-	}
-
-	//	fillandTransmitCommon();
-
 
 	if (err_error != 0) {
 		if ((err_or_not == 0) && (err_fullerror != err_previous)) {
@@ -90,6 +81,12 @@ void startUpState(void) {
 		//currentMode = mode_evcu;
 		currentPage = front;
 
+		if (dataCounter > 2) {
+			_realTimeData = true;
+			dataCounter = 0;
+		}
+		_oneTimeData = true;
+
 		inInfoBat = false;
 		inSettings = false;
 
@@ -98,8 +95,6 @@ void startUpState(void) {
 	}
 
 	//StartingUp Transmit flag
-	//Fill and Transmit
-	//startingUp();
 	_startingUp = true;
 
 	//All clear transmit function called through flag
@@ -125,12 +120,9 @@ void driveState(void) {
 		dataCounter = 0;
 		_drivePageSet = front;
 		///////////////////////
-		//_oneTimeData = true;
 		_gearChanged = true;
 		_modeSelection = 1;
 		modeIcon = true;
-		//_realTimeData = true;
-		//////////////////////
 		if (err_or_not != 0) {
 			_errorSetIcon = false;
 		}
@@ -165,7 +157,6 @@ void driveState(void) {
 		previousState = currentstate;
 	}
 
-	//fillandTransmitCommon();
 	navigation();
 	//_realTimeData = true;
 //	if (dataCounter>2) {

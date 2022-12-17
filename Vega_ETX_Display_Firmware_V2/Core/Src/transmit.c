@@ -836,23 +836,23 @@ void fireData(void) {
 
 void transmit() {
 	_transmit_Function++;
-	if (_transmit_Function == 1) {
+	//if (_transmit_Function == 1) {
 		if (_realTimeData) {
 			realTimeData();
 			_realTimeData = false;
-			//return;
+			return;
 		}
-	}
+	//}
 
-	if (_transmit_Function == 2) {
+	if (_transmit_Function == 1) {
 		if (_oneTimeData) {
-			oneTimeData();
+			//oneTimeData();
 			_oneTimeData = false;
 			//return;
 		}
 	}
 
-	if (_transmit_Function == 3) {
+	if (_transmit_Function == 2) {
 		if (_startingUp) {
 			_startingUp = false;
 			startingUp();
@@ -860,7 +860,7 @@ void transmit() {
 		}
 	}
 
-	if (_transmit_Function == 4) {
+	if (_transmit_Function == 3) {
 		if (_gearChanged) {
 			_gearChanged = false;
 			gearUpdate();
@@ -868,7 +868,7 @@ void transmit() {
 		}
 	}
 
-	if (_transmit_Function == 5) {
+	if (_transmit_Function == 4) {
 		//_transmit_Function = 0;
 		if (_modeSelection == 1 && currentstate == 2) {
 			modeSelection(currentMode);
@@ -882,7 +882,7 @@ void transmit() {
 		}
 	}
 
-	if (_transmit_Function == 6) {
+	if (_transmit_Function == 5) {
 		if (currentStateSM == driving_state && _setDriverPage == true && !_setPoup) {
 			_setDriverPage = false;
 			drivePageSetter(_drivePageSet);
@@ -891,7 +891,7 @@ void transmit() {
 
 	}
 
-	if (_transmit_Function == 9) {
+	if (_transmit_Function == 6) {
 		_transmit_Function = 0;
 		popUpCounter++;
 		if (popUpCounter > 3) {
@@ -900,11 +900,6 @@ void transmit() {
 			if (inPopup) {
 				_setPoup = true;
 			}
-
-		}
-		else
-		{
-
 		}
 		//_setPoup and Popup Number should be set from else where
 		if (_setPoup) {
@@ -945,7 +940,81 @@ void transmit() {
 	}
 }
 
+void startingUp(void) {
+
+	if (error_check) {
+		if (err_State_Navigation == true) {
+			SysError_Shutdown_Page;
+		}
+	}
+
+	if (entry == true) {
+		if (_navigation) {
+			if (_trasmitGlobal == MainMenuPages) {
+				drivePageSetter(_drivePageSet);
+				return;
+			}
+			_trasmitGlobal = MainMenuPages;
+			Disengage_KillSwitch_Page;
+			_navigation = false;
+			return;
+		}
+		Press_Brake_Page;
+	}
+
+	if (start == 1) {
+		entry = false;
+		//If start is set by EVCU, Then run this Gimmick Part//
+		if (checklit == true) {
+			//bootAnimation();
+			checklit = false;
+		}
+
+		if (readytodrive == 1) {
+			ReadytoDrive_ON_Icon;
+			//If ready to drive is ok, Then run this Gimmick Part//
+			if (startup == true) {
+				ReadytoDrive_Page;
+				_testPage = true;
+				startup = false;
+			}
+		} else {
+			System_Check_Okay_No_Icon_Page;
+		}
+
+		/////////////////////////////////////////////////////////
+		if (chargerconn == 1) {
+			Charge_Connection_Error_Popup_ON;
+		} else {
+			Charge_Connection_Error_Popup_OFF;
+		}
+		/////////////////////////////////////////////////////////
+
+	} else { //if Start == 0//
+//		if (mode) {
+//			startupModeChange(); //Show Tuk Page as Mode Change Unavailable
+//			//Final: Mode Change unavailable before ignition
+//			mode = false;
+//		}
+		if (warning == 1) {
+			Press_Brake_Page;
+		}
+		if (warning == 2) {
+			Mild_Error_ON_Icon;
+		}
+		if (warning == 3) {
+			Gear_Error_Page;
+
+		}
+	}
+
+}
+
+
+
+
 uint8_t drivePageTransmit = 0;
+
 
 void drivePageSetter(uitype_t page) {
 	drivePageTransmit++;
@@ -1066,6 +1135,351 @@ void drivePageSetter(uitype_t page) {
 	}
 
 }
+
+
+void realTimeData(void) { //Realtime updatable data sending
+// Priority Level 1
+	priorityLevel1_counter++;
+//Speed
+	if (priorityLevel1_counter == 1) {
+	strDATA[4] = 0x11; //
+	strDATA[5] = 0x00; //
+	strDATA[7] = (test_speed & 0xFF);
+	strDATA[6] = (test_speed >> 8);
+	Transmit_strDATA;
+	}
+
+//RPM
+//	if (priorityLevel1_counter == 2) {
+//	strDATA[4] = 0x12;
+//	strDATA[5] = 0x50;
+//	strDATA[7] = (rpm_meter & 0xFF);
+//	strDATA[6] = (rpm_meter >> 8);
+//	Transmit_strDATA;
+
+//Power Bar
+	if (priorityLevel1_counter == 2) {
+		powerMeter();
+	}
+//DC Current
+	if (priorityLevel1_counter == 3) {
+		priorityLevel1_counter = 0;
+		realTime_counter++;
+		if (realTime_counter == 1) {
+			if (currentstate == 4) {
+				strDATA[4] = 0x12;
+				strDATA[5] = 0x80;
+			} else {
+				strDATA[4] = 0x12;
+				strDATA[5] = 0x30;
+			}
+			strDATA[6] = (dc_current >> 8);
+			strDATA[7] = (dc_current & 0xFF);
+			Transmit_strDATA;
+		}
+
+//Lowest Cell Voltage
+		if (realTime_counter == 2) {
+			strDATA[4] = 0x12;
+			strDATA[5] = 0x20;
+			strDATA[7] = (lcell_voltage & 0xFF);
+			strDATA[6] = (lcell_voltage >> 8);
+			Transmit_strDATA;
+		}
+
+////Trip
+		if (realTime_counter == 3) {
+			strDATA2[4] = 0x11;
+			strDATA2[5] = 0x40;
+			strDATA2[9] = (distance.trip & 0xFF);
+			strDATA2[8] = (distance.trip >> 8);
+			strDATA2[7] = (distance.trip >> 16);
+			strDATA2[6] = (distance.trip >> 24);
+			Transmit_strDATA2;
+		}
+//Power
+		if (realTime_counter == 4) {
+			realTime_counter = 0;
+			if (currentstate == 4) {
+				strDATA[4] = 0x12;
+				strDATA[5] = 0x60;
+			} else {
+				strDATA[4] = 0x11;
+				strDATA[5] = 0x70;
+			}
+			strDATA[7] = (power & 0xFF);
+			strDATA[6] = (power >> 8);
+			Transmit_strDATA;
+		}
+	}
+}
+
+void oneTimeData(void) {
+
+// Priority Level 2
+	priorityLevel2_counter++;
+	if (readytodrive == 0) {
+		DriveUnit_OFF_Icon;
+	} else {
+		DriveUnit_ON_Icon;
+	}
+
+//ODO
+	if (priorityLevel2_counter == 1) {
+		if (realTime_counter == 2) {
+			strDATA2[4] = 0x11;
+			strDATA2[5] = 0x20;
+			strDATA2[9] = (distance.ODO & 0xFF);
+			strDATA2[8] = (distance.ODO >> 8);
+			strDATA2[7] = (distance.ODO >> 16);
+			strDATA2[6] = (distance.ODO >> 24);
+			Transmit_strDATA2;
+		}
+	}
+
+//Pack voltage
+	if (priorityLevel2_counter == 2) {
+		if (currentstate == 4) {
+			strDATA[4] = 0x12;
+			strDATA[5] = 0x10;
+		} else {
+			strDATA[4] = 0x12;
+			strDATA[5] = 0x10;
+		}
+		strDATA[7] = (pack_voltage & 0xFF);
+		strDATA[6] = (pack_voltage >> 8);
+		Transmit_strDATA;
+	}
+
+//Highest Cell Voltage
+	if (priorityLevel2_counter == 3) {
+		strDATA[4] = 0x12;
+		strDATA[5] = 0x70;
+		strDATA[7] = (hcell_voltage & 0xFF);
+		strDATA[6] = (hcell_voltage >> 8);
+		Transmit_strDATA;
+	}
+
+//Estimated Range
+	if (priorityLevel2_counter == 4) {
+		strDATA[4] = 0x11;
+		strDATA[5] = 0x30;
+		//strDATA[7] = uint32_t(distance.range);
+		//strDATA[6] = 0;
+		strDATA[7] = (distance.range & 0xFF);
+		strDATA[6] = (distance.range >> 8);
+		//strDATA[7] = (distance.range >> 16);
+		//strDATA[6] = (distance.range >> 24);
+		Transmit_strDATA;
+	}
+
+//Range
+	if (priorityLevel2_counter == 5) {
+		strDATA[4] = 0x11;
+		strDATA[5] = 0x30;
+		strDATA[7] = (distance.range);
+		strDATA[6] = 0;
+		//Transmit_strDATA;
+	}
+//SOC - Battery Percentage
+	if (priorityLevel2_counter == 6) {
+		strDATA[4] = 0x11;
+		strDATA[5] = 0x10;
+		strDATA[7] = (soc_value);
+		strDATA[6] = 0;
+		Transmit_strDATA;
+
+	}
+	if (priorityLevel2_counter == 7) {
+	batteryBar();
+	}
+	//AVG SPEED
+	if (priorityLevel2_counter == 8) {
+		priorityLevel2_counter = 0;
+		strDATA[4] = 0x11;
+		strDATA[5] = 0x52;
+		strDATA[7] = (distance.tripAvgSpeed & 0xFF);
+		strDATA[6] = (distance.tripAvgSpeed >> 8);
+		Transmit_strDATA;
+	}
+
+
+
+// Priority Level 3
+
+	if (_After_Charge_Page) {
+		_After_Charge_Page = false;
+		//After charge trip
+		strDATA[4] = 0x11;
+		strDATA[5] = 0x62;
+		strDATA[7] = (afterChargeData.trip & 0xFF);
+		strDATA[6] = (afterChargeData.trip >> 8);
+		//	strDATA[7] = (afterChargeData.trip >> 16);
+		//	strDATA[6] = (afterChargeData.trip >> 24);
+		Transmit_strDATA;
+
+		// After charge average speed
+		strDATA[4] = 0x11;
+		strDATA[5] = 0x58;
+		strDATA[7] = (afterChargeData.avarage_Speed & 0xFF);
+		strDATA[6] = (afterChargeData.avarage_Speed >> 8);
+		//	strDATA[7] = (afterChargeData.avarage_Speed >> 16);
+		//	strDATA[6] = (afterChargeData.avarage_Speed >> 24);
+		Transmit_strDATA;
+
+		// After Charge Economy
+		strDATA[4] = 0x11;
+		strDATA[5] = 0x56;
+		strDATA[7] = (afterChargeData.economy & 0xFF);
+		strDATA[6] = (afterChargeData.economy >> 8);
+		//	strDATA[7] = (afterChargeData.economy >> 16);
+		//	strDATA[6] = (afterChargeData.economy >> 24);
+		Transmit_strDATA;
+
+		// After charge Power
+		strDATA[4] = 0x11;
+		strDATA[5] = 0x60;
+		strDATA[7] = (afterChargeData.power & 0xFF);
+		strDATA[6] = (afterChargeData.power >> 8);
+		//	strDATA[7] = (afterChargeData.power >> 16);
+		//	strDATA[6] = (afterChargeData.power >> 24);
+		Transmit_strDATA;
+	}
+
+	if (_Trip_Summary_Page) {
+		_Trip_Summary_Page = false;
+		//Trip Economy -------VP
+		strDATA[4] = 0x11;
+		strDATA[5] = 0x50;
+		strDATA[7] = (distance.trip_Economy & 0xFF);
+		strDATA[6] = (distance.trip_Economy >> 8);
+		//	strDATA[7] = (distance.trip_Economy >> 16);
+		//	strDATA[6] = (distance.trip_Economy >> 24);
+		Transmit_strDATA;
+
+		//Trip Power----------VP
+
+		strDATA[4] = 0x11;
+		strDATA[5] = 0x54;
+		strDATA[7] = (distance.trip_Power & 0xFF);
+		strDATA[6] = (distance.trip_Power >> 8);
+		//	strDATA[7] = (distance.trip_Power >> 16);
+		//	strDATA[6] = (distance.trip_Power >> 24);
+		Transmit_strDATA;
+
+	}
+
+	if (_Battery_Info_Page) {
+		//SOH Battery Health
+		strDATA[4] = 0x11;
+		strDATA[5] = 0x66;
+		strDATA[7] = (soh_value);
+		strDATA[6] = 0;
+		Transmit_strDATA;
+
+	}
+
+	if (_Motor_Info_Page) {
+
+	}
+
+	if (_Inverter_Info_Page) {
+
+	}
+
+
+
+
+
+	//Battery Data
+	//if (oneTime_counter == 10) {
+
+//	switch (transferCount) {
+//	case 1: //SOC - Battery Percentage
+//		strDATA[4] = 0x11;
+//		strDATA[5] = 0x10;
+//		strDATA[7] = (soc_value);
+//		strDATA[6] = 0;
+//		Transmit_strDATA;
+//		break;
+//	case 2:  //Pack voltage
+//		if (currentstate == 4) {
+//			strDATA[4] = 0x12;
+//			strDATA[5] = 0x10;
+//		} else {
+//			strDATA[4] = 0x12;
+//			strDATA[5] = 0x10;
+//		}
+//		strDATA[7] = (pack_voltage & 0xFF);
+//		strDATA[6] = (pack_voltage >> 8);
+//		Transmit_strDATA;
+//		break;
+//	case 3:  //Lowest Cell Voltage
+//		strDATA[4] = 0x12;
+//		strDATA[5] = 0x20;
+//		strDATA[7] = (lcell_voltage & 0xFF);
+//		strDATA[6] = (lcell_voltage >> 8);
+//		Transmit_strDATA;
+//		break;
+//	case 4:  //DC Current
+//		if (currentstate == 4) {
+//			strDATA[4] = 0x12;
+//			strDATA[5] = 0x80;
+//		} else {
+//			strDATA[4] = 0x12;
+//			strDATA[5] = 0x30;
+//		}
+//		strDATA[6] = (dc_current >> 8);
+//		strDATA[7] = (dc_current & 0xFF);
+//		Transmit_strDATA;
+//		break;
+//	case 5:  //Pack Temperature
+//		strDATA[4] = 0x12;
+//		strDATA[5] = 0x40;
+//		strDATA[6] = (pack_temp >> 8);
+//		strDATA[7] = (pack_temp & 0xFF);
+//		Transmit_strDATA;
+//		strDATA[4] = 0x11;
+//		strDATA[5] = 0x68;
+//		Transmit_strDATA;
+//		break;
+//	case 6:  //Highest Cell Voltage
+//		strDATA[4] = 0x12;
+//		strDATA[5] = 0x70;
+//		strDATA[7] = (hcell_voltage & 0xFF);
+//		strDATA[6] = (hcell_voltage >> 8);
+//		Transmit_strDATA;
+//		break;
+//	case 7:  //SOH Battery Health
+//		strDATA[4] = 0x11;
+//		strDATA[5] = 0x66;
+//		strDATA[7] = (soh_value);
+//		strDATA[6] = 0;
+//		Transmit_strDATA;
+//		break;
+//	case 8:  //Estimated Range
+//		strDATA[4] = 0x11;
+//		strDATA[5] = 0x30;
+//		//strDATA[7] = uint32_t(distance.range);
+//		//strDATA[6] = 0;
+//		strDATA[7] = (distance.range & 0xFF);
+//		strDATA[6] = (distance.range >> 8);
+//		//strDATA[7] = (distance.range >> 16);
+//		//strDATA[6] = (distance.range >> 24);
+//		Transmit_strDATA;
+//		break;
+//	default:
+//		break;
+//	}
+
+//	transferCount++;
+//	if (transferCount >= 9) {
+//		transferCount = 1;
+//	}
+
+}
+
+
 
 void vehicleInfo_UI(uitype_t InfoUI) {
 	switch (InfoUI) {
@@ -1258,32 +1672,31 @@ void errorCode(void) {
 	strDATA[5] = 0x94;
 	strDATA[6] = 0;
 	strDATA[7] = (err_error);
-	Transmit_strDATA
-	;
+	Transmit_strDATA;
+
 	strDATA[4] = 0x11; //System Error Critical
 	strDATA[5] = 0x97;
-	Transmit_strDATA
-	;
+	Transmit_strDATA;
+
 	strDATA[4] = 0x11; //System Error Mild
 	strDATA[5] = 0x95;
 	strDATA[6] = 0;
 	strDATA[7] = (err_device);
-	Transmit_strDATA
-	;
+	Transmit_strDATA;
+
 	strDATA[4] = 0x11; //System Error Critical
 	strDATA[5] = 0x98;
-	Transmit_strDATA
-	;
+	Transmit_strDATA;
+
 	strDATA[4] = 0x11; //System Error Mild
 	strDATA[5] = 0x96;
 	strDATA[6] = 0;
 	strDATA[7] = (err_crit_mild);
-	Transmit_strDATA
-	;
+	Transmit_strDATA;
+
 	strDATA[4] = 0x11; //System Error Critical
 	strDATA[5] = 0x99;
-	Transmit_strDATA
-	;
+	Transmit_strDATA;
 
 }
 
@@ -1428,339 +1841,10 @@ void sideMenuPopup(void) {
 
 	}
 }
-uint8_t delayCounter = 0;
 
-void startingUp(void) {
 
-//	if (accessory == 0) {
-//		modeSelection(currentMode);
-//	}
 
-	if (error_check) {
-		if (err_State_Navigation == true) {
-			SysError_Shutdown_Page;
-		}
-	}
-
-	if (entry == true) {
-		if (_navigation) {
-			if (_trasmitGlobal == MainMenuPages) {
-				drivePageSetter(_drivePageSet);
-				return;
-			}
-			_trasmitGlobal = MainMenuPages;
-			Disengage_KillSwitch_Page;
-			_navigation = false;
-			return;
-		}
-		Press_Brake_Page;
-	}
-
-	if (start == 1) {
-		entry = false;
-		//If start is set by EVCU, Then run this Gimmick Part//
-		if (checklit == true) {
-			//bootAnimation();
-			checklit = false;
-		}
-
-		if (readytodrive == 1) {
-			ReadytoDrive_ON_Icon;
-			//If ready to drive is ok, Then run this Gimmick Part//
-			if (startup == true) {
-				ReadytoDrive_Page;
-				_testPage = true;
-				startup = false;
-			}
-		} else {
-			System_Check_Okay_No_Icon_Page;
-		}
-
-		/////////////////////////////////////////////////////////
-		if (chargerconn == 1) {
-			Charge_Connection_Error_Popup_ON;
-		} else {
-			Charge_Connection_Error_Popup_OFF;
-		}
-		/////////////////////////////////////////////////////////
-
-	} else { //if Start == 0//
-//		if (mode) {
-//			startupModeChange(); //Show Tuk Page as Mode Change Unavailable
-//			//Final: Mode Change unavailable before ignition
-//			mode = false;
-//		}
-		if (warning == 1) {
-			Press_Brake_Page;
-		}
-		if (warning == 2) {
-			Mild_Error_ON_Icon;
-		}
-		if (warning == 3) {
-			Gear_Error_Page;
-
-		}
-	}
-
-}
-
-uint8_t powerBarTransmit = 0;
-
-void realTimeData(void) { //Realtime updatable data sending
-//Speed
-	realTime_counter++;
-	if (realTime_counter == 1) {
-		strDATA[4] = 0x11; //
-		strDATA[5] = 0x00; //
-		strDATA[7] = (test_speed & 0xFF);
-		strDATA[6] = (test_speed >> 8);
-//		Transmit_strDATA
-//		;
-		testFlag_2 = true;
-	}
-//ODO
-	if (realTime_counter == 2) {
-		strDATA2[4] = 0x11;
-		strDATA2[5] = 0x20;
-		strDATA2[9] = (distance.ODO & 0xFF);
-		strDATA2[8] = (distance.ODO >> 8);
-		strDATA2[7] = (distance.ODO >> 16);
-		strDATA2[6] = (distance.ODO >> 24);
-//		Transmit_strDATA2
-//		;
-	}
-////Trip
-	if (realTime_counter == 3) {
-		strDATA2[4] = 0x11;
-		strDATA2[5] = 0x40;
-		strDATA2[9] = (distance.trip & 0xFF);
-		strDATA2[8] = (distance.trip >> 8);
-		strDATA2[7] = (distance.trip >> 16);
-		strDATA2[6] = (distance.trip >> 24);
-//		Transmit_strDATA2
-//		;
-	}
-//Power Bar
-	powerBarTransmit++;
-	if (realTime_counter == 4) {
-
-//		if (rpm_meter >= 1) {
-//			if (powerBarTransmit == 9) {
-//				if (power_90 <= power) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, power5, sizeof(power5));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, power5, sizeof(power5),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//				powerBarTransmit = 0;
-//			}
-//			if (powerBarTransmit == 8) {
-//				if (power_80 <= power && power < power_90) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, power4, sizeof(power4));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, power4, sizeof(power4),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//			}
-//			if (powerBarTransmit == 7) {
-//				if (power_70 <= power && power < power_80) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, power3, sizeof(power3));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, power3, sizeof(power3),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 6) {
-//				if (power_60 <= power && power < power_70) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, power2, sizeof(power2));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, power2, sizeof(power2),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 5) {
-//				if (eco_50 <= power && power < power_60) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, power1, sizeof(power1));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, power1, sizeof(power1),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 4) {
-//				if (eco_40 <= power && power < eco_50) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, eco5, sizeof(eco5));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, eco5, sizeof(eco5),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 3) {
-//				if (eco_30 <= power && power < eco_40) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, eco4, sizeof(eco4));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, eco4, sizeof(eco4),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 2) {
-//				if (eco_20 <= power && power < eco_30) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, eco3, sizeof(eco3));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, eco3, sizeof(eco3),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 1) {
-//				if (eco_10 <= power && power < eco_20) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, eco2, sizeof(eco2));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, eco2, sizeof(eco2),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 0) {
-//				if (0 <= power && power < eco_10) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, eco1, sizeof(eco1));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, eco1, sizeof(eco1),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 10) {
-//				if (-1 >= power && power >= -50) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, charge1, sizeof(charge1));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, charge1, sizeof(charge1),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//
-//			}
-//			if (powerBarTransmit == 11) {
-//				if (-51 >= power && power >= -101) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, charge2, sizeof(charge2));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, charge2, sizeof(charge2),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//			}
-//			if (powerBarTransmit == 12) {
-//				if (-102 >= power && power >= -152) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, charge3, sizeof(charge3));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, charge3, sizeof(charge3),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//			}
-//			if (powerBarTransmit == 13) {
-//				if (-153 >= power && power >= -203) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, charge4, sizeof(charge4));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, charge4, sizeof(charge4),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//			}
-//			if (powerBarTransmit == 14) {
-//				if (-204 >= power) {
-//#ifdef DMA
-//					HAL_UART_Transmit_DMA(&huart3, charge5, sizeof(charge5));
-//#endif
-//#ifdef No_DMA
-//					HAL_UART_Transmit(&huart3, charge5, sizeof(charge5),
-//					HAL_MAX_DELAY);
-//#endif
-//				}
-//			}
-//
-//		}
-		realTime_counter = 0;
-	}
-//	if (rpm_meter == 0) {
-//#ifdef DMA
-//		HAL_UART_Transmit_DMA(&huart3, eco0, sizeof(eco0));
-//#endif
-//#ifdef No_DMA
-//		HAL_UART_Transmit(&huart3, eco0, sizeof(eco0), HAL_MAX_DELAY);
-//#endif
-//	}
-
-//Gear Position
-
-	//if (realTime_counter == 5) {
-//		if (currentstate == 1) {
-////			while(delayCounter < 1000)
-////			{
-////				delayCounter++;
-////			}
-//			//transmitPageHandler(NeutralON, 8);
-//			Gear_Neutral_Icon;
-//
-//		}
-//
-//		if (currentstate == 2) {
-//			//transmitPageHandler(DriveON, 8);
-//			Gear_Drive_Icon;
-//		}
-//
-//		if (currentstate == 3) {
-//			//transmitPageHandler(ReverseON, 8);
-//			Gear_Reverse_Icon;
-//		}
-//		if (_gearCleared) {
-//			Gear_Clear_Icon;
-//			_gearCleared = false;
-//		}
-
-	///}
+void batteryBar(void) {
 
 //Battery Bar
 	if (soc_value <= 5) {
@@ -1990,231 +2074,174 @@ void realTimeData(void) { //Realtime updatable data sending
 		HAL_MAX_DELAY);
 #endif
 	}
+}
+
+void powerMeter(void) {
+
+	if (rpm_meter == 0) {
+#ifdef DMA
+			HAL_UART_Transmit_DMA(&huart3, eco0, sizeof(eco0));
+	#endif
+#ifdef No_DMA
+		HAL_UART_Transmit(&huart3, eco0, sizeof(eco0), HAL_MAX_DELAY);
+#endif
+	}
+
+	if (rpm_meter >= 1) {
+
+		if (power_90 <= power) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, power5, sizeof(power5));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, power5, sizeof(power5),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (power_80 <= power && power < power_90) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, power4, sizeof(power4));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, power4, sizeof(power4),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (power_70 <= power && power < power_80) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, power3, sizeof(power3));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, power3, sizeof(power3),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (power_60 <= power && power < power_70) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, power2, sizeof(power2));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, power2, sizeof(power2),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (eco_50 <= power && power < power_60) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, power1, sizeof(power1));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, power1, sizeof(power1),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (eco_40 <= power && power < eco_50) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, eco5, sizeof(eco5));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, eco5, sizeof(eco5),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (eco_30 <= power && power < eco_40) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, eco4, sizeof(eco4));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, eco4, sizeof(eco4),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (eco_20 <= power && power < eco_30) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, eco3, sizeof(eco3));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, eco3, sizeof(eco3),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (eco_10 <= power && power < eco_20) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, eco2, sizeof(eco2));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, eco2, sizeof(eco2),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (0 <= power && power < eco_10) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, eco1, sizeof(eco1));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, eco1, sizeof(eco1),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (-1 >= power && power >= -50) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, charge1, sizeof(charge1));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, charge1, sizeof(charge1),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (-51 >= power && power >= -101) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, charge2, sizeof(charge2));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, charge2, sizeof(charge2),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (-102 >= power && power >= -152) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, charge3, sizeof(charge3));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, charge3, sizeof(charge3),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (-153 >= power && power >= -203) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, charge4, sizeof(charge4));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, charge4, sizeof(charge4),
+			HAL_MAX_DELAY);
+#endif
+		}
+
+		if (-204 >= power) {
+#ifdef DMA
+				HAL_UART_Transmit_DMA(&huart3, charge5, sizeof(charge5));
+#endif
+#ifdef No_DMA
+			HAL_UART_Transmit(&huart3, charge5, sizeof(charge5),
+			HAL_MAX_DELAY);
+#endif
+		}
+	}
 
 }
 
-void oneTimeData(void) {
-
-	oneTime_counter++;
-
-	if (readytodrive == 0) {
-		DriveUnit_OFF_Icon;
-	} else {
-		DriveUnit_ON_Icon;
-	}
-//RPM
-	if (oneTime_counter == 0) {
-		strDATA[4] = 0x12;
-		strDATA[5] = 0x50;
-		strDATA[7] = (rpm_meter & 0xFF);
-		strDATA[6] = (rpm_meter >> 8);
-		//Transmit_strDATA
-		//;
-	}
-
-//AVG SPEED
-	if (oneTime_counter == 1) {
-		strDATA[4] = 0x11;
-		strDATA[5] = 0x52;
-		strDATA[7] = (distance.tripAvgSpeed & 0xFF);
-		strDATA[6] = (distance.tripAvgSpeed >> 8);
-//		Transmit_strDATA
-//		;
-	}
-
-	//Trip Economy -------VP
-	if (oneTime_counter == 2) {
-		strDATA[4] = 0x11;
-		strDATA[5] = 0x50;
-		strDATA[7] = (distance.trip_Economy & 0xFF);
-		strDATA[6] = (distance.trip_Economy >> 8);
-//	strDATA[7] = (distance.trip_Economy >> 16);
-//	strDATA[6] = (distance.trip_Economy >> 24);
-//		Transmit_strDATA
-//		;
-	}
-
-	//Trip Power----------VP
-	if (oneTime_counter == 3) {
-		strDATA[4] = 0x11;
-		strDATA[5] = 0x54;
-		strDATA[7] = (distance.trip_Power & 0xFF);
-		strDATA[6] = (distance.trip_Power >> 8);
-//	strDATA[7] = (distance.trip_Power >> 16);
-//	strDATA[6] = (distance.trip_Power >> 24);
-//		Transmit_strDATA
-//		;
-	}
-
-	//After charge trip
-	if (oneTime_counter == 4) {
-		strDATA[4] = 0x11;
-		strDATA[5] = 0x62;
-		strDATA[7] = (afterChargeData.trip & 0xFF);
-		strDATA[6] = (afterChargeData.trip >> 8);
-//	strDATA[7] = (afterChargeData.trip >> 16);
-//	strDATA[6] = (afterChargeData.trip >> 24);
-//		Transmit_strDATA
-//		;
-	}
-
-	// After charge average speed
-	if (oneTime_counter == 5) {
-		strDATA[4] = 0x11;
-		strDATA[5] = 0x58;
-		strDATA[7] = (afterChargeData.avarage_Speed & 0xFF);
-		strDATA[6] = (afterChargeData.avarage_Speed >> 8);
-//	strDATA[7] = (afterChargeData.avarage_Speed >> 16);
-//	strDATA[6] = (afterChargeData.avarage_Speed >> 24);
-//		Transmit_strDATA
-//		;
-	}
-
-	// After Charge Economy
-	if (oneTime_counter == 6) {
-		strDATA[4] = 0x11;
-		strDATA[5] = 0x56;
-		strDATA[7] = (afterChargeData.economy & 0xFF);
-		strDATA[6] = (afterChargeData.economy >> 8);
-//	strDATA[7] = (afterChargeData.economy >> 16);
-//	strDATA[6] = (afterChargeData.economy >> 24);
-//		Transmit_strDATA
-//		;
-	}
-
-	// After charge Power
-	if (oneTime_counter == 7) {
-		strDATA[4] = 0x11;
-		strDATA[5] = 0x60;
-		strDATA[7] = (afterChargeData.power & 0xFF);
-		strDATA[6] = (afterChargeData.power >> 8);
-//	strDATA[7] = (afterChargeData.power >> 16);
-//	strDATA[6] = (afterChargeData.power >> 24);
-//		Transmit_strDATA
-//		;
-	}
-
-
-
-//Power
-	if (oneTime_counter == 8) {
-		strDATA[4] = 0x12;
-		strDATA[5] = 0x60;
-		strDATA[7] = (power & 0xFF);
-		strDATA[6] = (power >> 8);
-		Transmit_strDATA
-		;
-		strDATA[4] = 0x11;
-		strDATA[5] = 0x70;
-		Transmit_strDATA
-		;
-	}
-//Range
-//	if (oneTime_counter == 9) {
-//		oneTime_counter = 0;
-//		strDATA[4] = 0x11;
-//		strDATA[5] = 0x30;
-//		strDATA[7] = (distance.range);
-//		strDATA[6] = 0;
-//		Transmit_strDATA
-//		;
-//	}
-	//Battery Data
-	//if (oneTime_counter == 10) {
-
-	switch (transferCount) {
-	case 1: //SOC - Battery Percentage
-		strDATA[4] = 0x11;
-		strDATA[5] = 0x10;
-		strDATA[7] = (soc_value);
-		strDATA[6] = 0;
-		Transmit_strDATA
-		;
-		break;
-	case 2:  //Pack voltage
-		if (currentstate == 4) {
-			strDATA[4] = 0x12;
-			strDATA[5] = 0x10;
-		} else {
-			strDATA[4] = 0x12;
-			strDATA[5] = 0x10;
-		}
-		strDATA[7] = (pack_voltage & 0xFF);
-		strDATA[6] = (pack_voltage >> 8);
-		Transmit_strDATA
-		;
-		break;
-	case 3:  //Lowest Cell Voltage
-		strDATA[4] = 0x12;
-		strDATA[5] = 0x20;
-		strDATA[7] = (lcell_voltage & 0xFF);
-		strDATA[6] = (lcell_voltage >> 8);
-		Transmit_strDATA
-		;
-		break;
-	case 4:  //DC Current
-		if (currentstate == 4) {
-			strDATA[4] = 0x12;
-			strDATA[5] = 0x80;
-		} else {
-			strDATA[4] = 0x12;
-			strDATA[5] = 0x30;
-		}
-		strDATA[6] = (dc_current >> 8);
-		strDATA[7] = (dc_current & 0xFF);
-		Transmit_strDATA
-		;
-		break;
-	case 5:  //Pack Temperature
-		strDATA[4] = 0x12;
-		strDATA[5] = 0x40;
-		strDATA[6] = (pack_temp >> 8);
-		strDATA[7] = (pack_temp & 0xFF);
-		Transmit_strDATA
-		;
-		strDATA[4] = 0x11;
-		strDATA[5] = 0x68;
-		Transmit_strDATA
-		;
-		break;
-	case 6:  //Highest Cell Voltage
-		strDATA[4] = 0x12;
-		strDATA[5] = 0x70;
-		strDATA[7] = (hcell_voltage & 0xFF);
-		strDATA[6] = (hcell_voltage >> 8);
-		Transmit_strDATA
-		;
-		break;
-	case 7:  //SOH Battery Health
-		strDATA[4] = 0x11;
-		strDATA[5] = 0x66;
-		strDATA[7] = (soh_value);
-		strDATA[6] = 0;
-		Transmit_strDATA
-		;
-		break;
-	case 8:  //Estimated Range
-		strDATA[4] = 0x11;
-		strDATA[5] = 0x30;
-		//strDATA[7] = uint32_t(distance.range);
-		//strDATA[6] = 0;
-		strDATA[7] = (distance.range & 0xFF);
-		strDATA[6] = (distance.range >> 8);
-		//strDATA[7] = (distance.range >> 16);
-		//strDATA[6] = (distance.range >> 24);
-		HAL_UART_Transmit(&huart3, strDATA, sizeof(strDATA),
-		HAL_MAX_DELAY);
-		break;
-	default:
-		break;
-	}
-
-	transferCount++;
-	if (transferCount >= 9) {
-		transferCount = 1;
-	}
-
-}
 
 void gearUpdate(void) {
 	if (currentstate == 1) {

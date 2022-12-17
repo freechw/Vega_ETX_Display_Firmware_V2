@@ -72,3 +72,5 @@ inPopup
 _gearChanged
 currentstate
 oneTime_counter
+distance.range
+_modeSelection
