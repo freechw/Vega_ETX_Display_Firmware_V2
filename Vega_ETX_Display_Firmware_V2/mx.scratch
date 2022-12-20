@@ -14,7 +14,14 @@
       <ProjectName>Vega_ETX_Display_Firmware_V2</ProjectName>
       <ProjectNature>C</ProjectNature>
       <Secure/>
-      <filestoremove/>
+      <filestoremove>
+        <file>
+          <name>Core/Src/dma.c</name>
+        </file>
+        <file>
+          <name>..\Src\custom.c</name>
+        </file>
+      </filestoremove>
       <sourceEntriesToRemove>
         <sourceEntry/>
       </sourceEntriesToRemove>

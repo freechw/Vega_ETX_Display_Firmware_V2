@@ -25,10 +25,10 @@ void navigation(void) {
 			_realTimeData = false;
 			_oneTimeData = false;
 			if (currentStateSM == driving_state) {
-				_transmit_Function = 5;
+				_transmit_Function = 4;
 			}
 			if (currentStateSM == startingup_state) {
-				_transmit_Function = 2;
+				_transmit_Function = 1;
 			}
 
 		}
@@ -46,10 +46,10 @@ void navigation(void) {
 			_realTimeData = false;
 			_oneTimeData = false;
 			if (currentStateSM == driving_state) {
-				_transmit_Function = 5;
+				_transmit_Function = 4;
 			}
 			if (currentStateSM == startingup_state) {
-				_transmit_Function = 2;
+				_transmit_Function = 1;
 			}
 		}
 		break;
@@ -66,15 +66,15 @@ void navigation(void) {
 			_realTimeData = false;
 			_oneTimeData = false;
 			if (currentStateSM == driving_state) {
-				_transmit_Function = 5;
+				_transmit_Function = 4;
 			}
 			if (currentStateSM == startingup_state) {
-				_transmit_Function = 2;
+				_transmit_Function = 1;
 			}
 		}
 		break;
 	case info:
-		_Battery_Info_Page = true;
+		_Battery_Info_Page = false;
 		_Motor_Info_Page = false;
 		_Inverter_Info_Page = false;
 		info_mainPage();
@@ -88,10 +88,10 @@ void navigation(void) {
 			_realTimeData = false;
 			_oneTimeData = false;
 			if (currentStateSM == driving_state) {
-				_transmit_Function = 5;
+				_transmit_Function = 4;
 			}
 			if (currentStateSM == startingup_state) {
-				_transmit_Function = 2;
+				_transmit_Function = 1;
 			}
 		}
 		break;
@@ -107,10 +107,10 @@ void navigation(void) {
 			_realTimeData = false;
 			_oneTimeData = false;
 			if (currentStateSM == driving_state) {
-				_transmit_Function = 5;
+				_transmit_Function = 4;
 			}
 			if (currentStateSM == startingup_state) {
-				_transmit_Function = 2;
+				_transmit_Function = 1;
 			}
 		}
 		break;
@@ -239,10 +239,13 @@ void info_mainPage(void) {
 			page_entry = false;
 			vehicleInfo_UI(infobat);
 		} else {
-			vehicleInfo_UI(currentMenu);
+			if (buttonPressed) {
+				vehicleInfo_UI(currentMenu);
+				buttonPressed = false;
+			}
 		}
 		if (forward == true) {
-
+			buttonPressed = true;
 			if (currentMenu == infoinv && previousMenuBack == infomot) {
 				_Battery_Info_Page = true;
 				_Motor_Info_Page = false;
@@ -282,7 +285,7 @@ void info_mainPage(void) {
 		}
 
 		if (backward == true) {
-			//currentMenu--;
+			buttonPressed = true;
 			if (currentMenu == infobat && previousMenuForward == infomot) {
 				_Battery_Info_Page = false;
 				_Motor_Info_Page = false;

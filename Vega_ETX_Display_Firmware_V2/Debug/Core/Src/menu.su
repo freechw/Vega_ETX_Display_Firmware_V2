@@ -3,8 +3,8 @@
 ../Core/Src/menu.c:158:6:trip_mainPage	8	static
 ../Core/Src/menu.c:193:6:after_charge_mainPage	4	static
 ../Core/Src/menu.c:221:6:info_mainPage	8	static
-../Core/Src/menu.c:355:6:settings_mainPage	8	static
-../Core/Src/menu.c:520:6:vehicle_page	8	static
-../Core/Src/menu.c:547:6:system_page	8	static
-../Core/Src/menu.c:698:6:bluetooth_page	8	static
-../Core/Src/menu.c:726:6:errors_page	8	static
+../Core/Src/menu.c:358:6:settings_mainPage	8	static
+../Core/Src/menu.c:525:6:vehicle_page	8	static
+../Core/Src/menu.c:553:6:system_page	8	static
+../Core/Src/menu.c:706:6:bluetooth_page	8	static
+../Core/Src/menu.c:734:6:errors_page	8	static

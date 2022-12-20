@@ -62,6 +62,7 @@ void startUpState(void) {
 		state_entry = true;
 		return;
 	}
+	_oneTimeData = true;
 	if (accessory == 1) {
 		navigation(); //enable navigation in Accessory Mode
 		//_modeSelection = 2;//Clear Mode
@@ -85,7 +86,7 @@ void startUpState(void) {
 			_realTimeData = true;
 			dataCounter = 0;
 		}
-		_oneTimeData = true;
+
 
 		inInfoBat = false;
 		inSettings = false;

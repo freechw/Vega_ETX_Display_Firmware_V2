@@ -28,7 +28,8 @@ Core/Src/transmit.o: ../Core/Src/transmit.c ../Core/Inc/transmit.h \
  ../Core/Inc/data_structures.h ../Core/Inc/can.h ../Core/Inc/main.h \
  ../Core/Inc/gpio.h ../Core/Inc/usart.h ../Core/Inc/can_matrix.h \
  ../Core/Inc/data_structures.h ../Core/Inc/errLogging.h \
- ../Core/Inc/transmit.h ../Core/Inc/transmitDefinitions.h
+ ../Core/Inc/transmit.h ../Core/Inc/transmitDefinitions.h \
+ ../Core/Inc/PollingRoutine.h ../Core/Inc/RingBuff.h
 ../Core/Inc/transmit.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -66,3 +67,5 @@ Core/Src/transmit.o: ../Core/Src/transmit.c ../Core/Inc/transmit.h \
 ../Core/Inc/errLogging.h:
 ../Core/Inc/transmit.h:
 ../Core/Inc/transmitDefinitions.h:
+../Core/Inc/PollingRoutine.h:
+../Core/Inc/RingBuff.h:

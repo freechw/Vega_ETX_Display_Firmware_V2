@@ -2434,3 +2434,1447 @@
 2022-12-17 10:43:10,778 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 2022-12-17 10:43:10,780 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
 2022-12-17 10:43:10,782 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022-12-17 15:05:04,784 [INFO] Activator:177 - 
+
+
+2022-12-17 15:05:04,786 [INFO] Activator:178 - !SESSION log4j initialized
+2022-12-17 15:05:42,352 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022-12-17 15:05:42,353 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022-12-17 15:05:42,356 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022-12-18 08:59:04,372 [INFO] Activator:177 - 
+
+
+2022-12-18 08:59:04,376 [INFO] Activator:178 - !SESSION log4j initialized
+2022-12-18 08:59:42,285 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022-12-18 08:59:42,287 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022-12-18 08:59:42,293 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022-12-19 09:42:55,502 [INFO] Activator:177 - 
+
+
+2022-12-19 09:42:55,516 [INFO] Activator:178 - !SESSION log4j initialized
+2022-12-19 09:43:37,530 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022-12-19 09:43:37,531 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022-12-19 09:43:37,534 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022-12-19 14:31:07,447 [INFO] McuFinderGlobals:44 - Set McuFinder mode to 2 (CubeIDE integrated)
+2022-12-19 14:31:07,892 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2022-12-19 14:31:07,915 [INFO] DbMcusXml:77 - Set database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2022-12-19 14:31:07,916 [INFO] ApiDb:269 - Set plugin database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2022-12-19 14:31:07,918 [WARN] ApiDb:254 - Overriding images path with different value:  => C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2022-12-19 14:31:07,954 [INFO] ApiDb:249 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/
+2022-12-19 14:31:07,956 [INFO] DbMcusAds:124 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/
+2022-12-19 14:31:08,322 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-12-19 14:31:08,510 [INFO] RulesReader:61 - Compatibility file has been processed (282 Rules)
+2022-12-19 14:31:08,647 [INFO] DbMcusXml:77 - Set database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2022-12-19 14:31:08,648 [INFO] ApiDb:269 - Set plugin database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2022-12-19 14:31:08,649 [INFO] ApiDb:256 - Set plugin images path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2022-12-19 14:31:08,649 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 14:31:08,649 [INFO] ApiDb:249 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/
+2022-12-19 14:31:08,650 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 14:31:08,650 [INFO] DbMcusAds:124 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/
+2022-12-19 14:31:08,651 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 14:31:08,652 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 14:31:08,652 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-12-19 14:31:08,805 [INFO] MainPanel:242 - HeapMemory: 277872640
+2022-12-19 14:31:09,021 [INFO] DbMcusXml:77 - Set database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2022-12-19 14:31:09,022 [INFO] ApiDb:269 - Set plugin database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2022-12-19 14:31:09,022 [INFO] ApiDb:256 - Set plugin images path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2022-12-19 14:31:09,023 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 14:31:09,023 [INFO] ApiDb:249 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/
+2022-12-19 14:31:09,023 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 14:31:09,023 [INFO] DbMcusAds:124 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/
+2022-12-19 14:31:09,024 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 14:31:09,024 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 14:31:09,024 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-12-19 14:31:09,054 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2022-12-19 14:31:09,056 [INFO] PluginManage:193 - Search for loadable plugins [exclusion list=, ]
+2022-12-19 14:31:09,059 [INFO] PluginManage:307 - Check plugin analytics
+2022-12-19 14:31:09,455 [INFO] AnalyticsPlugin:262 - Accepted Software Licenses: 
+2022-12-19 14:31:09,459 [INFO] AnalyticsPlugin:264 - Accepted CMSIS Pack Licenses: 
+2022-12-19 14:31:09,460 [INFO] AnalyticsPlugin:266 - Accepted Firmware Licenses: 
+2022-12-19 14:31:09,494 [INFO] PluginManage:356 - Loaded plugin analytics (category:tool,tabindex:-1)
+2022-12-19 14:31:09,495 [INFO] PluginManage:307 - Check plugin cadmodel
+2022-12-19 14:31:09,505 [INFO] CADModel:65 - Init CAD model plugin
+2022-12-19 14:31:09,506 [INFO] PluginManage:356 - Loaded plugin cadmodel (category:power,tabindex:5)
+2022-12-19 14:31:09,506 [INFO] PluginManage:307 - Check plugin clock
+2022-12-19 14:31:09,533 [INFO] PluginManage:356 - Loaded plugin clock (category:base,tabindex:2)
+2022-12-19 14:31:09,533 [INFO] PluginManage:307 - Check plugin ddr
+2022-12-19 14:31:09,542 [INFO] PluginManage:356 - Loaded plugin ddr (category:tool,tabindex:6)
+2022-12-19 14:31:09,543 [INFO] PluginManage:307 - Check plugin filemanager
+2022-12-19 14:31:09,827 [INFO] PluginManage:356 - Loaded plugin filemanager (category:base,tabindex:10)
+2022-12-19 14:31:09,827 [INFO] PluginManage:307 - Check plugin ipmanager
+2022-12-19 14:31:09,841 [INFO] PluginManage:356 - Loaded plugin ipmanager (category:base,tabindex:5)
+2022-12-19 14:31:09,841 [INFO] PluginManage:307 - Check plugin lpbam
+2022-12-19 14:31:09,857 [INFO] PluginManage:356 - Loaded plugin lpbam (category:base,tabindex:0)
+2022-12-19 14:31:09,858 [INFO] PluginManage:307 - Check plugin pinoutandconfiguration
+2022-12-19 14:31:09,872 [INFO] PluginManage:356 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2022-12-19 14:31:09,873 [INFO] PluginManage:307 - Check plugin pinoutconfig
+2022-12-19 14:31:09,919 [INFO] PluginManage:356 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2022-12-19 14:31:09,920 [INFO] PluginManage:307 - Check plugin power
+2022-12-19 14:31:09,935 [INFO] PluginManage:356 - Loaded plugin power (category:power,tabindex:4)
+2022-12-19 14:31:09,936 [INFO] PluginManage:307 - Check plugin projectmanager
+2022-12-19 14:31:09,963 [INFO] PluginManage:356 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2022-12-19 14:31:09,963 [INFO] PluginManage:307 - Check plugin thirdparty
+2022-12-19 14:31:10,183 [WARN] IntegrityCheckThread:82 - waiting for thirdparty lock release [integrity check]
+2022-12-19 14:31:10,184 [INFO] PluginManage:356 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2022-12-19 14:31:10,185 [INFO] IntegrityCheckThread:84 - entering critical section [integrity check]
+2022-12-19 14:31:10,185 [INFO] PluginManage:307 - Check plugin tools
+2022-12-19 14:31:10,192 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [1/15]
+2022-12-19 14:31:10,192 [INFO] PluginManage:356 - Loaded plugin tools (category:base,tabindex:7)
+2022-12-19 14:31:10,193 [INFO] PluginManage:307 - Check plugin tutovideos
+2022-12-19 14:31:10,514 [INFO] PluginManage:356 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2022-12-19 14:31:10,515 [INFO] PluginManage:307 - Check plugin updater
+2022-12-19 14:31:10,539 [INFO] PluginManage:356 - Loaded plugin updater (category:base,tabindex:12)
+2022-12-19 14:31:10,541 [INFO] PluginManage:280 - PluginManage : Loaded plugins [15]
+2022-12-19 14:31:11,011 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-12-19 14:31:11,120 [INFO] CADModel:98 - CPN selected for project level
+2022-12-19 14:31:11,144 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,144 [INFO] PluginManager:217 - loadIPPluginJar : add adc
+2022-12-19 14:31:11,148 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,149 [INFO] PluginManager:217 - loadIPPluginJar : add aes
+2022-12-19 14:31:11,153 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,153 [INFO] PluginManager:217 - loadIPPluginJar : add can
+2022-12-19 14:31:11,155 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,156 [INFO] PluginManager:217 - loadIPPluginJar : add comp
+2022-12-19 14:31:11,159 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,159 [INFO] PluginManager:217 - loadIPPluginJar : add cryp
+2022-12-19 14:31:11,163 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,163 [INFO] PluginManager:217 - loadIPPluginJar : add dfsdm
+2022-12-19 14:31:11,172 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,173 [INFO] PluginManager:217 - loadIPPluginJar : add dma
+2022-12-19 14:31:11,176 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,177 [INFO] PluginManager:217 - loadIPPluginJar : add dma3
+2022-12-19 14:31:11,179 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,180 [INFO] PluginManager:217 - loadIPPluginJar : add fatfs
+2022-12-19 14:31:11,192 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,192 [INFO] PluginManager:217 - loadIPPluginJar : add fmc
+2022-12-19 14:31:11,218 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,218 [INFO] PluginManager:217 - loadIPPluginJar : add freertos
+2022-12-19 14:31:11,227 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,228 [INFO] PluginManager:217 - loadIPPluginJar : add genericplugin
+2022-12-19 14:31:11,236 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,237 [INFO] PluginManager:217 - loadIPPluginJar : add gfxmmu
+2022-12-19 14:31:11,247 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,248 [INFO] PluginManager:217 - loadIPPluginJar : add gic
+2022-12-19 14:31:11,256 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,256 [INFO] PluginManager:217 - loadIPPluginJar : add gpio
+2022-12-19 14:31:11,263 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,264 [INFO] PluginManager:217 - loadIPPluginJar : add gtzc
+2022-12-19 14:31:11,269 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,270 [INFO] PluginManager:217 - loadIPPluginJar : add hash
+2022-12-19 14:31:11,276 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,276 [INFO] PluginManager:217 - loadIPPluginJar : add i2c
+2022-12-19 14:31:11,282 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,282 [INFO] PluginManager:217 - loadIPPluginJar : add i2s
+2022-12-19 14:31:11,288 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,289 [INFO] PluginManager:217 - loadIPPluginJar : add ipddr
+2022-12-19 14:31:11,300 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,300 [INFO] PluginManager:217 - loadIPPluginJar : add linkedlist
+2022-12-19 14:31:11,306 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,306 [INFO] PluginManager:217 - loadIPPluginJar : add lorawan
+2022-12-19 14:31:11,309 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,310 [INFO] PluginManager:217 - loadIPPluginJar : add ltdc
+2022-12-19 14:31:11,321 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,321 [INFO] PluginManager:217 - loadIPPluginJar : add mdma
+2022-12-19 14:31:11,328 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,328 [INFO] PluginManager:217 - loadIPPluginJar : add nvic
+2022-12-19 14:31:11,335 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,336 [INFO] PluginManager:217 - loadIPPluginJar : add opamp
+2022-12-19 14:31:11,341 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,342 [INFO] PluginManager:217 - loadIPPluginJar : add openamp
+2022-12-19 14:31:11,347 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,348 [INFO] PluginManager:217 - loadIPPluginJar : add pdm2pcm
+2022-12-19 14:31:11,361 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,367 [INFO] PluginManager:217 - loadIPPluginJar : add plateformsettings
+2022-12-19 14:31:11,371 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,372 [INFO] PluginManager:217 - loadIPPluginJar : add quadspi
+2022-12-19 14:31:11,382 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,383 [INFO] PluginManager:217 - loadIPPluginJar : add resmgrutility
+2022-12-19 14:31:11,388 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,388 [INFO] PluginManager:217 - loadIPPluginJar : add sai
+2022-12-19 14:31:11,393 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,393 [INFO] PluginManager:217 - loadIPPluginJar : add spi
+2022-12-19 14:31:11,402 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,402 [INFO] PluginManager:217 - loadIPPluginJar : add stm32_wpan
+2022-12-19 14:31:11,405 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,406 [INFO] PluginManager:217 - loadIPPluginJar : add tim
+2022-12-19 14:31:11,410 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,411 [INFO] PluginManager:217 - loadIPPluginJar : add touchsensing
+2022-12-19 14:31:11,415 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,415 [INFO] PluginManager:217 - loadIPPluginJar : add tracer_emb
+2022-12-19 14:31:11,418 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,418 [INFO] PluginManager:217 - loadIPPluginJar : add ts
+2022-12-19 14:31:11,422 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,422 [INFO] PluginManager:217 - loadIPPluginJar : add tsc
+2022-12-19 14:31:11,459 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,460 [INFO] PluginManager:217 - loadIPPluginJar : add ucpd
+2022-12-19 14:31:11,465 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,465 [INFO] PluginManager:217 - loadIPPluginJar : add usart
+2022-12-19 14:31:11,471 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:11,472 [INFO] PluginManager:217 - loadIPPluginJar : add usbx
+2022-12-19 14:31:11,951 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 14:31:12,282 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 14:31:12,299 [INFO] DbMcusAds:52 - JSON generation date=Thu Sep 30 12:26:37 IST 2021 (1632984997303)
+2022-12-19 14:31:12,300 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 14:31:12,393 [WARN] DetailPanel:344 - Failed to get advertising image, set to default
+2022-12-19 14:31:12,546 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 14:31:12,551 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 14:31:12,551 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 14:31:12,552 [WARN] DetailPanel:344 - Failed to get advertising image, set to default
+2022-12-19 14:31:12,556 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 14:31:12,658 [ERROR] Updater:1105 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2022-12-19 14:31:12,662 [INFO] Updater:1041 - Updater Version found : 6.6.1
+2022-12-19 14:31:12,687 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2022-12-19 14:31:13,201 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [2/15]
+2022-12-19 14:31:13,636 [INFO] MainUpdater:2768 - connection check result : 10
+2022-12-19 14:31:13,638 [INFO] MainUpdater:280 - Updater Check For Update Now.
+2022-12-19 14:31:13,638 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-12-19 14:31:13,849 [INFO] CheckServerUpdateThread:119 - End of CheckServer Thread
+2022-12-19 14:31:13,856 [INFO] MainUpdater:2768 - connection check result : 10
+2022-12-19 14:31:13,858 [INFO] MainUpdater:2768 - connection check result : 10
+2022-12-19 14:31:13,985 [INFO] MicroXplorer:451 - Change Database Path : 
+2022-12-19 14:31:13,987 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-12-19 14:31:13,989 [WARN] ThirdParty:827 - waiting for thirdparty lock release [close project]
+2022-12-19 14:31:16,483 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-GNSS1.6.0.0
+2022-12-19 14:31:16,538 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F4.1.1.0
+2022-12-19 14:31:16,553 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.1.2.0
+2022-12-19 14:31:16,578 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F7.1.1.0
+2022-12-19 14:31:16,591 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.6.2.3
+2022-12-19 14:31:16,598 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.6.2.4
+2022-12-19 14:31:16,607 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC4.2.0.5
+2022-12-19 14:31:16,614 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC4.2.0.4
+2022-12-19 14:31:16,629 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.1.0
+2022-12-19 14:31:16,642 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC7.1.0.0
+2022-12-19 14:31:16,723 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.9.3.0
+2022-12-19 14:31:16,963 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.7.2.0
+2022-12-19 14:31:16,978 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0
+2022-12-19 14:31:16,993 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE2.3.3.0
+2022-12-19 14:31:17,025 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DISPLAY.2.2.0
+2022-12-19 14:31:17,050 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.2.0
+2022-12-19 14:31:17,178 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.3.0.0
+2022-12-19 14:31:17,194 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ISPU.1.0.0
+2022-12-19 14:31:17,202 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ISPU.1.1.0
+2022-12-19 14:31:17,224 [WARN] PackLoader:242 - Cannot read IP mode file for RoweBots.I-CUBE-UNISONRTOS.5.5.0-4
+2022-12-19 14:31:17,259 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.2.1.0
+2022-12-19 14:31:17,273 [WARN] PackLoader:242 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfSSL.5.4.0
+2022-12-19 14:31:17,286 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.1.0.0
+2022-12-19 14:31:17,350 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.9.4.0
+2022-12-19 14:31:17,565 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.7.3.0
+2022-12-19 14:31:17,581 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALGOBUILD.1.3.0
+2022-12-19 14:31:17,608 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.1.1.0
+2022-12-19 14:31:17,673 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G0.1.1.0
+2022-12-19 14:31:17,703 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SUBG2.5.0.0
+2022-12-19 14:31:17,812 [WARN] PackLoader:242 - Cannot read IP mode file for SEGGER.I-CUBE-embOS.1.2.0
+2022-12-19 14:31:17,900 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.1.1.1
+2022-12-19 14:31:17,907 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.1.1.0
+2022-12-19 14:31:17,923 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.1.3.0
+2022-12-19 14:31:18,024 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G4.1.0.0
+2022-12-19 14:31:18,035 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-SIGFOX1.3.2.0
+2022-12-19 14:31:18,072 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L4.1.0.0
+2022-12-19 14:31:18,094 [WARN] PackLoader:242 - Cannot read IP mode file for emotas.I-CUBE-CANOPEN.1.1.2
+2022-12-19 14:31:18,110 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.20.0
+2022-12-19 14:31:18,134 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WL.1.0.0
+2022-12-19 14:31:18,148 [WARN] PackLoader:242 - Cannot read IP mode file for portGmbH.I-Cube-SoM-uGOAL.1.1.0
+2022-12-19 14:31:18,156 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALS.1.0.1
+2022-12-19 14:31:18,191 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WB.1.1.0
+2022-12-19 14:31:18,219 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.1.0.0
+2022-12-19 14:31:18,233 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-EEPRMA1.3.1.1
+2022-12-19 14:31:18,238 [INFO] ThirdParty:929 - Integrity check success = true
+2022-12-19 14:31:18,239 [INFO] IntegrityCheckThread:98 - exiting critical section [integrity check]
+2022-12-19 14:31:18,239 [INFO] IntegrityCheckThread:101 - End integrity checks thread
+2022-12-19 14:31:18,239 [INFO] ThirdParty:829 - entering critical section [close project]
+2022-12-19 14:31:18,241 [INFO] ThirdParty:839 - exiting critical section [close project]
+2022-12-19 14:31:18,251 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-12-19 14:31:18,273 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 228949104 Bytes (277872640)
+2022-12-19 14:31:18,277 [INFO] MicroXplorer:451 - Change Database Path : 
+2022-12-19 14:31:18,277 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-12-19 14:31:18,278 [INFO] OpenFileManager:307 - Change cursor
+2022-12-19 14:31:18,370 [INFO] Mcu:1922 - Initializing MCU STM32F105R(8-B-C)Tx STM32F105R8Tx STM32F105R8T6
+2022-12-19 14:31:20,316 [INFO] Context:654 - Trying to add GPIOservice into a context  which must be forbidden
+2022-12-19 14:31:20,941 [WARN] ApiManager:308 - Cannot register API 'Board Extension:GNSS1A1' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2022-12-19 14:31:20,942 [WARN] ApiManager:308 - Cannot register API 'Board Support:Custom' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2022-12-19 14:31:20,942 [WARN] ApiManager:308 - Cannot register API 'Data Exchange:lib_gnss' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2022-12-19 14:31:21,180 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.9.4.0: no header file found
+2022-12-19 14:31:21,181 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.9.4.0: no header file found
+2022-12-19 14:31:21,181 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.9.4.0: no header file found
+2022-12-19 14:31:21,193 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.6.2.3: no header file found
+2022-12-19 14:31:21,194 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.6.2.4: no header file found
+2022-12-19 14:31:21,198 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2022-12-19 14:31:21,199 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2022-12-19 14:31:21,199 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2022-12-19 14:31:21,199 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2022-12-19 14:31:21,199 [WARN] ModelIntegratedComponent:185 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2022-12-19 14:31:21,205 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2022-12-19 14:31:21,205 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2022-12-19 14:31:21,205 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2022-12-19 14:31:21,211 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC04A1' from pack STMicroelectronics.X-CUBE-NFC4.2.0.5: no header file found
+2022-12-19 14:31:21,214 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC04A1' from pack STMicroelectronics.X-CUBE-NFC4.2.0.4: no header file found
+2022-12-19 14:31:21,225 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,226 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,226 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,226 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,226 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,226 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,226 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,227 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,227 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,227 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,227 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,227 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,227 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,227 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,228 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,228 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,228 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,228 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,228 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,228 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,228 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,228 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,229 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,243 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,243 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,243 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,243 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,243 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,243 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,244 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,244 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,244 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,244 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 14:31:21,248 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC07A1' from pack STMicroelectronics.X-CUBE-NFC7.1.0.0: no header file found
+2022-12-19 14:31:21,361 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-12-19 14:31:21,362 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-12-19 14:31:21,362 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-12-19 14:31:21,369 [WARN] ApiManager:308 - Cannot register API 'Board Extension:EEPRMA1' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.1.1: no header file found
+2022-12-19 14:31:21,369 [WARN] ApiManager:308 - Cannot register API 'Board Extension:EEPRMA2' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.1.1: no header file found
+2022-12-19 14:31:21,370 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2022-12-19 14:31:21,370 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2022-12-19 14:31:21,370 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2022-12-19 14:31:21,371 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-2' from pack STMicroelectronics.X-CUBE-BLE2.3.3.0: no header file found
+2022-12-19 14:31:21,399 [INFO] ThirdPartyModel:289 - Start build external matchings
+2022-12-19 14:31:22,008 [INFO] ThirdPartyModel:302 - End build external matchings
+2022-12-19 14:31:22,061 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Instance) has Id (USART3_TX) currently not set
+2022-12-19 14:31:22,061 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Direction) has Id (USART3_TX) currently not set
+2022-12-19 14:31:22,061 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphInc) has Id (USART3_TX) currently not set
+2022-12-19 14:31:22,062 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemInc) has Id (USART3_TX) currently not set
+2022-12-19 14:31:22,062 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphDataAlignment) has Id (USART3_TX) currently not set
+2022-12-19 14:31:22,063 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemDataAlignment) has Id (USART3_TX) currently not set
+2022-12-19 14:31:22,064 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Mode) has Id (USART3_TX) currently not set
+2022-12-19 14:31:22,064 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Priority) has Id (USART3_TX) currently not set
+2022-12-19 14:31:22,065 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (ADCFreqValue) has invalid value (36000000)
+2022-12-19 14:31:22,066 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2022-12-19 14:31:22,066 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCOFreq_Value) has invalid value (72000000)
+2022-12-19 14:31:22,596 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 208279176 Bytes (341835776)
+2022-12-19 14:31:22,795 [INFO] ApiDb:576 - Connected to CubeFinder SQLite database (C:\Users\akila\.stmcufinder\plugins\mcufinder\mcu\cube-finder-db.db)
+2022-12-19 14:31:22,864 [INFO] ApiDb:663 - CubeFinder database Data Model version=2.1
+2022-12-19 14:31:22,865 [INFO] ApiDb:664 - CubeFinder database Configuration version=3.0.32
+2022-12-19 14:31:22,865 [INFO] ApiDb:665 - CubeFinder database generation date=2022-08-05 (1659688109)
+2022-12-19 14:31:22,865 [INFO] ApiDb:666 - CubeFinder database FW Pack versions=[STM32Cube_FW_C0_V1.0.0, STM32Cube_FW_F4_V1.27.1, STM32Cube_FW_F7_V1.17.0, STM32Cube_FW_G0_V1.6.1, STM32Cube_FW_G4_V1.5.0, STM32Cube_FW_H7_V1.10.0, STM32Cube_FW_L5_V1.4.0, STM32Cube_FW_U5_V1.1.1, STM32Cube_FW_WB_V1.14.1, STM32Cube_FW_WL_V1.2.0, X-CUBE-ALGOBUILD_V1.3.0, X-CUBE-ALS_V1.0.1, X-CUBE-AZRTOS-F4_V1.1.0, X-CUBE-AZRTOS-F7_V1.1.0, X-CUBE-AZRTOS-G0_V1.1.0, X-CUBE-AZRTOS-G4_V1.0.0, X-CUBE-AZRTOS-H7_V2.1.0, X-CUBE-AZRTOS-L4_V1.0.0, X-CUBE-AZRTOS-L5_V1.0.0, X-CUBE-AZRTOS-WL_V1.0.0, X-CUBE-BLE1_V6.2.3, X-CUBE-BLE2_V3.3.0, X-CUBE-EEPRMA1_V3.1.1, X-CUBE-GNSS1_V6.0.0, X-CUBE-MEMS1_V9.1.0, X-CUBE-MEMS1_V9.3.0, X-CUBE-NFC4_V2.0.4, X-CUBE-NFC7_V1.0.0, X-CUBE-SFXS2LP1_V4.0.0, X-CUBE-SUBG2_V5.0.0]
+2022-12-19 14:31:25,826 [INFO] ApiDb:239 - Found 138 in-development CPN: [B-WB1M-WPAN1, NUCLEO-C031C6, STEVAL-STWINBX1, STM320518-EVAL, STM32C0116-DK, STM32C011D6Y3TR, STM32C011D6Y6TR, STM32C011F4P3, STM32C011F4P6, STM32C011F4U3, STM32C011F4U6TR, STM32C011F6P3, STM32C011F6P6, STM32C011F6U3, STM32C011F6U6TR, STM32C011J4M3, STM32C011J4M6, STM32C011J6M3, STM32C011J6M6, STM32C0316-DK, STM32C031C4T3, STM32C031C4T6, STM32C031C4U3, STM32C031C4U6, STM32C031C6T3, STM32C031C6T6, STM32C031C6U3, STM32C031C6U6, STM32C031F4P3, STM32C031F4P6, STM32C031F6P3, STM32C031F6P6, STM32C031G4U3, STM32C031G4U6, STM32C031G6U3, STM32C031G6U6, STM32C031K4T3, STM32C031K4T6, STM32C031K4U3, STM32C031K4U6, STM32C031K6T3, STM32C031K6T6, STM32C031K6U3, STM32C031K6U6, STM32G071K8TXN, STM32G071K8UXN, STM32G081GBU6N, STM32G081KBT6N, STM32G081KBUXN, STM32G0B1CCT6N, STM32G0B1KCT6, STM32G0B1NEY6TR, STM32G0B1RCT6N, STM32G0C1CCT6, STM32G0C1CCT6N, STM32G0C1CCU6N, STM32G0C1CET6N, STM32G0C1CEU6N, STM32G0C1KCT6, STM32G0C1NEY6TR, STM32G0C1RCI6N, STM32G0C1RCT6N, STM32G0C1REI6N, STM32G0C1RET6N, STM32G0C1VCI6, STM32G0C1VEI6, STM32G471CCT6, STM32G471CCU6, STM32G471CET3, STM32G471CET6, STM32G471CEU3, STM32G471CEU6, STM32G471MCT6, STM32G471MET3, STM32G471MET6, STM32G471MEY6TR, STM32G471QCT6, STM32G471QET3, STM32G471RCT6, STM32G471RET3, STM32G471RET6, STM32G471VCH6, STM32G471VCI6, STM32G471VCT6, STM32G471VEH3, STM32G471VEH6, STM32G471VEI3, STM32G471VEI6, STM32G471VET3, STM32G471VET6, STM32G474CCT6, STM32L476VGY6PTR, STM32L4R5QGI6STR, STM32MP131AAE3, STM32MP131AAF3, STM32MP131AAG3, STM32MP131CAE3, STM32MP131CAF3, STM32MP131CAG3, STM32MP131DAE7, STM32MP131DAF7, STM32MP131DAG7, STM32MP131FAE7, STM32MP131FAF7, STM32MP131FAG7, STM32MP133AAE3, STM32MP133AAF3, STM32MP133AAG3, STM32MP133CAE3, STM32MP133CAF3, STM32MP133CAG3, STM32MP133DAE7, STM32MP133DAF7, STM32MP133DAG7, STM32MP133FAE7, STM32MP133FAF7, STM32MP133FAG7, STM32MP135AAE3, STM32MP135AAF3, STM32MP135AAG3, STM32MP135CAE3, STM32MP135CAF3, STM32MP135CAG3, STM32MP135DAE7, STM32MP135DAF7, STM32MP135DAG7, STM32MP135F-DK, STM32MP135FAE7, STM32MP135FAF7, STM32MP135FAG7, STM32U595ZJT6Q, STM32U599BJY6QTR, STM32U599NIH6Q, STM32U599NJH6Q, STM32U5A5ZJT6Q, STM32U5A9BJY6QTR, STM32U5A9NJH6Q, STM32WB1MMCH6]
+2022-12-19 14:31:25,829 [INFO] DbMcus:215 - Found 3542 MCUs, 3542 are supported
+2022-12-19 14:31:25,832 [INFO] ApiDb:418 - Load user favorites file C:\Users\akila/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2022-12-19 14:31:25,833 [INFO] ApiDb:422 - User favorites MCUs=[]
+2022-12-19 14:31:25,833 [INFO] DbMcus:221 - Set 0 / 0 favorites MCUs
+2022-12-19 14:31:25,850 [WARN] ThirdParty:789 - waiting for thirdparty lock release [change project]
+2022-12-19 14:31:25,850 [INFO] ThirdParty:791 - entering critical section [change project]
+2022-12-19 14:31:25,851 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.1.0
+2022-12-19 14:31:25,851 [INFO] ThirdParty:981 - CMSIS Pack Vendor :RoweBots I-CUBE-UNISONRTOS 5.5.0-4
+2022-12-19 14:31:25,851 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2022-12-19 14:31:25,851 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 2.1.0
+2022-12-19 14:31:25,851 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2022-12-19 14:31:25,851 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2022-12-19 14:31:25,852 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2022-12-19 14:31:25,852 [INFO] ThirdParty:981 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.4.0
+2022-12-19 14:31:25,852 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2022-12-19 14:31:25,852 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.0.0
+2022-12-19 14:31:25,852 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.2.0
+2022-12-19 14:31:25,852 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2022-12-19 14:31:25,852 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.4.0
+2022-12-19 14:31:25,852 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2022-12-19 14:31:25,853 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 7.3.0
+2022-12-19 14:31:25,853 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.3
+2022-12-19 14:31:25,853 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2022-12-19 14:31:25,853 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.4
+2022-12-19 14:31:25,853 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.1.0
+2022-12-19 14:31:25,853 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2022-12-19 14:31:25,853 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2022-12-19 14:31:25,853 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2022-12-19 14:31:25,853 [INFO] ThirdParty:981 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.2.0
+2022-12-19 14:31:25,853 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2022-12-19 14:31:25,853 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2022-12-19 14:31:25,853 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 2.0.5
+2022-12-19 14:31:25,853 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 2.0.4
+2022-12-19 14:31:25,854 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2022-12-19 14:31:25,854 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2022-12-19 14:31:25,854 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 1.1.1
+2022-12-19 14:31:25,854 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2022-12-19 14:31:25,854 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.1.0
+2022-12-19 14:31:25,855 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 1.1.0
+2022-12-19 14:31:25,855 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.3.0
+2022-12-19 14:31:25,855 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 1.0.0
+2022-12-19 14:31:25,855 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2022-12-19 14:31:25,855 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 1.0.0
+2022-12-19 14:31:25,855 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2022-12-19 14:31:25,856 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2022-12-19 14:31:25,856 [INFO] ThirdParty:981 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.1.2
+2022-12-19 14:31:25,856 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.20.0
+2022-12-19 14:31:25,856 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2022-12-19 14:31:25,856 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.0
+2022-12-19 14:31:25,856 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 1.0.0
+2022-12-19 14:31:25,856 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.3.0
+2022-12-19 14:31:25,856 [INFO] ThirdParty:981 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2022-12-19 14:31:25,856 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2022-12-19 14:31:25,856 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 7.2.0
+2022-12-19 14:31:25,856 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2022-12-19 14:31:25,856 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 1.1.0
+2022-12-19 14:31:25,856 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.0.0
+2022-12-19 14:31:25,857 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2022-12-19 14:31:25,857 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 3.1.1
+2022-12-19 14:31:25,857 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2022-12-19 14:31:25,857 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2022-12-19 14:31:25,858 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2022-12-19 14:31:25,858 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2022-12-19 14:31:25,858 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 2.2.0
+2022-12-19 14:31:25,858 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.2.0
+2022-12-19 14:31:25,858 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2022-12-19 14:31:25,858 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.0.0
+2022-12-19 14:31:25,858 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.0.0
+2022-12-19 14:31:25,858 [INFO] ThirdParty:797 - exiting critical section [change project]
+2022-12-19 14:31:26,466 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-12-19 14:31:26,468 [INFO] PinOutPanel:1468 - setPackage(STM32F105R8Tx,LQFP64)
+2022-12-19 14:31:27,431 [INFO] UtilMem:74 - Before build in PCC Used Memory: 204932104 Bytes (341835776)
+2022-12-19 14:31:28,682 [INFO] UtilMem:74 - After build in PCC Used Memory: 203323672 Bytes (341835776)
+2022-12-19 14:31:28,731 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,731 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,731 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,731 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,732 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,732 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,732 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,732 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,732 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,733 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,733 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,733 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,733 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,733 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,734 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,734 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,734 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,735 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,735 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,736 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,736 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,737 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,737 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,738 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,738 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,739 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,739 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,740 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,740 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,741 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,741 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,742 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,742 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,743 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,744 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,745 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,745 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,746 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 14:31:28,783 [INFO] Can:70 - Can Add PropertyChangeListener com.st.microxplorer.plugins.ip.can.Can@3ca13060
+2022-12-19 14:31:29,196 [INFO] OpenFileManager:327 - Restore cursor
+2022-12-19 14:31:42,481 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2022-12-19 14:31:43,934 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 217060144 Bytes (341835776)
+2022-12-19 14:31:45,033 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 234060584 Bytes (341835776)
+2022-12-19 14:31:55,647 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 228938168 Bytes (341835776)
+2022-12-19 14:31:56,704 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-12-19 14:31:56,704 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: USART
+2022-12-19 14:31:56,705 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: DMA
+2022-12-19 14:31:56,705 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: TIM1_8F1
+2022-12-19 14:31:56,705 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: CAN
+2022-12-19 14:31:56,705 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-12-19 14:31:56,706 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-12-19 14:31:56,707 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-12-19 14:31:56,711 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-12-19 14:31:57,300 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\license.tmp_save
+2022-12-19 14:31:57,968 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\license.tmp
+2022-12-19 14:31:58,198 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\gpio.c_save
+2022-12-19 14:31:58,546 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\gpio.c
+2022-12-19 14:31:58,557 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\gpio.h_save
+2022-12-19 14:31:58,706 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\gpio.h
+2022-12-19 14:31:59,084 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\can.c_save
+2022-12-19 14:31:59,340 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\can.c
+2022-12-19 14:31:59,350 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\can.h_save
+2022-12-19 14:31:59,474 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\can.h
+2022-12-19 14:31:59,512 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\dma.c_save
+2022-12-19 14:31:59,694 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\dma.c
+2022-12-19 14:31:59,704 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\dma.h_save
+2022-12-19 14:31:59,825 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\dma.h
+2022-12-19 14:31:59,838 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\tim.c_save
+2022-12-19 14:31:59,976 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\tim.c
+2022-12-19 14:31:59,984 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\tim.h_save
+2022-12-19 14:32:00,087 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\tim.h
+2022-12-19 14:32:00,102 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\usart.c_save
+2022-12-19 14:32:00,245 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\usart.c
+2022-12-19 14:32:00,293 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\usart.h_save
+2022-12-19 14:32:00,373 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\usart.h
+2022-12-19 14:32:00,392 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_it.c_save
+2022-12-19 14:32:00,512 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_it.c
+2022-12-19 14:32:00,523 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_it.h_save
+2022-12-19 14:32:00,603 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_it.h
+2022-12-19 14:32:00,622 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_hal_msp.c_save
+2022-12-19 14:32:00,786 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_hal_msp.c
+2022-12-19 14:32:00,794 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\system.tmp_save
+2022-12-19 14:32:00,890 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\system.tmp
+2022-12-19 14:32:00,907 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_hal_conf.h_save
+2022-12-19 14:32:01,084 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_hal_conf.h
+2022-12-19 14:32:01,151 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\main.h_save
+2022-12-19 14:32:01,259 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\main.h
+2022-12-19 14:32:01,269 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\main.c_save
+2022-12-19 14:32:01,446 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\main.c
+2022-12-19 14:32:02,642 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 341mS.
+2022-12-19 14:32:02,662 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-12-19 14:32:03,070 [INFO] ConfigFileManager:1394 - The Die is : DIE418
+2022-12-19 14:32:03,087 [INFO] ApiDbMcu:505 - Load IP Config File for FATFS
+2022-12-19 14:32:03,093 [INFO] ApiDbMcu:505 - Load IP Config File for FREERTOS
+2022-12-19 14:32:03,102 [INFO] ApiDbMcu:505 - Load IP Config File for USB_DEVICE
+2022-12-19 14:32:03,110 [INFO] ApiDbMcu:505 - Load IP Config File for USB_HOST
+2022-12-19 14:32:04,441 [ERROR] root:77 - Fail to recover any existing build configuration matching on going update process
+2022-12-19 14:32:04,442 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 1780mS.
+2022-12-19 14:32:04,444 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-12-19 14:32:04,447 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-12-19 15:06:57,294 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 338141984 Bytes (682622976)
+2022-12-19 15:06:57,819 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-12-19 15:06:57,819 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: USART
+2022-12-19 15:06:57,820 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: DMA
+2022-12-19 15:06:57,820 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: TIM1_8F1
+2022-12-19 15:06:57,820 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: CAN
+2022-12-19 15:06:57,820 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-12-19 15:06:57,820 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-12-19 15:06:57,820 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-12-19 15:06:57,822 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-12-19 15:06:57,844 [INFO] Argument:300 - Argument : hdmavalue: null
+2022-12-19 15:06:57,845 [INFO] Argument:302 - 	 sub Args: 
+2022-12-19 15:06:57,845 [INFO] Argument:300 - Argument : Instancevalue: DMA1_Channel2
+2022-12-19 15:06:57,845 [INFO] Argument:310 - Argument : Instancevalue: DMA1_Channel2
+2022-12-19 15:06:57,845 [INFO] Argument:300 - Argument : Initvalue: null
+2022-12-19 15:06:57,845 [INFO] Argument:302 - 	 sub Args: 
+2022-12-19 15:06:57,845 [INFO] Argument:300 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2022-12-19 15:06:57,845 [INFO] Argument:310 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2022-12-19 15:06:57,845 [INFO] Argument:300 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2022-12-19 15:06:57,845 [INFO] Argument:310 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2022-12-19 15:06:57,846 [INFO] Argument:300 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2022-12-19 15:06:57,846 [INFO] Argument:310 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2022-12-19 15:06:57,846 [INFO] Argument:300 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2022-12-19 15:06:57,846 [INFO] Argument:310 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2022-12-19 15:06:57,846 [INFO] Argument:300 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2022-12-19 15:06:57,846 [INFO] Argument:310 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2022-12-19 15:06:57,846 [INFO] Argument:300 - Argument : Modevalue: DMA_NORMAL
+2022-12-19 15:06:57,846 [INFO] Argument:310 - Argument : Modevalue: DMA_NORMAL
+2022-12-19 15:06:57,846 [INFO] Argument:300 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2022-12-19 15:06:57,847 [INFO] Argument:310 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2022-12-19 15:06:57,847 [INFO] Argument:300 - Argument : Lockvalue: null
+2022-12-19 15:06:57,847 [INFO] Argument:310 - Argument : Lockvalue: null
+2022-12-19 15:06:57,847 [INFO] Argument:300 - Argument : Statevalue: null
+2022-12-19 15:06:57,847 [INFO] Argument:310 - Argument : Statevalue: null
+2022-12-19 15:06:57,847 [INFO] Argument:300 - Argument : Parentvalue: null
+2022-12-19 15:06:57,848 [INFO] Argument:310 - Argument : Parentvalue: null
+2022-12-19 15:06:57,849 [INFO] Argument:300 - Argument : XferCpltCallbackvalue: null
+2022-12-19 15:06:57,849 [INFO] Argument:310 - Argument : XferCpltCallbackvalue: null
+2022-12-19 15:06:57,849 [INFO] Argument:300 - Argument : XferHalfCpltCallbackvalue: null
+2022-12-19 15:06:57,849 [INFO] Argument:310 - Argument : XferHalfCpltCallbackvalue: null
+2022-12-19 15:06:57,849 [INFO] Argument:300 - Argument : XferErrorCallbackvalue: null
+2022-12-19 15:06:57,849 [INFO] Argument:310 - Argument : XferErrorCallbackvalue: null
+2022-12-19 15:06:57,849 [INFO] Argument:300 - Argument : ErrorCodevalue: null
+2022-12-19 15:06:57,850 [INFO] Argument:310 - Argument : ErrorCodevalue: null
+2022-12-19 15:06:58,042 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\license.tmp_save
+2022-12-19 15:06:58,128 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\license.tmp
+2022-12-19 15:06:58,169 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\gpio.c_save
+2022-12-19 15:06:58,260 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\gpio.c
+2022-12-19 15:06:58,270 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\gpio.h_save
+2022-12-19 15:06:58,371 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\gpio.h
+2022-12-19 15:06:58,674 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\can.c_save
+2022-12-19 15:06:58,797 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\can.c
+2022-12-19 15:06:58,804 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\can.h_save
+2022-12-19 15:06:58,870 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\can.h
+2022-12-19 15:06:58,894 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\dma.c_save
+2022-12-19 15:06:58,964 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\dma.c
+2022-12-19 15:06:58,971 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\dma.h_save
+2022-12-19 15:06:59,036 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\dma.h
+2022-12-19 15:06:59,049 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\tim.c_save
+2022-12-19 15:06:59,154 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\tim.c
+2022-12-19 15:06:59,161 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\tim.h_save
+2022-12-19 15:06:59,228 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\tim.h
+2022-12-19 15:06:59,241 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\usart.c_save
+2022-12-19 15:06:59,346 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\usart.c
+2022-12-19 15:06:59,357 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\usart.h_save
+2022-12-19 15:06:59,429 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\usart.h
+2022-12-19 15:06:59,445 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_it.c_save
+2022-12-19 15:06:59,526 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_it.c
+2022-12-19 15:06:59,535 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_it.h_save
+2022-12-19 15:06:59,631 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_it.h
+2022-12-19 15:06:59,645 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_hal_msp.c_save
+2022-12-19 15:06:59,738 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_hal_msp.c
+2022-12-19 15:06:59,744 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\system.tmp_save
+2022-12-19 15:06:59,819 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\system.tmp
+2022-12-19 15:06:59,829 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_hal_conf.h_save
+2022-12-19 15:06:59,897 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_hal_conf.h
+2022-12-19 15:06:59,929 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\main.h_save
+2022-12-19 15:06:59,999 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\main.h
+2022-12-19 15:07:00,005 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\main.c_save
+2022-12-19 15:07:00,099 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\main.c
+2022-12-19 15:07:00,785 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 158mS.
+2022-12-19 15:07:00,789 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-12-19 15:07:01,188 [INFO] ConfigFileManager:1394 - The Die is : DIE418
+2022-12-19 15:07:02,315 [ERROR] root:77 - Fail to recover any existing build configuration matching on going update process
+2022-12-19 15:07:02,316 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 1527mS.
+2022-12-19 15:07:02,318 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-12-19 15:07:02,322 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-12-19 15:13:57,977 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2022-12-19 15:13:59,672 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 368137688 Bytes (682622976)
+2022-12-19 15:14:00,893 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 384914888 Bytes (682622976)
+2022-12-19 15:14:02,671 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 491869648 Bytes (682622976)
+2022-12-19 15:14:03,366 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-12-19 15:14:03,366 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: USART
+2022-12-19 15:14:03,366 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: DMA
+2022-12-19 15:14:03,366 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: TIM1_8F1
+2022-12-19 15:14:03,366 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: CAN
+2022-12-19 15:14:03,366 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-12-19 15:14:03,368 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-12-19 15:14:03,368 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-12-19 15:14:03,369 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-12-19 15:14:03,381 [INFO] Argument:300 - Argument : hdmavalue: null
+2022-12-19 15:14:03,381 [INFO] Argument:302 - 	 sub Args: 
+2022-12-19 15:14:03,381 [INFO] Argument:300 - Argument : Instancevalue: DMA1_Channel2
+2022-12-19 15:14:03,381 [INFO] Argument:310 - Argument : Instancevalue: DMA1_Channel2
+2022-12-19 15:14:03,381 [INFO] Argument:300 - Argument : Initvalue: null
+2022-12-19 15:14:03,381 [INFO] Argument:302 - 	 sub Args: 
+2022-12-19 15:14:03,381 [INFO] Argument:300 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2022-12-19 15:14:03,381 [INFO] Argument:310 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2022-12-19 15:14:03,381 [INFO] Argument:300 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2022-12-19 15:14:03,381 [INFO] Argument:310 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2022-12-19 15:14:03,381 [INFO] Argument:300 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2022-12-19 15:14:03,381 [INFO] Argument:310 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2022-12-19 15:14:03,381 [INFO] Argument:300 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2022-12-19 15:14:03,381 [INFO] Argument:310 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2022-12-19 15:14:03,383 [INFO] Argument:300 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2022-12-19 15:14:03,383 [INFO] Argument:310 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2022-12-19 15:14:03,383 [INFO] Argument:300 - Argument : Modevalue: DMA_NORMAL
+2022-12-19 15:14:03,383 [INFO] Argument:310 - Argument : Modevalue: DMA_NORMAL
+2022-12-19 15:14:03,383 [INFO] Argument:300 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2022-12-19 15:14:03,383 [INFO] Argument:310 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2022-12-19 15:14:03,383 [INFO] Argument:300 - Argument : Lockvalue: null
+2022-12-19 15:14:03,383 [INFO] Argument:310 - Argument : Lockvalue: null
+2022-12-19 15:14:03,383 [INFO] Argument:300 - Argument : Statevalue: null
+2022-12-19 15:14:03,383 [INFO] Argument:310 - Argument : Statevalue: null
+2022-12-19 15:14:03,383 [INFO] Argument:300 - Argument : Parentvalue: null
+2022-12-19 15:14:03,383 [INFO] Argument:310 - Argument : Parentvalue: null
+2022-12-19 15:14:03,384 [INFO] Argument:300 - Argument : XferCpltCallbackvalue: null
+2022-12-19 15:14:03,384 [INFO] Argument:310 - Argument : XferCpltCallbackvalue: null
+2022-12-19 15:14:03,384 [INFO] Argument:300 - Argument : XferHalfCpltCallbackvalue: null
+2022-12-19 15:14:03,384 [INFO] Argument:310 - Argument : XferHalfCpltCallbackvalue: null
+2022-12-19 15:14:03,384 [INFO] Argument:300 - Argument : XferErrorCallbackvalue: null
+2022-12-19 15:14:03,384 [INFO] Argument:310 - Argument : XferErrorCallbackvalue: null
+2022-12-19 15:14:03,384 [INFO] Argument:300 - Argument : ErrorCodevalue: null
+2022-12-19 15:14:03,384 [INFO] Argument:310 - Argument : ErrorCodevalue: null
+2022-12-19 15:14:03,535 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\license.tmp_save
+2022-12-19 15:14:03,591 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\license.tmp
+2022-12-19 15:14:03,625 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\gpio.c_save
+2022-12-19 15:14:03,706 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\gpio.c
+2022-12-19 15:14:03,713 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\gpio.h_save
+2022-12-19 15:14:03,793 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\gpio.h
+2022-12-19 15:14:04,076 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\can.c_save
+2022-12-19 15:14:04,192 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\can.c
+2022-12-19 15:14:04,202 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\can.h_save
+2022-12-19 15:14:04,280 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\can.h
+2022-12-19 15:14:04,305 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\dma.c_save
+2022-12-19 15:14:04,389 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\dma.c
+2022-12-19 15:14:04,396 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\dma.h_save
+2022-12-19 15:14:04,467 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\dma.h
+2022-12-19 15:14:04,479 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\tim.c_save
+2022-12-19 15:14:04,564 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\tim.c
+2022-12-19 15:14:04,571 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\tim.h_save
+2022-12-19 15:14:04,636 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\tim.h
+2022-12-19 15:14:04,654 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\usart.c_save
+2022-12-19 15:14:04,766 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\usart.c
+2022-12-19 15:14:04,773 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\usart.h_save
+2022-12-19 15:14:04,842 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\usart.h
+2022-12-19 15:14:04,860 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_it.c_save
+2022-12-19 15:14:04,929 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_it.c
+2022-12-19 15:14:04,936 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_it.h_save
+2022-12-19 15:14:05,000 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_it.h
+2022-12-19 15:14:05,015 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_hal_msp.c_save
+2022-12-19 15:14:05,105 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_hal_msp.c
+2022-12-19 15:14:05,110 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\system.tmp_save
+2022-12-19 15:14:05,168 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\system.tmp
+2022-12-19 15:14:05,178 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_hal_conf.h_save
+2022-12-19 15:14:05,243 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_hal_conf.h
+2022-12-19 15:14:05,270 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\main.h_save
+2022-12-19 15:14:05,398 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\main.h
+2022-12-19 15:14:05,405 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\main.c_save
+2022-12-19 15:14:05,524 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\main.c
+2022-12-19 15:14:06,193 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 162mS.
+2022-12-19 15:14:06,198 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-12-19 15:14:06,630 [INFO] ConfigFileManager:1394 - The Die is : DIE418
+2022-12-19 15:14:07,803 [ERROR] root:77 - Fail to recover any existing build configuration matching on going update process
+2022-12-19 15:14:07,803 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 1605mS.
+2022-12-19 15:14:07,807 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 4mS.
+2022-12-19 15:14:07,809 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-12-19 15:36:08,863 [INFO] Activator:177 - 
+
+
+2022-12-19 15:36:08,866 [INFO] Activator:178 - !SESSION log4j initialized
+2022-12-19 15:36:41,314 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022-12-19 15:36:41,315 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022-12-19 15:36:41,317 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022-12-19 17:09:18,718 [INFO] McuFinderGlobals:44 - Set McuFinder mode to 2 (CubeIDE integrated)
+2022-12-19 17:09:20,886 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2022-12-19 17:09:21,044 [INFO] DbMcusXml:77 - Set database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2022-12-19 17:09:21,054 [INFO] ApiDb:269 - Set plugin database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2022-12-19 17:09:21,096 [WARN] ApiDb:254 - Overriding images path with different value:  => C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2022-12-19 17:09:21,471 [INFO] ApiDb:249 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/
+2022-12-19 17:09:21,486 [INFO] DbMcusAds:124 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/
+2022-12-19 17:09:22,092 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-12-19 17:09:23,032 [INFO] RulesReader:61 - Compatibility file has been processed (282 Rules)
+2022-12-19 17:09:23,704 [INFO] DbMcusXml:77 - Set database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2022-12-19 17:09:23,705 [INFO] ApiDb:269 - Set plugin database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2022-12-19 17:09:23,707 [INFO] ApiDb:256 - Set plugin images path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2022-12-19 17:09:23,708 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 17:09:23,709 [INFO] ApiDb:249 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/
+2022-12-19 17:09:23,709 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 17:09:23,710 [INFO] DbMcusAds:124 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/
+2022-12-19 17:09:23,714 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 17:09:23,715 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 17:09:23,716 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-12-19 17:09:23,882 [INFO] MainPanel:242 - HeapMemory: 287309824
+2022-12-19 17:09:24,085 [INFO] DbMcusXml:77 - Set database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2022-12-19 17:09:24,086 [INFO] ApiDb:269 - Set plugin database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2022-12-19 17:09:24,086 [INFO] ApiDb:256 - Set plugin images path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2022-12-19 17:09:24,086 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 17:09:24,087 [INFO] ApiDb:249 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/
+2022-12-19 17:09:24,087 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 17:09:24,087 [INFO] DbMcusAds:124 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/
+2022-12-19 17:09:24,087 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 17:09:24,087 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\akila\.stmcufinder\plugins\mcufinder/ => C:\Users\akila\.stmcufinder\plugins\mcufinder
+2022-12-19 17:09:24,088 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\akila\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-12-19 17:09:24,120 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2022-12-19 17:09:24,122 [INFO] PluginManage:193 - Search for loadable plugins [exclusion list=, ]
+2022-12-19 17:09:24,124 [INFO] PluginManage:307 - Check plugin analytics
+2022-12-19 17:09:24,478 [INFO] AnalyticsPlugin:262 - Accepted Software Licenses: 
+2022-12-19 17:09:24,479 [INFO] AnalyticsPlugin:264 - Accepted CMSIS Pack Licenses: 
+2022-12-19 17:09:24,480 [INFO] AnalyticsPlugin:266 - Accepted Firmware Licenses: 
+2022-12-19 17:09:24,511 [INFO] PluginManage:356 - Loaded plugin analytics (category:tool,tabindex:-1)
+2022-12-19 17:09:24,512 [INFO] PluginManage:307 - Check plugin cadmodel
+2022-12-19 17:09:24,519 [INFO] CADModel:65 - Init CAD model plugin
+2022-12-19 17:09:24,519 [INFO] PluginManage:356 - Loaded plugin cadmodel (category:power,tabindex:5)
+2022-12-19 17:09:24,520 [INFO] PluginManage:307 - Check plugin clock
+2022-12-19 17:09:24,540 [INFO] PluginManage:356 - Loaded plugin clock (category:base,tabindex:2)
+2022-12-19 17:09:24,540 [INFO] PluginManage:307 - Check plugin ddr
+2022-12-19 17:09:24,547 [INFO] PluginManage:356 - Loaded plugin ddr (category:tool,tabindex:6)
+2022-12-19 17:09:24,547 [INFO] PluginManage:307 - Check plugin filemanager
+2022-12-19 17:09:24,812 [INFO] PluginManage:356 - Loaded plugin filemanager (category:base,tabindex:10)
+2022-12-19 17:09:24,812 [INFO] PluginManage:307 - Check plugin ipmanager
+2022-12-19 17:09:24,823 [INFO] PluginManage:356 - Loaded plugin ipmanager (category:base,tabindex:5)
+2022-12-19 17:09:24,824 [INFO] PluginManage:307 - Check plugin lpbam
+2022-12-19 17:09:24,839 [INFO] PluginManage:356 - Loaded plugin lpbam (category:base,tabindex:0)
+2022-12-19 17:09:24,840 [INFO] PluginManage:307 - Check plugin pinoutandconfiguration
+2022-12-19 17:09:24,853 [INFO] PluginManage:356 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2022-12-19 17:09:24,853 [INFO] PluginManage:307 - Check plugin pinoutconfig
+2022-12-19 17:09:25,407 [INFO] PluginManage:356 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2022-12-19 17:09:25,407 [INFO] PluginManage:307 - Check plugin power
+2022-12-19 17:09:25,426 [INFO] PluginManage:356 - Loaded plugin power (category:power,tabindex:4)
+2022-12-19 17:09:25,427 [INFO] PluginManage:307 - Check plugin projectmanager
+2022-12-19 17:09:25,457 [INFO] PluginManage:356 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2022-12-19 17:09:25,457 [INFO] PluginManage:307 - Check plugin thirdparty
+2022-12-19 17:09:25,696 [WARN] IntegrityCheckThread:82 - waiting for thirdparty lock release [integrity check]
+2022-12-19 17:09:25,703 [INFO] IntegrityCheckThread:84 - entering critical section [integrity check]
+2022-12-19 17:09:25,703 [INFO] PluginManage:356 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2022-12-19 17:09:25,706 [INFO] PluginManage:307 - Check plugin tools
+2022-12-19 17:09:25,710 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [1/15]
+2022-12-19 17:09:25,713 [INFO] PluginManage:356 - Loaded plugin tools (category:base,tabindex:7)
+2022-12-19 17:09:25,714 [INFO] PluginManage:307 - Check plugin tutovideos
+2022-12-19 17:09:26,046 [INFO] PluginManage:356 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2022-12-19 17:09:26,047 [INFO] PluginManage:307 - Check plugin updater
+2022-12-19 17:09:26,085 [INFO] PluginManage:356 - Loaded plugin updater (category:base,tabindex:12)
+2022-12-19 17:09:26,087 [INFO] PluginManage:280 - PluginManage : Loaded plugins [15]
+2022-12-19 17:09:26,816 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-12-19 17:09:26,922 [INFO] CADModel:98 - CPN selected for project level
+2022-12-19 17:09:26,953 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:26,953 [INFO] PluginManager:217 - loadIPPluginJar : add adc
+2022-12-19 17:09:26,958 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:26,958 [INFO] PluginManager:217 - loadIPPluginJar : add aes
+2022-12-19 17:09:26,963 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:26,963 [INFO] PluginManager:217 - loadIPPluginJar : add can
+2022-12-19 17:09:26,966 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:26,966 [INFO] PluginManager:217 - loadIPPluginJar : add comp
+2022-12-19 17:09:26,970 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:26,971 [INFO] PluginManager:217 - loadIPPluginJar : add cryp
+2022-12-19 17:09:26,975 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:26,975 [INFO] PluginManager:217 - loadIPPluginJar : add dfsdm
+2022-12-19 17:09:26,984 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:26,985 [INFO] PluginManager:217 - loadIPPluginJar : add dma
+2022-12-19 17:09:26,989 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:26,990 [INFO] PluginManager:217 - loadIPPluginJar : add dma3
+2022-12-19 17:09:26,993 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:26,993 [INFO] PluginManager:217 - loadIPPluginJar : add fatfs
+2022-12-19 17:09:27,000 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,001 [INFO] PluginManager:217 - loadIPPluginJar : add fmc
+2022-12-19 17:09:27,009 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,010 [INFO] PluginManager:217 - loadIPPluginJar : add freertos
+2022-12-19 17:09:27,013 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,013 [INFO] PluginManager:217 - loadIPPluginJar : add genericplugin
+2022-12-19 17:09:27,017 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,017 [INFO] PluginManager:217 - loadIPPluginJar : add gfxmmu
+2022-12-19 17:09:27,025 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,026 [INFO] PluginManager:217 - loadIPPluginJar : add gic
+2022-12-19 17:09:27,033 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,033 [INFO] PluginManager:217 - loadIPPluginJar : add gpio
+2022-12-19 17:09:27,038 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,038 [INFO] PluginManager:217 - loadIPPluginJar : add gtzc
+2022-12-19 17:09:27,043 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,043 [INFO] PluginManager:217 - loadIPPluginJar : add hash
+2022-12-19 17:09:27,048 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,049 [INFO] PluginManager:217 - loadIPPluginJar : add i2c
+2022-12-19 17:09:27,053 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,054 [INFO] PluginManager:217 - loadIPPluginJar : add i2s
+2022-12-19 17:09:27,060 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,061 [INFO] PluginManager:217 - loadIPPluginJar : add ipddr
+2022-12-19 17:09:27,071 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,071 [INFO] PluginManager:217 - loadIPPluginJar : add linkedlist
+2022-12-19 17:09:27,077 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,078 [INFO] PluginManager:217 - loadIPPluginJar : add lorawan
+2022-12-19 17:09:27,081 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,081 [INFO] PluginManager:217 - loadIPPluginJar : add ltdc
+2022-12-19 17:09:27,091 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,092 [INFO] PluginManager:217 - loadIPPluginJar : add mdma
+2022-12-19 17:09:27,097 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,098 [INFO] PluginManager:217 - loadIPPluginJar : add nvic
+2022-12-19 17:09:27,103 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,103 [INFO] PluginManager:217 - loadIPPluginJar : add opamp
+2022-12-19 17:09:27,110 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,111 [INFO] PluginManager:217 - loadIPPluginJar : add openamp
+2022-12-19 17:09:27,117 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,118 [INFO] PluginManager:217 - loadIPPluginJar : add pdm2pcm
+2022-12-19 17:09:27,130 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,134 [INFO] PluginManager:217 - loadIPPluginJar : add plateformsettings
+2022-12-19 17:09:27,137 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,138 [INFO] PluginManager:217 - loadIPPluginJar : add quadspi
+2022-12-19 17:09:27,148 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,148 [INFO] PluginManager:217 - loadIPPluginJar : add resmgrutility
+2022-12-19 17:09:27,154 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,155 [INFO] PluginManager:217 - loadIPPluginJar : add sai
+2022-12-19 17:09:27,160 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,160 [INFO] PluginManager:217 - loadIPPluginJar : add spi
+2022-12-19 17:09:27,169 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,169 [INFO] PluginManager:217 - loadIPPluginJar : add stm32_wpan
+2022-12-19 17:09:27,173 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,173 [INFO] PluginManager:217 - loadIPPluginJar : add tim
+2022-12-19 17:09:27,179 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,180 [INFO] PluginManager:217 - loadIPPluginJar : add touchsensing
+2022-12-19 17:09:27,183 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,184 [INFO] PluginManager:217 - loadIPPluginJar : add tracer_emb
+2022-12-19 17:09:27,187 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,188 [INFO] PluginManager:217 - loadIPPluginJar : add ts
+2022-12-19 17:09:27,191 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,191 [INFO] PluginManager:217 - loadIPPluginJar : add tsc
+2022-12-19 17:09:27,195 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,196 [INFO] PluginManager:217 - loadIPPluginJar : add ucpd
+2022-12-19 17:09:27,201 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,202 [INFO] PluginManager:217 - loadIPPluginJar : add usart
+2022-12-19 17:09:27,208 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:27,208 [INFO] PluginManager:217 - loadIPPluginJar : add usbx
+2022-12-19 17:09:27,657 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 17:09:28,009 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 17:09:28,024 [INFO] DbMcusAds:52 - JSON generation date=Thu Sep 30 12:26:37 IST 2021 (1632984997303)
+2022-12-19 17:09:28,025 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 17:09:28,095 [WARN] DetailPanel:344 - Failed to get advertising image, set to default
+2022-12-19 17:09:28,244 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 17:09:28,249 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 17:09:28,249 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 17:09:28,249 [WARN] DetailPanel:344 - Failed to get advertising image, set to default
+2022-12-19 17:09:28,251 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-12-19 17:09:28,357 [ERROR] Updater:1105 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2022-12-19 17:09:28,361 [INFO] Updater:1041 - Updater Version found : 6.6.1
+2022-12-19 17:09:28,387 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2022-12-19 17:09:28,723 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [2/15]
+2022-12-19 17:09:29,238 [INFO] MainUpdater:2768 - connection check result : 10
+2022-12-19 17:09:29,239 [INFO] MainUpdater:280 - Updater Check For Update Now.
+2022-12-19 17:09:29,239 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-12-19 17:09:29,440 [INFO] CheckServerUpdateThread:119 - End of CheckServer Thread
+2022-12-19 17:09:29,462 [INFO] MainUpdater:2768 - connection check result : 10
+2022-12-19 17:09:29,464 [INFO] MainUpdater:2768 - connection check result : 10
+2022-12-19 17:09:29,539 [INFO] MicroXplorer:451 - Change Database Path : 
+2022-12-19 17:09:29,541 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-12-19 17:09:29,543 [WARN] ThirdParty:827 - waiting for thirdparty lock release [close project]
+2022-12-19 17:09:31,951 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-GNSS1.6.0.0
+2022-12-19 17:09:31,990 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F4.1.1.0
+2022-12-19 17:09:32,011 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.1.2.0
+2022-12-19 17:09:32,089 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F7.1.1.0
+2022-12-19 17:09:32,103 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.6.2.3
+2022-12-19 17:09:32,133 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.6.2.4
+2022-12-19 17:09:32,142 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC4.2.0.5
+2022-12-19 17:09:32,150 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC4.2.0.4
+2022-12-19 17:09:32,166 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.1.0
+2022-12-19 17:09:32,181 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC7.1.0.0
+2022-12-19 17:09:32,258 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.9.3.0
+2022-12-19 17:09:32,499 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.7.2.0
+2022-12-19 17:09:32,513 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0
+2022-12-19 17:09:32,526 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE2.3.3.0
+2022-12-19 17:09:32,548 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DISPLAY.2.2.0
+2022-12-19 17:09:32,569 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.2.0
+2022-12-19 17:09:32,623 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.3.0.0
+2022-12-19 17:09:32,641 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ISPU.1.0.0
+2022-12-19 17:09:32,650 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ISPU.1.1.0
+2022-12-19 17:09:32,669 [WARN] PackLoader:242 - Cannot read IP mode file for RoweBots.I-CUBE-UNISONRTOS.5.5.0-4
+2022-12-19 17:09:32,704 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.2.1.0
+2022-12-19 17:09:32,813 [WARN] PackLoader:242 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfSSL.5.4.0
+2022-12-19 17:09:32,826 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.1.0.0
+2022-12-19 17:09:32,912 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.9.4.0
+2022-12-19 17:09:33,074 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.7.3.0
+2022-12-19 17:09:33,082 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALGOBUILD.1.3.0
+2022-12-19 17:09:33,114 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.1.1.0
+2022-12-19 17:09:33,139 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G0.1.1.0
+2022-12-19 17:09:33,163 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SUBG2.5.0.0
+2022-12-19 17:09:33,210 [WARN] PackLoader:242 - Cannot read IP mode file for SEGGER.I-CUBE-embOS.1.2.0
+2022-12-19 17:09:33,282 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.1.1.1
+2022-12-19 17:09:33,289 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.1.1.0
+2022-12-19 17:09:33,301 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.1.3.0
+2022-12-19 17:09:33,327 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G4.1.0.0
+2022-12-19 17:09:33,338 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-SIGFOX1.3.2.0
+2022-12-19 17:09:33,369 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L4.1.0.0
+2022-12-19 17:09:33,385 [WARN] PackLoader:242 - Cannot read IP mode file for emotas.I-CUBE-CANOPEN.1.1.2
+2022-12-19 17:09:33,393 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.20.0
+2022-12-19 17:09:33,406 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WL.1.0.0
+2022-12-19 17:09:33,417 [WARN] PackLoader:242 - Cannot read IP mode file for portGmbH.I-Cube-SoM-uGOAL.1.1.0
+2022-12-19 17:09:33,426 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALS.1.0.1
+2022-12-19 17:09:33,448 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WB.1.1.0
+2022-12-19 17:09:33,471 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.1.0.0
+2022-12-19 17:09:33,546 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-EEPRMA1.3.1.1
+2022-12-19 17:09:33,551 [INFO] ThirdParty:929 - Integrity check success = true
+2022-12-19 17:09:33,552 [INFO] IntegrityCheckThread:98 - exiting critical section [integrity check]
+2022-12-19 17:09:33,552 [INFO] IntegrityCheckThread:101 - End integrity checks thread
+2022-12-19 17:09:33,552 [INFO] ThirdParty:829 - entering critical section [close project]
+2022-12-19 17:09:33,558 [INFO] ThirdParty:839 - exiting critical section [close project]
+2022-12-19 17:09:33,588 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-12-19 17:09:33,600 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 231080688 Bytes (287309824)
+2022-12-19 17:09:33,603 [INFO] MicroXplorer:451 - Change Database Path : 
+2022-12-19 17:09:33,603 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-12-19 17:09:33,603 [INFO] OpenFileManager:307 - Change cursor
+2022-12-19 17:09:33,688 [INFO] Mcu:1922 - Initializing MCU STM32F105R(8-B-C)Tx STM32F105R8Tx STM32F105R8T6
+2022-12-19 17:09:35,644 [INFO] Context:654 - Trying to add GPIOservice into a context  which must be forbidden
+2022-12-19 17:09:36,231 [WARN] ApiManager:308 - Cannot register API 'Board Extension:GNSS1A1' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2022-12-19 17:09:36,231 [WARN] ApiManager:308 - Cannot register API 'Board Support:Custom' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2022-12-19 17:09:36,232 [WARN] ApiManager:308 - Cannot register API 'Data Exchange:lib_gnss' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2022-12-19 17:09:36,495 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.9.4.0: no header file found
+2022-12-19 17:09:36,495 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.9.4.0: no header file found
+2022-12-19 17:09:36,495 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.9.4.0: no header file found
+2022-12-19 17:09:36,505 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.6.2.3: no header file found
+2022-12-19 17:09:36,507 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.6.2.4: no header file found
+2022-12-19 17:09:36,511 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2022-12-19 17:09:36,511 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2022-12-19 17:09:36,511 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2022-12-19 17:09:36,511 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2022-12-19 17:09:36,512 [WARN] ModelIntegratedComponent:185 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2022-12-19 17:09:36,515 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2022-12-19 17:09:36,516 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2022-12-19 17:09:36,516 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2022-12-19 17:09:36,520 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC04A1' from pack STMicroelectronics.X-CUBE-NFC4.2.0.5: no header file found
+2022-12-19 17:09:36,521 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC04A1' from pack STMicroelectronics.X-CUBE-NFC4.2.0.4: no header file found
+2022-12-19 17:09:36,529 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,530 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,530 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,530 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,530 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,530 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,531 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,531 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,531 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,531 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,531 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,531 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,531 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,531 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,531 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,531 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,532 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,532 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,532 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,532 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,532 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,533 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,533 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,533 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,533 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,533 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,533 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,533 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,533 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,533 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,533 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,534 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,534 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:09:36,536 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC07A1' from pack STMicroelectronics.X-CUBE-NFC7.1.0.0: no header file found
+2022-12-19 17:09:36,631 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-12-19 17:09:36,631 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-12-19 17:09:36,631 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-12-19 17:09:36,640 [WARN] ApiManager:308 - Cannot register API 'Board Extension:EEPRMA1' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.1.1: no header file found
+2022-12-19 17:09:36,641 [WARN] ApiManager:308 - Cannot register API 'Board Extension:EEPRMA2' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.1.1: no header file found
+2022-12-19 17:09:36,643 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2022-12-19 17:09:36,643 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2022-12-19 17:09:36,644 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2022-12-19 17:09:36,645 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-2' from pack STMicroelectronics.X-CUBE-BLE2.3.3.0: no header file found
+2022-12-19 17:09:36,679 [INFO] ThirdPartyModel:289 - Start build external matchings
+2022-12-19 17:09:37,180 [INFO] ThirdPartyModel:302 - End build external matchings
+2022-12-19 17:09:37,293 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Instance) has Id (USART3_TX) currently not set
+2022-12-19 17:09:37,293 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Direction) has Id (USART3_TX) currently not set
+2022-12-19 17:09:37,294 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphInc) has Id (USART3_TX) currently not set
+2022-12-19 17:09:37,294 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemInc) has Id (USART3_TX) currently not set
+2022-12-19 17:09:37,294 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphDataAlignment) has Id (USART3_TX) currently not set
+2022-12-19 17:09:37,296 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemDataAlignment) has Id (USART3_TX) currently not set
+2022-12-19 17:09:37,296 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Mode) has Id (USART3_TX) currently not set
+2022-12-19 17:09:37,296 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Priority) has Id (USART3_TX) currently not set
+2022-12-19 17:09:37,298 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (ADCFreqValue) has invalid value (36000000)
+2022-12-19 17:09:37,298 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2022-12-19 17:09:37,299 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCOFreq_Value) has invalid value (72000000)
+2022-12-19 17:09:37,769 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 234638376 Bytes (394264576)
+2022-12-19 17:09:38,222 [INFO] ApiDb:576 - Connected to CubeFinder SQLite database (C:\Users\akila\.stmcufinder\plugins\mcufinder\mcu\cube-finder-db.db)
+2022-12-19 17:09:38,290 [INFO] ApiDb:663 - CubeFinder database Data Model version=2.1
+2022-12-19 17:09:38,290 [INFO] ApiDb:664 - CubeFinder database Configuration version=3.0.32
+2022-12-19 17:09:38,291 [INFO] ApiDb:665 - CubeFinder database generation date=2022-08-05 (1659688109)
+2022-12-19 17:09:38,291 [INFO] ApiDb:666 - CubeFinder database FW Pack versions=[STM32Cube_FW_C0_V1.0.0, STM32Cube_FW_F4_V1.27.1, STM32Cube_FW_F7_V1.17.0, STM32Cube_FW_G0_V1.6.1, STM32Cube_FW_G4_V1.5.0, STM32Cube_FW_H7_V1.10.0, STM32Cube_FW_L5_V1.4.0, STM32Cube_FW_U5_V1.1.1, STM32Cube_FW_WB_V1.14.1, STM32Cube_FW_WL_V1.2.0, X-CUBE-ALGOBUILD_V1.3.0, X-CUBE-ALS_V1.0.1, X-CUBE-AZRTOS-F4_V1.1.0, X-CUBE-AZRTOS-F7_V1.1.0, X-CUBE-AZRTOS-G0_V1.1.0, X-CUBE-AZRTOS-G4_V1.0.0, X-CUBE-AZRTOS-H7_V2.1.0, X-CUBE-AZRTOS-L4_V1.0.0, X-CUBE-AZRTOS-L5_V1.0.0, X-CUBE-AZRTOS-WL_V1.0.0, X-CUBE-BLE1_V6.2.3, X-CUBE-BLE2_V3.3.0, X-CUBE-EEPRMA1_V3.1.1, X-CUBE-GNSS1_V6.0.0, X-CUBE-MEMS1_V9.1.0, X-CUBE-MEMS1_V9.3.0, X-CUBE-NFC4_V2.0.4, X-CUBE-NFC7_V1.0.0, X-CUBE-SFXS2LP1_V4.0.0, X-CUBE-SUBG2_V5.0.0]
+2022-12-19 17:09:41,157 [INFO] ApiDb:239 - Found 138 in-development CPN: [B-WB1M-WPAN1, NUCLEO-C031C6, STEVAL-STWINBX1, STM320518-EVAL, STM32C0116-DK, STM32C011D6Y3TR, STM32C011D6Y6TR, STM32C011F4P3, STM32C011F4P6, STM32C011F4U3, STM32C011F4U6TR, STM32C011F6P3, STM32C011F6P6, STM32C011F6U3, STM32C011F6U6TR, STM32C011J4M3, STM32C011J4M6, STM32C011J6M3, STM32C011J6M6, STM32C0316-DK, STM32C031C4T3, STM32C031C4T6, STM32C031C4U3, STM32C031C4U6, STM32C031C6T3, STM32C031C6T6, STM32C031C6U3, STM32C031C6U6, STM32C031F4P3, STM32C031F4P6, STM32C031F6P3, STM32C031F6P6, STM32C031G4U3, STM32C031G4U6, STM32C031G6U3, STM32C031G6U6, STM32C031K4T3, STM32C031K4T6, STM32C031K4U3, STM32C031K4U6, STM32C031K6T3, STM32C031K6T6, STM32C031K6U3, STM32C031K6U6, STM32G071K8TXN, STM32G071K8UXN, STM32G081GBU6N, STM32G081KBT6N, STM32G081KBUXN, STM32G0B1CCT6N, STM32G0B1KCT6, STM32G0B1NEY6TR, STM32G0B1RCT6N, STM32G0C1CCT6, STM32G0C1CCT6N, STM32G0C1CCU6N, STM32G0C1CET6N, STM32G0C1CEU6N, STM32G0C1KCT6, STM32G0C1NEY6TR, STM32G0C1RCI6N, STM32G0C1RCT6N, STM32G0C1REI6N, STM32G0C1RET6N, STM32G0C1VCI6, STM32G0C1VEI6, STM32G471CCT6, STM32G471CCU6, STM32G471CET3, STM32G471CET6, STM32G471CEU3, STM32G471CEU6, STM32G471MCT6, STM32G471MET3, STM32G471MET6, STM32G471MEY6TR, STM32G471QCT6, STM32G471QET3, STM32G471RCT6, STM32G471RET3, STM32G471RET6, STM32G471VCH6, STM32G471VCI6, STM32G471VCT6, STM32G471VEH3, STM32G471VEH6, STM32G471VEI3, STM32G471VEI6, STM32G471VET3, STM32G471VET6, STM32G474CCT6, STM32L476VGY6PTR, STM32L4R5QGI6STR, STM32MP131AAE3, STM32MP131AAF3, STM32MP131AAG3, STM32MP131CAE3, STM32MP131CAF3, STM32MP131CAG3, STM32MP131DAE7, STM32MP131DAF7, STM32MP131DAG7, STM32MP131FAE7, STM32MP131FAF7, STM32MP131FAG7, STM32MP133AAE3, STM32MP133AAF3, STM32MP133AAG3, STM32MP133CAE3, STM32MP133CAF3, STM32MP133CAG3, STM32MP133DAE7, STM32MP133DAF7, STM32MP133DAG7, STM32MP133FAE7, STM32MP133FAF7, STM32MP133FAG7, STM32MP135AAE3, STM32MP135AAF3, STM32MP135AAG3, STM32MP135CAE3, STM32MP135CAF3, STM32MP135CAG3, STM32MP135DAE7, STM32MP135DAF7, STM32MP135DAG7, STM32MP135F-DK, STM32MP135FAE7, STM32MP135FAF7, STM32MP135FAG7, STM32U595ZJT6Q, STM32U599BJY6QTR, STM32U599NIH6Q, STM32U599NJH6Q, STM32U5A5ZJT6Q, STM32U5A9BJY6QTR, STM32U5A9NJH6Q, STM32WB1MMCH6]
+2022-12-19 17:09:41,161 [INFO] DbMcus:215 - Found 3542 MCUs, 3542 are supported
+2022-12-19 17:09:41,164 [INFO] ApiDb:418 - Load user favorites file C:\Users\akila/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2022-12-19 17:09:41,165 [INFO] ApiDb:422 - User favorites MCUs=[]
+2022-12-19 17:09:41,165 [INFO] DbMcus:221 - Set 0 / 0 favorites MCUs
+2022-12-19 17:09:41,186 [WARN] ThirdParty:789 - waiting for thirdparty lock release [change project]
+2022-12-19 17:09:41,186 [INFO] ThirdParty:791 - entering critical section [change project]
+2022-12-19 17:09:41,187 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.1.0
+2022-12-19 17:09:41,187 [INFO] ThirdParty:981 - CMSIS Pack Vendor :RoweBots I-CUBE-UNISONRTOS 5.5.0-4
+2022-12-19 17:09:41,187 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2022-12-19 17:09:41,187 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 2.1.0
+2022-12-19 17:09:41,187 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2022-12-19 17:09:41,187 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2022-12-19 17:09:41,187 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2022-12-19 17:09:41,187 [INFO] ThirdParty:981 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.4.0
+2022-12-19 17:09:41,187 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2022-12-19 17:09:41,187 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.0.0
+2022-12-19 17:09:41,187 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.2.0
+2022-12-19 17:09:41,188 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2022-12-19 17:09:41,188 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.4.0
+2022-12-19 17:09:41,188 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2022-12-19 17:09:41,188 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 7.3.0
+2022-12-19 17:09:41,188 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.3
+2022-12-19 17:09:41,188 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2022-12-19 17:09:41,188 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.4
+2022-12-19 17:09:41,188 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.1.0
+2022-12-19 17:09:41,188 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2022-12-19 17:09:41,188 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2022-12-19 17:09:41,188 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2022-12-19 17:09:41,188 [INFO] ThirdParty:981 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.2.0
+2022-12-19 17:09:41,188 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 2.0.5
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 2.0.4
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 1.1.1
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.1.0
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 1.1.0
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.3.0
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 1.0.0
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 1.0.0
+2022-12-19 17:09:41,189 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2022-12-19 17:09:41,190 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2022-12-19 17:09:41,190 [INFO] ThirdParty:981 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.1.2
+2022-12-19 17:09:41,190 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.20.0
+2022-12-19 17:09:41,190 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2022-12-19 17:09:41,190 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.0
+2022-12-19 17:09:41,190 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 1.0.0
+2022-12-19 17:09:41,190 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.3.0
+2022-12-19 17:09:41,190 [INFO] ThirdParty:981 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2022-12-19 17:09:41,191 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2022-12-19 17:09:41,191 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 7.2.0
+2022-12-19 17:09:41,191 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2022-12-19 17:09:41,191 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 1.1.0
+2022-12-19 17:09:41,191 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.0.0
+2022-12-19 17:09:41,191 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2022-12-19 17:09:41,192 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 3.1.1
+2022-12-19 17:09:41,192 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2022-12-19 17:09:41,192 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2022-12-19 17:09:41,192 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2022-12-19 17:09:41,192 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2022-12-19 17:09:41,192 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 2.2.0
+2022-12-19 17:09:41,192 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.2.0
+2022-12-19 17:09:41,192 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2022-12-19 17:09:41,192 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.0.0
+2022-12-19 17:09:41,192 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.0.0
+2022-12-19 17:09:41,193 [INFO] ThirdParty:797 - exiting critical section [change project]
+2022-12-19 17:09:41,861 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-12-19 17:09:41,864 [INFO] PinOutPanel:1468 - setPackage(STM32F105R8Tx,LQFP64)
+2022-12-19 17:09:42,832 [INFO] UtilMem:74 - Before build in PCC Used Memory: 273176624 Bytes (394264576)
+2022-12-19 17:09:44,124 [INFO] UtilMem:74 - After build in PCC Used Memory: 225810048 Bytes (394264576)
+2022-12-19 17:09:44,307 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,308 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,308 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,308 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,308 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,309 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,309 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,309 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,310 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,310 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,311 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,312 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,312 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,313 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,314 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,316 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,317 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,318 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,318 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,319 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,320 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,320 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,321 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,322 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,323 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,324 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,324 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,325 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,325 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,326 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,327 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,327 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,328 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,329 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,329 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,330 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,330 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,331 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:09:44,371 [INFO] Can:70 - Can Add PropertyChangeListener com.st.microxplorer.plugins.ip.can.Can@575d19cd
+2022-12-19 17:09:44,759 [INFO] OpenFileManager:327 - Restore cursor
+2022-12-19 17:10:09,511 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2022-12-19 17:10:13,360 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 259074872 Bytes (394264576)
+2022-12-19 17:10:14,624 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 275397624 Bytes (394264576)
+2022-12-19 17:10:16,282 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 220814496 Bytes (394264576)
+2022-12-19 17:10:17,394 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-12-19 17:10:17,395 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: USART
+2022-12-19 17:10:17,395 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: DMA
+2022-12-19 17:10:17,395 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: TIM1_8F1
+2022-12-19 17:10:17,396 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: CAN
+2022-12-19 17:10:17,396 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-12-19 17:10:17,397 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-12-19 17:10:17,397 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-12-19 17:10:17,399 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-12-19 17:10:18,127 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\license.tmp_save
+2022-12-19 17:10:19,015 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\license.tmp
+2022-12-19 17:10:19,253 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\gpio.c_save
+2022-12-19 17:10:19,548 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\gpio.c
+2022-12-19 17:10:19,558 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\gpio.h_save
+2022-12-19 17:10:19,718 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\gpio.h
+2022-12-19 17:10:20,403 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\can.c_save
+2022-12-19 17:10:20,743 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\can.c
+2022-12-19 17:10:20,753 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\can.h_save
+2022-12-19 17:10:20,921 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\can.h
+2022-12-19 17:10:20,963 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\dma.c_save
+2022-12-19 17:10:21,115 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\dma.c
+2022-12-19 17:10:21,127 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\dma.h_save
+2022-12-19 17:10:21,258 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\dma.h
+2022-12-19 17:10:21,276 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\tim.c_save
+2022-12-19 17:10:21,482 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\tim.c
+2022-12-19 17:10:21,491 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\tim.h_save
+2022-12-19 17:10:21,627 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\tim.h
+2022-12-19 17:10:21,644 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\usart.c_save
+2022-12-19 17:10:21,886 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\usart.c
+2022-12-19 17:10:21,895 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\usart.h_save
+2022-12-19 17:10:22,132 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\usart.h
+2022-12-19 17:10:22,156 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_it.c_save
+2022-12-19 17:10:22,354 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_it.c
+2022-12-19 17:10:22,363 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_it.h_save
+2022-12-19 17:10:22,490 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_it.h
+2022-12-19 17:10:22,510 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_hal_msp.c_save
+2022-12-19 17:10:22,694 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_hal_msp.c
+2022-12-19 17:10:22,702 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\system.tmp_save
+2022-12-19 17:10:22,822 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\system.tmp
+2022-12-19 17:10:22,837 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_hal_conf.h_save
+2022-12-19 17:10:22,963 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_hal_conf.h
+2022-12-19 17:10:23,026 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\main.h_save
+2022-12-19 17:10:23,161 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\main.h
+2022-12-19 17:10:23,171 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\main.c_save
+2022-12-19 17:10:23,399 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\main.c
+2022-12-19 17:10:24,808 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 252mS.
+2022-12-19 17:10:24,829 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-12-19 17:10:25,313 [INFO] ConfigFileManager:1394 - The Die is : DIE418
+2022-12-19 17:10:25,333 [INFO] ApiDbMcu:505 - Load IP Config File for FATFS
+2022-12-19 17:10:25,341 [INFO] ApiDbMcu:505 - Load IP Config File for FREERTOS
+2022-12-19 17:10:25,350 [INFO] ApiDbMcu:505 - Load IP Config File for USB_DEVICE
+2022-12-19 17:10:25,358 [INFO] ApiDbMcu:505 - Load IP Config File for USB_HOST
+2022-12-19 17:10:26,933 [ERROR] root:77 - Fail to recover any existing build configuration matching on going update process
+2022-12-19 17:10:26,946 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2117mS.
+2022-12-19 17:10:26,949 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 2mS.
+2022-12-19 17:10:26,953 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-12-19 17:35:10,642 [INFO] MainUpdater:2768 - connection check result : 10
+2022-12-19 17:35:10,643 [INFO] MainUpdater:2768 - connection check result : 10
+2022-12-19 17:35:10,847 [INFO] MicroXplorer:451 - Change Database Path : 
+2022-12-19 17:35:10,848 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-12-19 17:35:10,883 [WARN] ThirdParty:827 - waiting for thirdparty lock release [close project]
+2022-12-19 17:35:10,883 [INFO] ThirdParty:829 - entering critical section [close project]
+2022-12-19 17:35:10,883 [INFO] ThirdParty:839 - exiting critical section [close project]
+2022-12-19 17:35:10,886 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-12-19 17:35:10,898 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 377462560 Bytes (754974720)
+2022-12-19 17:35:10,900 [INFO] MicroXplorer:451 - Change Database Path : 
+2022-12-19 17:35:10,900 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-12-19 17:35:10,900 [INFO] OpenFileManager:307 - Change cursor
+2022-12-19 17:35:10,936 [INFO] RulesReader:61 - Compatibility file has been processed (282 Rules)
+2022-12-19 17:35:10,941 [INFO] Mcu:1922 - Initializing MCU STM32F105R(8-B-C)Tx STM32F105R8Tx STM32F105R8T6
+2022-12-19 17:35:12,361 [INFO] Context:654 - Trying to add GPIOservice into a context  which must be forbidden
+2022-12-19 17:35:12,644 [WARN] ApiManager:308 - Cannot register API 'Board Extension:GNSS1A1' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2022-12-19 17:35:12,645 [WARN] ApiManager:308 - Cannot register API 'Board Support:Custom' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2022-12-19 17:35:12,645 [WARN] ApiManager:308 - Cannot register API 'Data Exchange:lib_gnss' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2022-12-19 17:35:12,737 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.9.4.0: no header file found
+2022-12-19 17:35:12,738 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.9.4.0: no header file found
+2022-12-19 17:35:12,738 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.9.4.0: no header file found
+2022-12-19 17:35:12,746 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.6.2.3: no header file found
+2022-12-19 17:35:12,748 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.6.2.4: no header file found
+2022-12-19 17:35:12,750 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2022-12-19 17:35:12,751 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2022-12-19 17:35:12,751 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2022-12-19 17:35:12,751 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2022-12-19 17:35:12,751 [WARN] ModelIntegratedComponent:185 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2022-12-19 17:35:12,757 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2022-12-19 17:35:12,758 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2022-12-19 17:35:12,758 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2022-12-19 17:35:12,760 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC04A1' from pack STMicroelectronics.X-CUBE-NFC4.2.0.5: no header file found
+2022-12-19 17:35:12,761 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC04A1' from pack STMicroelectronics.X-CUBE-NFC4.2.0.4: no header file found
+2022-12-19 17:35:12,765 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,766 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,766 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,766 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,766 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,766 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,766 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,766 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,766 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,767 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,767 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,767 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,767 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,767 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,767 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,767 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,768 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,768 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,768 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,768 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,768 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,768 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,769 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,769 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,769 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,769 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,769 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,769 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,769 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,769 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,769 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,769 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,770 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-12-19 17:35:12,772 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC07A1' from pack STMicroelectronics.X-CUBE-NFC7.1.0.0: no header file found
+2022-12-19 17:35:12,843 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-12-19 17:35:12,844 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-12-19 17:35:12,844 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-12-19 17:35:12,852 [WARN] ApiManager:308 - Cannot register API 'Board Extension:EEPRMA1' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.1.1: no header file found
+2022-12-19 17:35:12,852 [WARN] ApiManager:308 - Cannot register API 'Board Extension:EEPRMA2' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.1.1: no header file found
+2022-12-19 17:35:12,853 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2022-12-19 17:35:12,854 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2022-12-19 17:35:12,854 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2022-12-19 17:35:12,854 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-2' from pack STMicroelectronics.X-CUBE-BLE2.3.3.0: no header file found
+2022-12-19 17:35:12,868 [INFO] ThirdPartyModel:289 - Start build external matchings
+2022-12-19 17:35:13,439 [INFO] ThirdPartyModel:302 - End build external matchings
+2022-12-19 17:35:13,459 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Instance) has Id (USART3_TX) currently not set
+2022-12-19 17:35:13,460 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Direction) has Id (USART3_TX) currently not set
+2022-12-19 17:35:13,460 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphInc) has Id (USART3_TX) currently not set
+2022-12-19 17:35:13,460 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemInc) has Id (USART3_TX) currently not set
+2022-12-19 17:35:13,460 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphDataAlignment) has Id (USART3_TX) currently not set
+2022-12-19 17:35:13,461 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemDataAlignment) has Id (USART3_TX) currently not set
+2022-12-19 17:35:13,461 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Mode) has Id (USART3_TX) currently not set
+2022-12-19 17:35:13,461 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Priority) has Id (USART3_TX) currently not set
+2022-12-19 17:35:13,462 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (ADCFreqValue) has invalid value (36000000)
+2022-12-19 17:35:13,462 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2022-12-19 17:35:13,462 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCOFreq_Value) has invalid value (72000000)
+2022-12-19 17:35:13,845 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 294022672 Bytes (754974720)
+2022-12-19 17:35:13,925 [WARN] ThirdParty:789 - waiting for thirdparty lock release [change project]
+2022-12-19 17:35:13,925 [INFO] ThirdParty:791 - entering critical section [change project]
+2022-12-19 17:35:13,925 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.1.0
+2022-12-19 17:35:13,925 [INFO] ThirdParty:981 - CMSIS Pack Vendor :RoweBots I-CUBE-UNISONRTOS 5.5.0-4
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 2.1.0
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.4.0
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.0.0
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.2.0
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.4.0
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 7.3.0
+2022-12-19 17:35:13,926 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.3
+2022-12-19 17:35:13,927 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2022-12-19 17:35:13,927 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.4
+2022-12-19 17:35:13,927 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.1.0
+2022-12-19 17:35:13,927 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2022-12-19 17:35:13,927 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2022-12-19 17:35:13,927 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2022-12-19 17:35:13,927 [INFO] ThirdParty:981 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.2.0
+2022-12-19 17:35:13,927 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2022-12-19 17:35:13,927 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2022-12-19 17:35:13,927 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 2.0.5
+2022-12-19 17:35:13,927 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 2.0.4
+2022-12-19 17:35:13,927 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2022-12-19 17:35:13,928 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2022-12-19 17:35:13,928 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 1.1.1
+2022-12-19 17:35:13,928 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2022-12-19 17:35:13,928 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.1.0
+2022-12-19 17:35:13,928 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 1.1.0
+2022-12-19 17:35:13,929 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.3.0
+2022-12-19 17:35:13,929 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 1.0.0
+2022-12-19 17:35:13,929 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2022-12-19 17:35:13,929 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 1.0.0
+2022-12-19 17:35:13,929 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2022-12-19 17:35:13,929 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2022-12-19 17:35:13,930 [INFO] ThirdParty:981 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.1.2
+2022-12-19 17:35:13,930 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.20.0
+2022-12-19 17:35:13,930 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2022-12-19 17:35:13,930 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.0
+2022-12-19 17:35:13,930 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 1.0.0
+2022-12-19 17:35:13,930 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.3.0
+2022-12-19 17:35:13,930 [INFO] ThirdParty:981 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2022-12-19 17:35:13,931 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2022-12-19 17:35:13,931 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 7.2.0
+2022-12-19 17:35:13,931 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2022-12-19 17:35:13,931 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 1.1.0
+2022-12-19 17:35:13,931 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.0.0
+2022-12-19 17:35:13,931 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2022-12-19 17:35:13,931 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 3.1.1
+2022-12-19 17:35:13,931 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2022-12-19 17:35:13,932 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2022-12-19 17:35:13,932 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2022-12-19 17:35:13,932 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2022-12-19 17:35:13,932 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 2.2.0
+2022-12-19 17:35:13,932 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.2.0
+2022-12-19 17:35:13,932 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2022-12-19 17:35:13,932 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.0.0
+2022-12-19 17:35:13,932 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.0.0
+2022-12-19 17:35:13,933 [INFO] ThirdParty:797 - exiting critical section [change project]
+2022-12-19 17:35:14,268 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-12-19 17:35:14,270 [INFO] PinOutPanel:1468 - setPackage(STM32F105R8Tx,LQFP64)
+2022-12-19 17:35:14,643 [INFO] UtilMem:74 - Before build in PCC Used Memory: 323331584 Bytes (754974720)
+2022-12-19 17:35:15,180 [INFO] UtilMem:74 - After build in PCC Used Memory: 366323200 Bytes (754974720)
+2022-12-19 17:35:15,205 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,206 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,206 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,207 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,207 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,207 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,207 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,207 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,207 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,207 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,207 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,208 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,208 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,208 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,208 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,208 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,208 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,209 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,209 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,210 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,210 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,210 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,210 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,210 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,211 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,211 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,211 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,211 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,211 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,211 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,212 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,212 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,212 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,213 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,213 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,213 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,213 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,214 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-12-19 17:35:15,216 [INFO] Can:70 - Can Add PropertyChangeListener com.st.microxplorer.plugins.ip.can.Can@286f82bf
+2022-12-19 17:35:15,324 [INFO] OpenFileManager:327 - Restore cursor
+2022-12-19 17:35:34,659 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2022-12-19 17:35:57,053 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 285035072 Bytes (754974720)
+2022-12-19 17:36:00,562 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,460x134,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2022-12-19 17:36:08,343 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 365223544 Bytes (754974720)
+2022-12-19 17:36:08,689 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-12-19 17:36:08,690 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: USART
+2022-12-19 17:36:08,690 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: TIM1_8F1
+2022-12-19 17:36:08,690 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: CAN
+2022-12-19 17:36:08,690 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-12-19 17:36:08,691 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-12-19 17:36:08,691 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-12-19 17:36:08,694 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-12-19 17:36:09,068 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\license.tmp_save
+2022-12-19 17:36:09,177 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\license.tmp
+2022-12-19 17:36:09,243 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\gpio.c_save
+2022-12-19 17:36:09,330 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\gpio.c
+2022-12-19 17:36:09,338 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\gpio.h_save
+2022-12-19 17:36:09,415 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\gpio.h
+2022-12-19 17:36:09,577 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\can.c_save
+2022-12-19 17:36:09,703 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\can.c
+2022-12-19 17:36:09,715 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\can.h_save
+2022-12-19 17:36:09,814 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\can.h
+2022-12-19 17:36:09,828 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\tim.c_save
+2022-12-19 17:36:09,960 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\tim.c
+2022-12-19 17:36:09,969 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\tim.h_save
+2022-12-19 17:36:10,049 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\tim.h
+2022-12-19 17:36:10,063 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\usart.c_save
+2022-12-19 17:36:10,191 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\usart.c
+2022-12-19 17:36:10,199 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\usart.h_save
+2022-12-19 17:36:10,269 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\usart.h
+2022-12-19 17:36:10,287 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_it.c_save
+2022-12-19 17:36:10,533 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_it.c
+2022-12-19 17:36:10,545 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_it.h_save
+2022-12-19 17:36:10,623 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_it.h
+2022-12-19 17:36:10,638 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_hal_msp.c_save
+2022-12-19 17:36:10,731 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\stm32f1xx_hal_msp.c
+2022-12-19 17:36:10,739 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\system.tmp_save
+2022-12-19 17:36:10,867 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\MXTmpFiles\system.tmp
+2022-12-19 17:36:10,883 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_hal_conf.h_save
+2022-12-19 17:36:10,974 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\stm32f1xx_hal_conf.h
+2022-12-19 17:36:11,006 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\main.h_save
+2022-12-19 17:36:11,084 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Inc\main.h
+2022-12-19 17:36:11,094 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\main.c_save
+2022-12-19 17:36:11,247 [INFO] CodeEngine:269 - Generated code: D:\Internship\Vega\Projects\Project 1 - Three wheeler CAN bus Communication to meter panel\Display Workspaces\Vega_ETX_Display_Firmware_V2\Vega_ETX_Display_Firmware_V2\Core\Src\main.c
+2022-12-19 17:36:12,181 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 228mS.
+2022-12-19 17:36:12,187 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-12-19 17:36:12,548 [INFO] ConfigFileManager:1394 - The Die is : DIE418
+2022-12-19 17:36:12,554 [INFO] ApiDbMcu:505 - Load IP Config File for FATFS
+2022-12-19 17:36:12,561 [INFO] ApiDbMcu:505 - Load IP Config File for FREERTOS
+2022-12-19 17:36:12,568 [INFO] ApiDbMcu:505 - Load IP Config File for USB_DEVICE
+2022-12-19 17:36:12,574 [INFO] ApiDbMcu:505 - Load IP Config File for USB_HOST
+2022-12-19 17:36:14,221 [ERROR] root:77 - Fail to recover any existing build configuration matching on going update process
+2022-12-19 17:36:14,222 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2035mS.
+2022-12-19 17:36:14,223 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-12-19 17:36:14,227 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-12-20 09:15:35,061 [INFO] Activator:177 - 
+
+
+2022-12-20 09:15:35,065 [INFO] Activator:178 - !SESSION log4j initialized
+2022-12-20 09:16:12,507 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022-12-20 09:16:12,509 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022-12-20 09:16:12,511 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.

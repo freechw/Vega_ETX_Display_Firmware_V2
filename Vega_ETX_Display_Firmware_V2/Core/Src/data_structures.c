@@ -223,6 +223,7 @@ bool _Vehicle_Info_Page = false;
 bool _Battery_Info_Page = false;
 bool _Motor_Info_Page = false;
 bool _Inverter_Info_Page = false;
+bool buttonPressed = false;
 //Vehicle Charging
 bool _Charging_Page = false;
 bool _ChargeComplete_Page = false;
@@ -244,3 +245,8 @@ bool _firePage = false;
 
 uitype_t volatile _drivePageSet = front;
 uiTrasnmittype_t volatile _trasmitGlobal = Disengage_Page;
+
+UART_QueueStruct txMsg = {0};
+
+bool queueOverFlowed = false;
+

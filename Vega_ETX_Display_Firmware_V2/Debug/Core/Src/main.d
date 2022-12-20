@@ -27,12 +27,13 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/data_structures.h ../Core/Inc/can.h ../Core/Inc/main.h \
  ../Core/Inc/gpio.h ../Core/Inc/usart.h ../Core/Inc/can.h \
- ../Core/Inc/dma.h ../Core/Inc/tim.h ../Core/Inc/usart.h \
- ../Core/Inc/gpio.h ../Core/Inc/state_machine.h \
- ../Core/Inc/vehicleControl.h ../Core/Inc/transmit.h \
- ../Core/Inc/can_matrix.h ../Core/Inc/data_structures.h \
- ../Core/Inc/errLogging.h ../Core/Inc/transmitDefinitions.h \
- ../Core/Inc/menu.h ../Core/Inc/test_function.h ../Core/Inc/timer.h
+ ../Core/Inc/tim.h ../Core/Inc/usart.h ../Core/Inc/gpio.h \
+ ../Core/Inc/state_machine.h ../Core/Inc/vehicleControl.h \
+ ../Core/Inc/transmit.h ../Core/Inc/can_matrix.h \
+ ../Core/Inc/data_structures.h ../Core/Inc/errLogging.h \
+ ../Core/Inc/transmitDefinitions.h ../Core/Inc/menu.h \
+ ../Core/Inc/test_function.h ../Core/Inc/timer.h \
+ ../Core/Inc/PollingRoutine.h ../Core/Inc/RingBuff.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -66,7 +67,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/gpio.h:
 ../Core/Inc/usart.h:
 ../Core/Inc/can.h:
-../Core/Inc/dma.h:
 ../Core/Inc/tim.h:
 ../Core/Inc/usart.h:
 ../Core/Inc/gpio.h:
@@ -80,3 +80,5 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/menu.h:
 ../Core/Inc/test_function.h:
 ../Core/Inc/timer.h:
+../Core/Inc/PollingRoutine.h:
+../Core/Inc/RingBuff.h:

@@ -19,7 +19,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "can.h"
-#include "dma.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
@@ -29,6 +28,7 @@
 #include "state_machine.h"
 #include "test_function.h"
 #include "timer.h"
+#include "PollingRoutine.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -104,7 +104,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-	HAL_Delay(1000);
+  HAL_Delay(1000);
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -116,7 +116,6 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_DMA_Init();
   MX_CAN1_Init();
   MX_TIM2_Init();
   MX_USART3_UART_Init();
@@ -179,7 +178,7 @@ int main(void)
 //		}
 		counter++;
 		counter2++;
-		//HAL_Delay(10);
+		HAL_Delay(10);
 
 		if (gpioSetFlag) {
 			getInputs();
@@ -188,6 +187,10 @@ int main(void)
 			//mainStateMachine();
 			counter = 0;
 
+		}
+		if (counter2>5) {
+			//transmit();
+			counter2=0;
 		}
 		if (timeout.timeout_0_5s == true) {
 			if (counter2 >= 10) {
@@ -297,7 +300,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 //		//goto end;
 //	}
 	transmit();
-
+	PollingRoutine();
 	//gpioSetFlag = true;
 
 	if (timeout.timeout_1s == true) {
@@ -308,10 +311,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 }
 
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart) {
+	if (huart->Instance == huart3.Instance) {
+		PollingRoutine();
+	}
+
 
 }
 
 void HAL_UART_TxHalfCpltCallback(UART_HandleTypeDef *huart) {
+
 
 }
 /* USER CODE END 4 */

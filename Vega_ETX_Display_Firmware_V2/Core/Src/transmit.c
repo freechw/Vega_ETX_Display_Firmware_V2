@@ -1,4 +1,5 @@
 #include <transmit.h>
+#include "PollingRoutine.h"
 
 #define eco_10 101
 #define eco_20 201
@@ -13,6 +14,8 @@
 
 //TIME SET 5A A5 0B 82 00 9C 5A A5 12 06 1B 0D 08 00
 // 											H  M  S
+
+uint8_t status = 0;
 
 uint8_t timeSet[14]={0x5A,0xA5,0x0B,0x82,0x00,0x9C,0x5A,0xA5,0x12,0x06,0x1B,0x00,0x00,0x00};
 																		 // H      M    S
@@ -92,8 +95,8 @@ uint8_t SysErrMild[10] = { 0x5A, 0xA5, 0x07, 0x82, 0x00, 0x84, 0x5A, 0x01, 0x01,
 uint8_t SysErrCritical[10] = { 0x5A, 0xA5, 0x07, 0x82, 0x00, 0x84, 0x5A, 0x01,
 		0x01, 0x42 }; //Page
 /////////////////////////////////////////////////////Test will be removed///////////////////////
-uint8_t Test[10] =
-		{ 0x5A, 0xA5, 0x07, 0x82, 0x00, 0x84, 0x5A, 0x01, 0x01, 0x8F }; //Page
+uint8_t testData_Page[10] = { 0x5A, 0xA5, 0x07, 0x82, 0x00, 0x84, 0x5A, 0x01,
+		0x01, 0x8F }; //Page
 
 //Indicators//
 //Warning Lights
@@ -208,7 +211,8 @@ uint8_t BluetoothOFFLit[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x88, 0x01, 0xD8 };
 uint8_t TimeSelect[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x84, 0x01, 0xDA };
 uint8_t TimeSelectOff[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x84, 0x01, 0x00 };
 uint8_t BrightnessSelect[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x86, 0x01, 0xDC };
-uint8_t BrightnessSelectOff[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x86, 0x01, 0x00 };
+uint8_t BrightnessSelectOff[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x86, 0x01,
+		0x00 };
 //Charging Menu
 uint8_t SlowCharging[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x12, 0x85, 0x01, 0xDA };
 uint8_t FastCharging[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x12, 0x85, 0x01, 0xDA };
@@ -232,8 +236,8 @@ uint8_t Sport[10] =
 		{ 0x5A, 0xA5, 0x07, 0x82, 0x00, 0x84, 0x5A, 0x01, 0x01, 0x45 }; //Page
 
 uint8_t EcoPopUp[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x87, 0x02, 0x64 }; //0x02, 0x60
-uint8_t NormalPopUp[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x87, 0x02, 0x64 };//0x02, 0x62
-uint8_t SportPopUp[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x87, 0x02, 0x64 };//0x02, 0x64
+uint8_t NormalPopUp[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x87, 0x02, 0x64 }; //0x02, 0x62
+uint8_t SportPopUp[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x87, 0x02, 0x64 }; //0x02, 0x64
 
 uint8_t popOff[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x10, 0x88, 0x00, 0x00 };
 
@@ -369,18 +373,22 @@ char timebuf[80];
 uint8_t txTest = 0;
 uint8_t check1 = 0;
 
-//#define VEGA_TX
-//#define DMA
 #define IconSize 8
 #define PageSize 10
 
-#define No_DMA
+//#define VEGA_TX
+//#define DMA
+//#define No_DMA
+#define Queue
+//#define No_Queue
 
 #ifdef No_DMA
 #define Transmit_strDATA HAL_UART_Transmit(&huart3, strDATA, sizeof(strDATA), HAL_MAX_DELAY);
 #define Transmit_strDATA2 HAL_UART_Transmit(&huart3, strDATA2, sizeof(strDATA2), HAL_MAX_DELAY);
 
 #define Tuk_Page HAL_UART_Transmit(&huart3, Tuk,sizeof(Tuk),HAL_MAX_DELAY)
+
+#define Fire_Page HAL_UART_Transmit(&huart3, firePage, sizeof(firePage), HAL_MAX_DELAY)
 
 #define Disengage_KillSwitch_Page HAL_UART_Transmit(&huart3, DisenKillSwitch,sizeof(DisenKillSwitch),HAL_MAX_DELAY)
 #define Press_Brake_Page HAL_UART_Transmit(&huart3, PressBrake, sizeof(PressBrake),HAL_MAX_DELAY)
@@ -542,7 +550,6 @@ uint8_t check1 = 0;
 
 #define Disengage_KillSwitch_Page HAL_UART_Transmit_DMA(&huart3, DisenKillSwitch,sizeof(DisenKillSwitch))
 #define Press_Brake_Page HAL_UART_Transmit_DMA(&huart3, PressBrake, sizeof(PressBrake))
-
 #define Gear_Error_Page HAL_UART_Transmit_DMA(&huart3, GearErr, sizeof(GearErr))
 
 #define Gear_Neutral_Icon HAL_UART_Transmit_DMA(&huart3, NeutralON, sizeof(NeutralON))
@@ -570,7 +577,11 @@ uint8_t check1 = 0;
 #define Bluetooth_Menu_Page HAL_UART_Transmit_DMA(&huart3, Bluetooth, sizeof(Bluetooth))
 #define Error_Menu_Page HAL_UART_Transmit_DMA(&huart3, Errors, sizeof(Errors))
 
-#define TimeSetting HAL_UART_Trasmit_DMA(&huart3,TimeSelect,IconSize)
+#define TimeSetting_Button HAL_UART_Transmit_DMA(&huart3,TimeSelect,sizeof(TimeSelect))
+#define TimeSetting_Button_OFF HAL_UART_Transmit_DMA(&huart3,TimeSelectOff,sizeof(TimeSelectOff))
+
+#define BrightnessSetting_Button HAL_UART_Transmit_DMA(&huart3,BrightnessSelect,sizeof(BrightnessSelect))
+#define BrightnessSetting_Button_OFF HAL_UART_Transmit_DMA(&huart3,BrightnessSelectOff,sizeof(BrightnessSelectOff))
 
 #define Battery_Info_Page HAL_UART_Transmit_DMA(&huart3, VehicleInfoBat, sizeof(VehicleInfoBat))
 #define Motor_Info_Page HAL_UART_Transmit_DMA(&huart3, VehicleInfoMot, sizeof(VehicleInfoMot))
@@ -661,13 +672,20 @@ uint8_t check1 = 0;
 #define ModeChangeOFF_Page HAL_UART_Transmit_DMA(&huart3, modeChange_Lock,sizeof(modeChange_Lock))
 #define SysError_StopDrive_Page HAL_UART_Transmit_DMA(&huart3, SysError_SafeStop,sizeof(SysError_SafeStop))
 
-#define NormalMode_Popup HAL_UART_Transmit_DMA(&huart3, NormalON, sizeof(NormalON))
-#define NormalMode_Icon HAL_UART_Transmit_DMA(&huart3, Normal, sizeof(Normal))
-#define EcoMode_Popup HAL_UART_Transmit_DMA(&huart3, EcoON, sizeof(EcoON))
-#define EcoMode_Icon HAL_UART_Transmit_DMA(&huart3, Eco, sizeof(Eco))
-#define SportMode_Popup HAL_UART_Transmit_DMA(&huart3, SportON, sizeof(SportON))
-#define SportMode_Icon HAL_UART_Transmit_DMA(&huart3, Sport, sizeof(Sport))
+#define NormalMode_Popup_Page HAL_UART_Transmit_DMA(&huart3, Normal, sizeof(Normal))
+#define NormalMode_Popup HAL_UART_Transmit_DMA(&huart3, NormalPopUp, sizeof(NormalPopUp))
+#define NormalMode_Icon HAL_UART_Transmit_DMA(&huart3, NormalON, sizeof(NormalON))
+
+#define EcoMode_Popup_Page HAL_UART_Transmit_DMA(&huart3, Eco, sizeof(Eco))
+#define EcoMode_Popup HAL_UART_Transmit_DMA(&huart3, EcoPopUp, sizeof(EcoPopUp))
+#define EcoMode_Icon HAL_UART_Transmit_DMA(&huart3, EcoON, sizeof(EcoON))
+
+#define SportMode_Popup_Page HAL_UART_Transmit_DMA(&huart3, Sport, sizeof(Sport))
+#define SportMode_Popup HAL_UART_Transmit_DMA(&huart3, SportPopUp, sizeof(SportPopUp))
+#define SportMode_Icon HAL_UART_Transmit_DMA(&huart3, SportON, sizeof(SportON))
+
 #define ModeClear_Icon HAL_UART_Transmit_DMA(&huart3, modeClear, sizeof(modeClear))
+#define popUp_OFF HAL_UART_Transmit_DMA(&huart3, popOff, sizeof(popOff))
 
 #define L_Signal_ON_Icon HAL_UART_Transmit_DMA(&huart3, LeftSignalON, sizeof(LeftSignalON))
 #define L_Signal_OFF_Icon HAL_UART_Transmit_DMA(&huart3, LeftSignalOFF, sizeof(LeftSignalOFF))
@@ -819,6 +837,162 @@ uint8_t check1 = 0;
 #define HighBeam_ON_Icon transmitPageHandler( HighBeamON, sizeof(HighBeamON))
 #define HighBeam_OFF_Icon transmitPageHandler( HighBeamOFF, sizeof(HighBeamOFF))
 #endif
+#ifdef Queue
+
+#define Transmit_strDATA SaveToUART_TxBuffer(strDATA, sizeof(strDATA));
+#define Transmit_strDATA2 SaveToUART_TxBuffer(strDATA2, sizeof(strDATA2));
+
+#define Tuk_Page SaveToUART_TxBuffer(Tuk,sizeof(Tuk))
+
+#define Fire_Page SaveToUART_TxBuffer(firePage, sizeof(firePage))
+
+#define Disengage_KillSwitch_Page SaveToUART_TxBuffer(DisenKillSwitch,sizeof(DisenKillSwitch))
+#define Press_Brake_Page SaveToUART_TxBuffer(PressBrake, sizeof(PressBrake))
+#define Gear_Error_Page SaveToUART_TxBuffer(GearErr, sizeof(GearErr))
+
+#define Gear_Neutral_Icon SaveToUART_TxBuffer(NeutralON, sizeof(NeutralON))
+#define Gear_Drive_Icon SaveToUART_TxBuffer(DriveON, sizeof(DriveON))
+#define Gear_Reverse_Icon SaveToUART_TxBuffer(ReverseON, sizeof(ReverseON))
+#define Gear_Clear_Icon SaveToUART_TxBuffer(GearClear, sizeof(GearClear))
+
+#define System_Check_Okay_No_Icon_Page SaveToUART_TxBuffer(SysCheck_Okay_NoIcon, sizeof(SysCheck_Okay_NoIcon))
+#define System_Check_All_Icon_Page SaveToUART_TxBuffer(SysCheck_lit_IconAll, sizeof(SysCheck_lit_IconAll))
+
+#define Vehicle_Button SaveToUART_TxBuffer(UI_Button_Vehicle, sizeof(UI_Button_Vehicle))
+#define System_Button SaveToUART_TxBuffer(UI_Button_System, sizeof(UI_Button_System))
+#define Bluetooth_Button SaveToUART_TxBuffer(UI_Button_Bluetooth, sizeof(UI_Button_Bluetooth))
+#define Error_Button SaveToUART_TxBuffer(UI_Button_Errors, sizeof(UI_Button_Errors))
+#define NO_Button SaveToUART_TxBuffer(UI_Button_Non, sizeof(UI_Button_Non))
+
+#define After_Charge_Page SaveToUART_TxBuffer(AfterRecharge, sizeof(AfterRecharge))
+
+#define Vehicle_Settings_Page SaveToUART_TxBuffer(Settings, sizeof(Settings))
+#define Trip_Summary_Page SaveToUART_TxBuffer(TripSum, sizeof(TripSum))
+#define Vehicle_Info_Page SaveToUART_TxBuffer(VehicleInfo, sizeof(VehicleInfo))
+
+#define General_Menu_Page SaveToUART_TxBuffer(Vehicle, sizeof(Vehicle))
+#define System_Menu_Page SaveToUART_TxBuffer(System, sizeof(System))
+#define Bluetooth_Menu_Page SaveToUART_TxBuffer(Bluetooth, sizeof(Bluetooth))
+#define Error_Menu_Page SaveToUART_TxBuffer(Errors, sizeof(Errors))
+
+#define TimeSetting_Button SaveToUART_TxBuffer(TimeSelect,sizeof(TimeSelect))
+#define TimeSetting_Button_OFF SaveToUART_TxBuffer(TimeSelectOff,sizeof(TimeSelectOff))
+
+#define BrightnessSetting_Button SaveToUART_TxBuffer(BrightnessSelect,sizeof(BrightnessSelect))
+#define BrightnessSetting_Button_OFF SaveToUART_TxBuffer(BrightnessSelectOff,sizeof(BrightnessSelectOff))
+
+#define Battery_Info_Page SaveToUART_TxBuffer(VehicleInfoBat, sizeof(VehicleInfoBat))
+#define Motor_Info_Page SaveToUART_TxBuffer(VehicleInfoMot, sizeof(VehicleInfoMot))
+#define Inverter_Info_Page SaveToUART_TxBuffer(VehicleInfoInv, sizeof(VehicleInfoInv))
+
+#define Charging_Page SaveToUART_TxBuffer(Charging, sizeof(Charging))
+#define ChargeComplete_Page SaveToUART_TxBuffer(ChargingComp, sizeof(ChargingComp))
+#define Charge_Error_Page SaveToUART_TxBuffer(ChargingErr, sizeof(ChargingErr))
+
+#define Charge_Error_WithPopup_Page SaveToUART_TxBuffer(ChargeError_Code,sizeof(ChargeError_Code))
+
+#define Charge_Connection_Error_Popup_ON SaveToUART_TxBuffer(ChargerConnErrON,sizeof(ChargerConnErrON))
+#define Charge_Connection_Error_Popup_OFF SaveToUART_TxBuffer(ChargerConnErrOFF,sizeof(ChargerConnErrOFF))
+///LIT
+
+////////
+
+#define Trip_Reset SaveToUART_TxBuffer(TripReset, sizeof(TripReset))
+
+#define DriveUnit_ON_Icon SaveToUART_TxBuffer(DriveUnitON, sizeof(DriveUnitON))
+#define DriveUnit_OFF_Icon SaveToUART_TxBuffer(DriveUnitOFF, sizeof(DriveUnitOFF))
+
+#define ReadytoDrive_ON_Icon SaveToUART_TxBuffer(ReadytoDrive_Icon_ON, sizeof(ReadytoDrive_Icon_ON))
+#define ReadytoDrive_OFF_Icon SaveToUART_TxBuffer(ReadytoDrive_Icon_OFF,sizeof(ReadytoDrive_Icon_OFF))
+#define ReadytoDrive_Page SaveToUART_TxBuffer(ReadytoDrive, sizeof(ReadytoDrive))
+
+#define PowerLimitON_Icon SaveToUART_TxBuffer(PowerLimitedON, sizeof(PowerLimitedON))
+#define PowerLimitOFF_Icon SaveToUART_TxBuffer(PowerLimitedOFF,sizeof(PowerLimitedOFF))
+
+#define HandBrake_ON_Icon SaveToUART_TxBuffer(HandBrakeON,sizeof(HandBrakeON))
+#define HandBrake_OFF_Icon SaveToUART_TxBuffer(HandBrakeOFF,sizeof(HandBrakeOFF))
+
+#define Motor_Critical_Temp_ON_Icon SaveToUART_TxBuffer(TemperatureMotCritON,sizeof(TemperatureMotCritON))
+#define Motor_Critical_Temp_OFF_Icon SaveToUART_TxBuffer(TemperatureMotCritOFF,sizeof(TemperatureMotCritOFF))
+
+#define Motor_Temp_ON_Icon SaveToUART_TxBuffer(TemperatureMotHighON,sizeof(TemperatureMotHighON))
+#define Motor_Temp_OFF_Icon SaveToUART_TxBuffer(TemperatureMotHighOFF,sizeof(TemperatureMotHighOFF))
+
+#define Motor_Mild_Temp_ON_Icon SaveToUART_TxBuffer(TemperatureMotMildON,sizeof(TemperatureMotMildON))
+#define Motor_Mild_Temp_OFF_Icon SaveToUART_TxBuffer(TemperatureMotMildOFF,sizeof(TemperatureMotMildOFF))
+
+#define Tailgate_Opened_Icon SaveToUART_TxBuffer(TailgateOpenON,sizeof(TailgateOpenON))
+#define Tailgate_Closed_Icon SaveToUART_TxBuffer(TailgateOpenOFF,sizeof(TailgateOpenOFF))
+
+//BluetoothON
+//BluetoothOFF
+//
+//BluetoothONNoLit
+//BluetoothOFFNoLit
+//
+//BluetoothONLit
+//BluetoothOFFLit
+
+#define Highbeam_ON_Icon SaveToUART_TxBuffer(HighBeamON,sizeof(HighBeamON))
+#define Highbeam_OFF_Icon SaveToUART_TxBuffer(HighBeamOFF,sizeof(HighBeamOFF))
+
+#define Seatbelt_ON_Icon SaveToUART_TxBuffer(SeatBeltON,sizeof(SeatBeltON))
+#define Seatbelt_OFF_Icon SaveToUART_TxBuffer(SeatBeltOFF,sizeof(SeatBeltOFF))
+
+#define Lowbeam_ON_Icon SaveToUART_TxBuffer(LowBeamON,sizeof(LowBeamON))
+#define Lowbeam_OFF_Icon SaveToUART_TxBuffer(LowBeamOFF,sizeof(LowBeamOFF))
+
+#define Error_ON_Icon SaveToUART_TxBuffer(ErrorON, sizeof(ErrorON))
+#define Error_OFF_Icon SaveToUART_TxBuffer(ErrorOFF, sizeof(ErrorOFF))
+
+#define Mild_Error_ON_Icon SaveToUART_TxBuffer(MildErrorON, sizeof(MildErrorON))
+#define Mild_Error_OFF_Icon SaveToUART_TxBuffer(MildErrorOFF, sizeof(MildErrorOFF))
+
+#define Service_Error_ON_Icon SaveToUART_TxBuffer(ServiceON, sizeof(ServiceON))
+#define Service_Error_OFF_Icon SaveToUART_TxBuffer(ServiceOFF, sizeof(ServiceOFF))
+
+#define Battery_SOH_LOW_Popup_ON SaveToUART_TxBuffer(BatterySOHLowON, sizeof(BatterySOHLowON))
+#define Battery_SOH_LOW_Popup_OFF SaveToUART_TxBuffer(BatterySOHLowOFF, sizeof(BatterySOHLowOFF))
+#define Battery_High_Temp_Popup_ON SaveToUART_TxBuffer(HighBatTemp, sizeof(HighBatTemp))
+#define Battery_High_Temp_Popup_OFF SaveToUART_TxBuffer(BatMenuOFF, sizeof(HighBatTemp))
+#define Battery_LOW20_Popup_ON	SaveToUART_TxBuffer(LowBat, sizeof(LowBat))
+#define Battery_LOW20_Popup_OFF SaveToUART_TxBuffer(BatMenuOFF, sizeof(HighBatTemp))
+#define Battery_LOW_Charge_Popup_ON SaveToUART_TxBuffer(LowBatCharge, sizeof(LowBatCharge))
+#define Battery_LOW_Charge_Popup_OFF SaveToUART_TxBuffer(BatMenuOFF, sizeof(HighBatTemp))
+#define Battery_Temp_High_Icon SaveToUART_TxBuffer(BatTempHighON, sizeof(BatTempHighON))
+#define Battery_Temp_OK_Icon SaveToUART_TxBuffer(BatTempHighOFF, sizeof(BatTempHighOFF))
+#define Battery_ON_Icon SaveToUART_TxBuffer(BatteryON, sizeof(BatteryON))
+#define Battery_OFF_Icon SaveToUART_TxBuffer(BatteryOFF, sizeof(BatteryOFF))
+
+#define SystemError_Critical_Popup SaveToUART_TxBuffer(SysErrCritical, sizeof(SysErrCritical))
+#define SystemError_Mild_Popup_Page SaveToUART_TxBuffer(SysErrMild, sizeof(SysErrMild))
+#define SysError_Shutdown_Page SaveToUART_TxBuffer(SysError_shutdown,sizeof(SysError_shutdown))
+#define ModeChangeOFF_Page SaveToUART_TxBuffer(modeChange_Lock,sizeof(modeChange_Lock))
+#define SysError_StopDrive_Page SaveToUART_TxBuffer(SysError_SafeStop,sizeof(SysError_SafeStop))
+
+#define NormalMode_Popup_Page SaveToUART_TxBuffer(Normal, sizeof(Normal))
+#define NormalMode_Popup SaveToUART_TxBuffer(NormalPopUp, sizeof(NormalPopUp))
+#define NormalMode_Icon SaveToUART_TxBuffer(NormalON, sizeof(NormalON))
+
+#define EcoMode_Popup_Page SaveToUART_TxBuffer(Eco, sizeof(Eco))
+#define EcoMode_Popup SaveToUART_TxBuffer(EcoPopUp, sizeof(EcoPopUp))
+#define EcoMode_Icon SaveToUART_TxBuffer(EcoON, sizeof(EcoON))
+
+#define SportMode_Popup_Page SaveToUART_TxBuffer(Sport, sizeof(Sport))
+#define SportMode_Popup SaveToUART_TxBuffer(SportPopUp, sizeof(SportPopUp))
+#define SportMode_Icon SaveToUART_TxBuffer(SportON, sizeof(SportON))
+
+#define ModeClear_Icon SaveToUART_TxBuffer(modeClear, sizeof(modeClear))
+#define popUp_OFF SaveToUART_TxBuffer(popOff, sizeof(popOff))
+
+#define L_Signal_ON_Icon SaveToUART_TxBuffer(LeftSignalON, sizeof(LeftSignalON))
+#define L_Signal_OFF_Icon SaveToUART_TxBuffer(LeftSignalOFF, sizeof(LeftSignalOFF))
+#define R_Signal_ON_Icon SaveToUART_TxBuffer(RightSignalON, sizeof(RightSignalON))
+#define R_Signal_OFF_Icon SaveToUART_TxBuffer(RightSignalOFF, sizeof(RightSignalOFF))
+
+#define HighBeam_ON_Icon SaveToUART_TxBuffer(HighBeamON, sizeof(HighBeamON))
+#define HighBeam_OFF_Icon SaveToUART_TxBuffer(HighBeamOFF, sizeof(HighBeamOFF))
+#endif
 
 void transmitPageHandler(uint8_t *page, uint8_t pageSize) {
 	HAL_UART_AbortTransmit(&huart3);
@@ -840,35 +1014,35 @@ void transmit() {
 		if (_realTimeData) {
 			realTimeData();
 			_realTimeData = false;
-			return;
+			//return;
 		}
 	//}
 
-	if (_transmit_Function == 1) {
+	//if (_transmit_Function == 1) {
 		if (_oneTimeData) {
-			//oneTimeData();
+			oneTimeData();
 			_oneTimeData = false;
 			//return;
-		}
+	//	}
 	}
 
-	if (_transmit_Function == 2) {
+	//if (_transmit_Function == 2) {
 		if (_startingUp) {
 			_startingUp = false;
 			startingUp();
-			return;
+			//return;
 		}
-	}
+	//}
 
-	if (_transmit_Function == 3) {
+	//if (_transmit_Function == 3) {
 		if (_gearChanged) {
 			_gearChanged = false;
 			gearUpdate();
 			return;
 		}
-	}
+	//}
 
-	if (_transmit_Function == 4) {
+	//if (_transmit_Function == 4) {
 		//_transmit_Function = 0;
 		if (_modeSelection == 1 && currentstate == 2) {
 			modeSelection(currentMode);
@@ -880,16 +1054,16 @@ void transmit() {
 			modeSelection(modeCleared);
 
 		}
-	}
+	//}
 
-	if (_transmit_Function == 5) {
+	//if (_transmit_Function == 5) {
 		if (currentStateSM == driving_state && _setDriverPage == true && !_setPoup) {
 			_setDriverPage = false;
 			drivePageSetter(_drivePageSet);
 			return;
 		}
 
-	}
+	//}
 
 	if (_transmit_Function == 6) {
 		_transmit_Function = 0;
@@ -928,13 +1102,13 @@ void transmit() {
 		if (_chargingUI) {
 			charging_UI(charging_ui);
 			_chargingUI = false;
-			//_trasmitGlobal = 2;
+			_trasmitGlobal = 2;
 			return;
 		}
 		if (_chargeComplete) {
 			charging_UI(chargingcomp_ui);
 			_chargeComplete = false;
-			//_trasmitGlobal = 3;
+			_trasmitGlobal = 3;
 			return;
 		}
 	}
@@ -959,6 +1133,10 @@ void startingUp(void) {
 			_navigation = false;
 			return;
 		}
+//		if (_trasmitGlobal == PressBrakePage && warning == 0) {
+//			return;
+//		}
+//		_trasmitGlobal = PressBrakePage;
 		Press_Brake_Page;
 	}
 
@@ -1094,7 +1272,7 @@ void drivePageSetter(uitype_t page) {
 			if (_testPage) {
 				//if (drivePageTransmit == 4) {
 				_testPage = false;
-				HAL_UART_Transmit_DMA(&huart3, Test, sizeof(Test));
+				HAL_UART_Transmit(&huart3, testData_Page, sizeof(testData_Page), HAL_MAX_DELAY);
 				//drivePageTransmit = 0;
 				//}
 			}
@@ -1142,27 +1320,39 @@ void realTimeData(void) { //Realtime updatable data sending
 	priorityLevel1_counter++;
 //Speed
 	if (priorityLevel1_counter == 1) {
-	strDATA[4] = 0x11; //
-	strDATA[5] = 0x00; //
-	strDATA[7] = (test_speed & 0xFF);
-	strDATA[6] = (test_speed >> 8);
+		strDATA[4] = 0x11; //
+		strDATA[5] = 0x00; //
+		strDATA[7] = (test_speed & 0xFF);
+		strDATA[6] = (test_speed >> 8);
+#ifdef Queue
+		SaveToUART_TxBuffer(strDATA, sizeof(strDATA));
+#endif
+
+#ifdef No_Queue
 	Transmit_strDATA;
+#endif
 	}
 
 //RPM
-//	if (priorityLevel1_counter == 2) {
-//	strDATA[4] = 0x12;
-//	strDATA[5] = 0x50;
-//	strDATA[7] = (rpm_meter & 0xFF);
-//	strDATA[6] = (rpm_meter >> 8);
-//	Transmit_strDATA;
+	if (priorityLevel1_counter == 2) {
+		strDATA[4] = 0x12;
+		strDATA[5] = 0x50;
+		strDATA[7] = (rpm_meter & 0xFF);
+		strDATA[6] = (rpm_meter >> 8);
+#ifdef Queue
+		SaveToUART_TxBuffer(strDATA, sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
+	}
 
 //Power Bar
-	if (priorityLevel1_counter == 2) {
-		powerMeter();
+	if (priorityLevel1_counter == 3) {
+		//powerMeter();
 	}
 //DC Current
-	if (priorityLevel1_counter == 3) {
+	if (priorityLevel1_counter == 4) {
 		priorityLevel1_counter = 0;
 		realTime_counter++;
 		if (realTime_counter == 1) {
@@ -1175,7 +1365,12 @@ void realTimeData(void) { //Realtime updatable data sending
 			}
 			strDATA[6] = (dc_current >> 8);
 			strDATA[7] = (dc_current & 0xFF);
-			Transmit_strDATA;
+#ifdef Queue
+			SaveToUART_TxBuffer(strDATA, sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 		}
 
 //Lowest Cell Voltage
@@ -1184,7 +1379,12 @@ void realTimeData(void) { //Realtime updatable data sending
 			strDATA[5] = 0x20;
 			strDATA[7] = (lcell_voltage & 0xFF);
 			strDATA[6] = (lcell_voltage >> 8);
-			Transmit_strDATA;
+#ifdef Queue
+			SaveToUART_TxBuffer(strDATA, sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 		}
 
 ////Trip
@@ -1195,7 +1395,12 @@ void realTimeData(void) { //Realtime updatable data sending
 			strDATA2[8] = (distance.trip >> 8);
 			strDATA2[7] = (distance.trip >> 16);
 			strDATA2[6] = (distance.trip >> 24);
-			Transmit_strDATA2;
+#ifdef Queue
+			SaveToUART_TxBuffer(strDATA, sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA2;
+#endif
 		}
 //Power
 		if (realTime_counter == 4) {
@@ -1209,19 +1414,25 @@ void realTimeData(void) { //Realtime updatable data sending
 			}
 			strDATA[7] = (power & 0xFF);
 			strDATA[6] = (power >> 8);
-			Transmit_strDATA;
+#ifdef Queue
+			SaveToUART_TxBuffer(strDATA, sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 		}
 	}
 }
+
 
 void oneTimeData(void) {
 
 // Priority Level 2
 	priorityLevel2_counter++;
 	if (readytodrive == 0) {
-		DriveUnit_OFF_Icon;
+		///DriveUnit_OFF_Icon;
 	} else {
-		DriveUnit_ON_Icon;
+		//DriveUnit_ON_Icon;
 	}
 
 //ODO
@@ -1233,7 +1444,12 @@ void oneTimeData(void) {
 			strDATA2[8] = (distance.ODO >> 8);
 			strDATA2[7] = (distance.ODO >> 16);
 			strDATA2[6] = (distance.ODO >> 24);
-			Transmit_strDATA2;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA2,sizeof(strDATA2));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 		}
 	}
 
@@ -1248,7 +1464,12 @@ void oneTimeData(void) {
 		}
 		strDATA[7] = (pack_voltage & 0xFF);
 		strDATA[6] = (pack_voltage >> 8);
-		Transmit_strDATA;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 	}
 
 //Highest Cell Voltage
@@ -1257,7 +1478,12 @@ void oneTimeData(void) {
 		strDATA[5] = 0x70;
 		strDATA[7] = (hcell_voltage & 0xFF);
 		strDATA[6] = (hcell_voltage >> 8);
-		Transmit_strDATA;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 	}
 
 //Estimated Range
@@ -1270,7 +1496,12 @@ void oneTimeData(void) {
 		strDATA[6] = (distance.range >> 8);
 		//strDATA[7] = (distance.range >> 16);
 		//strDATA[6] = (distance.range >> 24);
-		Transmit_strDATA;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 	}
 
 //Range
@@ -1279,7 +1510,12 @@ void oneTimeData(void) {
 		strDATA[5] = 0x30;
 		strDATA[7] = (distance.range);
 		strDATA[6] = 0;
-		//Transmit_strDATA;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 	}
 //SOC - Battery Percentage
 	if (priorityLevel2_counter == 6) {
@@ -1287,11 +1523,16 @@ void oneTimeData(void) {
 		strDATA[5] = 0x10;
 		strDATA[7] = (soc_value);
 		strDATA[6] = 0;
-		Transmit_strDATA;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 
 	}
 	if (priorityLevel2_counter == 7) {
-	batteryBar();
+		//batteryBar();
 	}
 	//AVG SPEED
 	if (priorityLevel2_counter == 8) {
@@ -1300,7 +1541,12 @@ void oneTimeData(void) {
 		strDATA[5] = 0x52;
 		strDATA[7] = (distance.tripAvgSpeed & 0xFF);
 		strDATA[6] = (distance.tripAvgSpeed >> 8);
-		Transmit_strDATA;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 	}
 
 
@@ -1316,7 +1562,12 @@ void oneTimeData(void) {
 		strDATA[6] = (afterChargeData.trip >> 8);
 		//	strDATA[7] = (afterChargeData.trip >> 16);
 		//	strDATA[6] = (afterChargeData.trip >> 24);
-		Transmit_strDATA;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 
 		// After charge average speed
 		strDATA[4] = 0x11;
@@ -1325,7 +1576,12 @@ void oneTimeData(void) {
 		strDATA[6] = (afterChargeData.avarage_Speed >> 8);
 		//	strDATA[7] = (afterChargeData.avarage_Speed >> 16);
 		//	strDATA[6] = (afterChargeData.avarage_Speed >> 24);
-		Transmit_strDATA;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 
 		// After Charge Economy
 		strDATA[4] = 0x11;
@@ -1334,7 +1590,12 @@ void oneTimeData(void) {
 		strDATA[6] = (afterChargeData.economy >> 8);
 		//	strDATA[7] = (afterChargeData.economy >> 16);
 		//	strDATA[6] = (afterChargeData.economy >> 24);
-		Transmit_strDATA;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 
 		// After charge Power
 		strDATA[4] = 0x11;
@@ -1343,7 +1604,12 @@ void oneTimeData(void) {
 		strDATA[6] = (afterChargeData.power >> 8);
 		//	strDATA[7] = (afterChargeData.power >> 16);
 		//	strDATA[6] = (afterChargeData.power >> 24);
-		Transmit_strDATA;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 	}
 
 	if (_Trip_Summary_Page) {
@@ -1355,7 +1621,12 @@ void oneTimeData(void) {
 		strDATA[6] = (distance.trip_Economy >> 8);
 		//	strDATA[7] = (distance.trip_Economy >> 16);
 		//	strDATA[6] = (distance.trip_Economy >> 24);
-		Transmit_strDATA;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 
 		//Trip Power----------VP
 
@@ -1365,7 +1636,12 @@ void oneTimeData(void) {
 		strDATA[6] = (distance.trip_Power >> 8);
 		//	strDATA[7] = (distance.trip_Power >> 16);
 		//	strDATA[6] = (distance.trip_Power >> 24);
-		Transmit_strDATA;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+#endif
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
 
 	}
 
@@ -1375,7 +1651,14 @@ void oneTimeData(void) {
 		strDATA[5] = 0x66;
 		strDATA[7] = (soh_value);
 		strDATA[6] = 0;
-		Transmit_strDATA;
+#ifdef Queue
+	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+#endif
+
+#ifdef No_Queue
+	Transmit_strDATA;
+#endif
+
 
 	}
 

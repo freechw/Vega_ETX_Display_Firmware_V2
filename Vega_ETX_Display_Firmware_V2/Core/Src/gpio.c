@@ -29,6 +29,8 @@ uint8_t buttonCounterBack = 0;
 uint8_t buttonCounterOkay = 0;
 uint8_t buttonCounterMode = 0;
 
+//#define P2
+#define TestBench
 
 /* USER CODE END 0 */
 
@@ -131,6 +133,8 @@ void getInputs() {
 	buttonOkay();
 }
 
+
+#ifdef TestBench
 void setInputs() {
 //	if (gpio.buttonInputs.bit.in11) //pageUp
 //	{
@@ -143,12 +147,7 @@ void setInputs() {
 //		HAL_Delay(50);
 //	}
 
-	//P2 Buttons
-	//  3 - Okay
-	//	4 - Back
-	//	5 - Forward
-	//	6 - Backward
-	//	7 - Mode
+
 	if (gpio.buttonInputs.bit.in7) //pageUp
 	{
 		buttonCounterForward++;
@@ -255,5 +254,136 @@ void buttonOkay(void) {
 	}
 
 }
+
+
+#endif
+
+#ifdef P2
+void setInputs() {
+//	if (gpio.buttonInputs.bit.in11) //pageUp
+//	{
+//		hand_Break = true;
+//		HAL_Delay(50);
+//	}
+//	if (gpio.buttonInputs.bit.in10) //pageUp
+//	{
+//		door = true;
+//		HAL_Delay(50);
+//	}
+
+	//P2 Buttons
+	//  3 - Okay
+	//	4 - Back
+	//	5 - Forward
+	//	6 - Backward
+	//	7 - Mode
+	if (gpio.buttonInputs.bit.in5) //pageUp
+	{
+		buttonCounterForward++;
+		if (buttonCounterForward < 2) {
+			forward = true;
+		}
+		else {
+			forward = false;
+		}
+	} else {
+		buttonCounterForward = 0;
+	}
+
+	if (gpio.buttonInputs.bit.in6) //pageDown
+	{
+		buttonCounterBackward++;
+		if (buttonCounterBackward < 2) {
+			backward = true;
+		}
+		else {
+			backward = false;
+		}
+	} else {
+		buttonCounterBackward = 0;
+	}
+
+	if (gpio.buttonInputs.bit.in4) //back
+	{
+		buttonCounterBack++;
+		if (buttonCounterBack < 2) {
+			back = true;
+		}
+		else {
+			back = false;
+		}
+	}
+	else
+	{
+		buttonCounterBack = 0;
+	}
+
+	if (gpio.buttonInputs.bit.in7) //mode //After fixing the okay button change mode to okay
+	{
+		buttonCounterMode++;
+		if (buttonCounterMode<2) {
+			mode = true;
+			//_modeChanged = true;
+		}
+		//else
+		//{
+			//mode = false;
+		//}
+	}
+	else
+	{
+		buttonCounterMode = 0;
+	}
+
+	if (gpio.buttonInputs.bit.in6 == 3) //okay
+	{
+		buttonCounterOkay++;
+		if (buttonCounterOkay<2) {
+			okay = true;
+		}
+		else
+		{
+			okay = false;
+		}
+	}
+	else
+	{
+		buttonCounterOkay = 0;
+	}
+//	if (gpio.buttonInputs.bit.button_turn_R) {
+//		turn_R = true;
+//		HAL_Delay(50);
+//	}
+//	if (gpio.buttonInputs.bit.button_turn_L) {
+//		turn_L = true;
+//		HAL_Delay(50);
+//	}
+//	if (gpio.buttonInputs.bit.button_high_Beam) {
+//		high_Beam = true;
+//		HAL_Delay(50);
+//	}
+//	if (gpio.buttonInputs.bit.button_park) {
+//		park = true;
+//		HAL_Delay(50);
+//	}
+}
+
+void buttonOkay(void) {
+	if (gpio.buttonInputs.bit.in6 == 3) {
+		buttonCounterLongPress++;
+	} else {
+		buttonCounterLongPress = 0;
+		okay = false;
+	}
+
+	if (buttonCounterLongPress >= longPress_Time) {
+		longpress = true;
+		okay = false;
+		buttonCounterLongPress = 0;
+	}
+
+}
+
+#endif
 
 /* USER CODE END 2 */

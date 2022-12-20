@@ -94,7 +94,8 @@ typedef enum {
 
 typedef enum{
 	Disengage_Page = 0,
-	MainMenuPages = 1
+	MainMenuPages = 1,
+	PressBrakePage = 2
 } uiTrasnmittype_t;
 
 extern volatile uiTrasnmittype_t _trasmitGlobal;
@@ -162,6 +163,7 @@ extern bool _Vehicle_Info_Page;
 extern bool _Battery_Info_Page;
 extern bool _Motor_Info_Page;
 extern bool _Inverter_Info_Page;
+extern bool buttonPressed;
 extern bool _Charging_Page;
 extern bool _ChargeComplete_Page;
 extern bool _Charge_Error_Page;
@@ -418,5 +420,35 @@ struct fireMode {
 };
 
 extern struct fireMode fire;
+
+typedef struct {
+	uint16_t iIndexIN; // change all these if need more than 16bits.
+	uint16_t iIndexOUT;
+	uint16_t iCnt_Handle;
+	uint16_t iCnt_OverFlow;
+} RING_BUFF_INFO;
+
+#define UART_TX_DATA_SIZE 10
+#define UART_TX_QUEUE_SIZE 150
+
+
+typedef struct {
+	uint8_t uartPort;
+	uint8_t data[UART_TX_DATA_SIZE];
+	uint8_t dataSize;
+} UART_Data;
+
+typedef struct {
+	struct {
+		UART_Data msg[UART_TX_QUEUE_SIZE];
+	} QUEUE;
+	struct {
+		RING_BUFF_INFO ptr;
+	} RING_BUFF;
+} UART_QueueStruct;
+
+extern UART_QueueStruct txMsg;
+
+extern bool queueOverFlowed;
 
 #endif /* INC_DATA_STRUCTURES_H_ */

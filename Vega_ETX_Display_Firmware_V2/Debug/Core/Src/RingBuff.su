@@ -1,0 +1,4 @@
+../Core/Src/RingBuff.c:24:6:DRV_RingBuffPtr__Clean	16	static
+../Core/Src/RingBuff.c:30:6:DRV_RingBuffPtr__Input	16	static
+../Core/Src/RingBuff.c:48:6:DRV_RingBuffPtr__Output	16	static
+../Core/Src/RingBuff.c:57:6:DRV_RingBuffPtr__Output_JumpToNew	16	static

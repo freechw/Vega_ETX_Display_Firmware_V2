@@ -59,8 +59,8 @@ extern void indicators(void);
 //struct tm ts;
 //char timebuf[80];
 //Debug//
-extern uint8_t Errors[10];
-extern uint8_t DisenKillSwitch[10];
+//extern uint8_t Errors[10];
+//extern uint8_t DisenKillSwitch[10];
 
 
 #endif /* INC_TRANSMIT_H_ */

@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="powerBarTransmit"/>
+		<item key="selection" value="_trasmitGlobal"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="powerBarTransmit"/>
+			<item value="_trasmitGlobal"/>
 			<item value="_transmit_Function"/>
+			<item value="status = "/>
+			<item value="priorityLevel1_counter"/>
+			<item value="HAL_UART_Transmit(&amp;huart3, "/>
+			<item value="HAL_UART_Transmit"/>
+			<item value="huart2"/>
+			<item value="volatile"/>
+			<item value="const"/>
+			<item value="drivePageTransmit"/>
+			<item value="delayCounter"/>
+			<item value="powerBarTransmit"/>
 			<item value="popUp_OFF"/>
 			<item value="popOff"/>
 			<item value="6C"/>
-			<item value="Sport"/>
-			<item value="OFF"/>
-			<item value="_popUptransmitOff"/>
-			<item value="modeSetAvailable"/>
-			<item value="_modeSelection"/>
-			<item value="60"/>
-			<item value="DriveModeErr"/>
-			<item value="6E"/>
-			<item value="_gearChanged"/>
-			<item value="if (currentStateSM == driving_state) {"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="volatile"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1227"/>
-		<item key="DIALOG_Y_ORIGIN" value="133"/>
+		<item key="DIALOG_X_ORIGIN" value="708"/>
+		<item key="DIALOG_Y_ORIGIN" value="191"/>
 		<item key="DIALOG_WIDTH" value="414"/>
 		<item key="DIALOG_HEIGHT" value="454"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
