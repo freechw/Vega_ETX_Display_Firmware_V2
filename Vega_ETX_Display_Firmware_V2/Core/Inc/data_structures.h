@@ -131,6 +131,7 @@ extern bool _oneTimeData;
 extern bool _navigation;
 extern bool _setDriverPage;
 extern uint8_t _modeSelection;
+extern bool _modeChangeDisabled;
 extern bool _allowNavigation;
 extern bool _errorSetPopup;
 extern bool _errorSetCode;

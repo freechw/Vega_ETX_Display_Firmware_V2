@@ -177,6 +177,7 @@ bool _realTimeData = false;
 bool _setDriverPage = false;
 bool _oneTimeData = false;
 uint8_t _modeSelection = 0;
+bool _modeChangeDisabled = false;
 bool _allowNavigation = false;
 bool _errorSetPopup = false;
 bool _errorSetCode = false;

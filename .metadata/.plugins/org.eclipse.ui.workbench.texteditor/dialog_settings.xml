@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="_trasmitGlobal"/>
+		<item key="selection" value="Estimated"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="Estimated"/>
+			<item value="TestBench"/>
 			<item value="_trasmitGlobal"/>
 			<item value="_transmit_Function"/>
 			<item value="status = "/>
@@ -21,8 +23,6 @@
 			<item value="delayCounter"/>
 			<item value="powerBarTransmit"/>
 			<item value="popUp_OFF"/>
-			<item value="popOff"/>
-			<item value="6C"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

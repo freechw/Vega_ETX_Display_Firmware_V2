@@ -83,3 +83,5 @@ _oneTimeData
 currentPage
 _startingUp
 _gearChanged
+buttonPressed
+dataCounter

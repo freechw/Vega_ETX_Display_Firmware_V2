@@ -18,7 +18,7 @@
 uint8_t status = 0;
 
 uint8_t timeSet[14]={0x5A,0xA5,0x0B,0x82,0x00,0x9C,0x5A,0xA5,0x12,0x06,0x1B,0x00,0x00,0x00};
-																		 // H      M    S
+																		   //H    M    S
 uint8_t DisenKillSwitch[10] = { 0x5A, 0xA5, 0x07, 0x82, 0x00, 0x84, 0x5A, 0x01,
 		0x01, 0x2C }; //Page
 uint8_t PressBrake[10] = { 0x5A, 0xA5, 0x07, 0x82, 0x00, 0x84, 0x5A, 0x01, 0x01,
@@ -235,11 +235,11 @@ uint8_t Normal[10] = { 0x5A, 0xA5, 0x07, 0x82, 0x00, 0x84, 0x5A, 0x01, 0x01,
 uint8_t Sport[10] =
 		{ 0x5A, 0xA5, 0x07, 0x82, 0x00, 0x84, 0x5A, 0x01, 0x01, 0x45 }; //Page
 
-uint8_t EcoPopUp[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x87, 0x02, 0x64 }; //0x02, 0x60
-uint8_t NormalPopUp[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x87, 0x02, 0x64 }; //0x02, 0x62
-uint8_t SportPopUp[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x11, 0x87, 0x02, 0x64 }; //0x02, 0x64
+uint8_t EcoPopUp[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x10, 0x87, 0x02, 0x60 }; //0x02, 0x60
+uint8_t NormalPopUp[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x10, 0x87, 0x02, 0x62 }; //0x02, 0x62
+uint8_t SportPopUp[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x10, 0x87, 0x02, 0x64 }; //0x02, 0x64
 
-uint8_t popOff[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x10, 0x88, 0x00, 0x00 };
+uint8_t popOff[8] = { 0x5A, 0xA5, 0x05, 0x82, 0x10, 0x87, 0x00, 0x00 };
 
 //uint8_t modeChange_Lock[10] = { 0x5A, 0xA5, 0x07, 0x82, 0x00, 0x84, 0x5A, 0x01,
 //		0x01, 0x45 }; //Page
@@ -1052,7 +1052,12 @@ void transmit() {
 		if (_modeSelection == 2) {
 			_modeSelection = 0;
 			modeSelection(modeCleared);
-
+			if (_modeChangeDisabled) {
+				_setPoup = true;
+				_modeChangeDisabled = false;
+				//_transmit_Function = 6;
+				popUpNumber = 5;
+			}
 		}
 	//}
 
@@ -1068,7 +1073,7 @@ void transmit() {
 	if (_transmit_Function == 6) {
 		_transmit_Function = 0;
 		popUpCounter++;
-		if (popUpCounter > 3) {
+		if (popUpCounter > 20) {
 			popUpCounter = 0;
 			popUpNumber = 0;
 			if (inPopup) {
@@ -1138,6 +1143,7 @@ void startingUp(void) {
 //		}
 //		_trasmitGlobal = PressBrakePage;
 		Press_Brake_Page;
+
 	}
 
 	if (start == 1) {
@@ -1152,7 +1158,10 @@ void startingUp(void) {
 			ReadytoDrive_ON_Icon;
 			//If ready to drive is ok, Then run this Gimmick Part//
 			if (startup == true) {
-				ReadytoDrive_Page;
+				//ReadytoDrive_Page;
+#ifdef Queue
+		SaveToUART_TxBuffer(testData_Page, sizeof(testData_Page));
+#endif
 				_testPage = true;
 				startup = false;
 			}
@@ -1272,9 +1281,12 @@ void drivePageSetter(uitype_t page) {
 			if (_testPage) {
 				//if (drivePageTransmit == 4) {
 				_testPage = false;
-				HAL_UART_Transmit(&huart3, testData_Page, sizeof(testData_Page), HAL_MAX_DELAY);
+				//HAL_UART_Transmit(&huart3, testData_Page, sizeof(testData_Page), HAL_MAX_DELAY);
 				//drivePageTransmit = 0;
 				//}
+#ifdef Queue
+		SaveToUART_TxBuffer(testData_Page, sizeof(testData_Page));
+#endif
 			}
 		}
 		break;
@@ -1349,7 +1361,12 @@ void realTimeData(void) { //Realtime updatable data sending
 
 //Power Bar
 	if (priorityLevel1_counter == 3) {
-		//powerMeter();
+#ifdef No_DMA
+		powerMeter();
+#endif
+#ifdef Queue
+		powerMeterQueue();
+#endif
 	}
 //DC Current
 	if (priorityLevel1_counter == 4) {
@@ -1504,21 +1521,21 @@ void oneTimeData(void) {
 #endif
 	}
 
-//Range
-	if (priorityLevel2_counter == 5) {
-		strDATA[4] = 0x11;
-		strDATA[5] = 0x30;
-		strDATA[7] = (distance.range);
-		strDATA[6] = 0;
-#ifdef Queue
-	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
-#endif
-#ifdef No_Queue
-	Transmit_strDATA;
-#endif
-	}
+////Range
+//	if (priorityLevel2_counter == 5) {
+//		strDATA[4] = 0x11;
+//		strDATA[5] = 0x30;
+//		strDATA[7] = (distance.range);
+//		strDATA[6] = 0;
+//#ifdef Queue
+//	SaveToUART_TxBuffer(strDATA,sizeof(strDATA));
+//#endif
+//#ifdef No_Queue
+//	Transmit_strDATA;
+//#endif
+//	}
 //SOC - Battery Percentage
-	if (priorityLevel2_counter == 6) {
+	if (priorityLevel2_counter == 5) {
 		strDATA[4] = 0x11;
 		strDATA[5] = 0x10;
 		strDATA[7] = (soc_value);
@@ -1531,11 +1548,16 @@ void oneTimeData(void) {
 #endif
 
 	}
-	if (priorityLevel2_counter == 7) {
-		//batteryBar();
+	if (priorityLevel2_counter == 6) {
+#ifdef No_DMA
+		batteryBar();
+#endif
+#ifdef Queue
+		batteryBarQueue();
+#endif
 	}
 	//AVG SPEED
-	if (priorityLevel2_counter == 8) {
+	if (priorityLevel2_counter == 7) {
 		priorityLevel2_counter = 0;
 		strDATA[4] = 0x11;
 		strDATA[5] = 0x52;
@@ -1569,7 +1591,7 @@ void oneTimeData(void) {
 	Transmit_strDATA;
 #endif
 
-		// After charge average speed
+// After charge average speed
 		strDATA[4] = 0x11;
 		strDATA[5] = 0x58;
 		strDATA[7] = (afterChargeData.avarage_Speed & 0xFF);
@@ -1583,7 +1605,7 @@ void oneTimeData(void) {
 	Transmit_strDATA;
 #endif
 
-		// After Charge Economy
+// After Charge Economy
 		strDATA[4] = 0x11;
 		strDATA[5] = 0x56;
 		strDATA[7] = (afterChargeData.economy & 0xFF);
@@ -1597,7 +1619,7 @@ void oneTimeData(void) {
 	Transmit_strDATA;
 #endif
 
-		// After charge Power
+// After charge Power
 		strDATA[4] = 0x11;
 		strDATA[5] = 0x60;
 		strDATA[7] = (afterChargeData.power & 0xFF);
@@ -1614,7 +1636,7 @@ void oneTimeData(void) {
 
 	if (_Trip_Summary_Page) {
 		_Trip_Summary_Page = false;
-		//Trip Economy -------VP
+//Trip Economy -------VP
 		strDATA[4] = 0x11;
 		strDATA[5] = 0x50;
 		strDATA[7] = (distance.trip_Economy & 0xFF);
@@ -1628,7 +1650,7 @@ void oneTimeData(void) {
 	Transmit_strDATA;
 #endif
 
-		//Trip Power----------VP
+//Trip Power----------VP
 
 		strDATA[4] = 0x11;
 		strDATA[5] = 0x54;
@@ -2047,23 +2069,23 @@ void popUpHandler(void) {
 
 	switch (popUpNumber) {
 	case 0:
-		//popUp_OFF;
-		Battery_High_Temp_Popup_OFF;
+		popUp_OFF;
+		//Battery_High_Temp_Popup_OFF;
 		inPopup = false;
 		break;
 	case 1:
-		//NormalMode_Popup;
-		Battery_High_Temp_Popup_ON;
+		NormalMode_Popup;
+		//Battery_High_Temp_Popup_ON;
 		inPopup = true;
 		break;
 	case 2:
-		//EcoMode_Popup;
-		Battery_High_Temp_Popup_ON;
+		EcoMode_Popup;
+		//Battery_High_Temp_Popup_ON;
 		inPopup = true;
 		break;
 	case 3:
-		//SportMode_Popup;
-		Battery_High_Temp_Popup_ON;
+		SportMode_Popup;
+		//Battery_High_Temp_Popup_ON;
 		inPopup = true;
 		break;
 	case 4:
@@ -2072,6 +2094,14 @@ void popUpHandler(void) {
 		break;
 	case 5:
 		//ModeChangeOFF_Page;
+#ifdef No_DMA
+	HAL_UART_Transmit(&huart3, Tuk, sizeof(Tuk),
+	HAL_MAX_DELAY);
+#endif
+#ifdef Queue
+	SaveToUART_TxBuffer(Tuk, sizeof(Tuk));
+#endif
+		inPopup = true;
 		break;
 
 	default:
@@ -2081,10 +2111,15 @@ void popUpHandler(void) {
 }
 
 //When Mode change unavailable
-void startupModeChange() {
-	HAL_UART_Transmit(&huart3, Tuk, sizeof(Tuk),
-	HAL_MAX_DELAY);
-}
+//void modeChangeUnavailable() {
+//#ifdef No_DMA
+//	HAL_UART_Transmit(&huart3, Tuk, sizeof(Tuk),
+//	HAL_MAX_DELAY);
+//#endif
+//#ifdef Queue
+//	SaveToUART_TxBuffer(Tuk, sizeof(Tuk));
+//#endif
+//}
 
 void sideMenuPopup(void) {
 	if (soh_value <= 800) {
@@ -2139,6 +2174,7 @@ void batteryBar(void) {
 		HAL_UART_Transmit(&huart3, bat0, sizeof(bat0), HAL_MAX_DELAY);
 		HAL_UART_Transmit(&huart3, BotRedON, sizeof(BotRedON), HAL_MAX_DELAY);
 #endif
+
 	}
 	if (6 <= soc_value && soc_value <= 10) {
 #ifdef DMA
@@ -2359,6 +2395,113 @@ void batteryBar(void) {
 	}
 }
 
+void batteryBarQueue(void) {
+	if (soc_value <= 5) {
+
+		SaveToUART_TxBuffer(bat0, sizeof(bat0));
+		SaveToUART_TxBuffer(BotRedON, sizeof(BotRedON));
+
+	}
+	if (6 <= soc_value && soc_value <= 10) {
+
+		SaveToUART_TxBuffer(bat5, sizeof(bat5));
+		SaveToUART_TxBuffer(BotRedON, sizeof(BotRedON));
+
+	}
+	if (11 <= soc_value && soc_value <= 15) {
+
+		SaveToUART_TxBuffer(bat10, sizeof(bat10));
+		SaveToUART_TxBuffer(BotRedON, sizeof(BotRedON));
+
+	}
+	if (16 <= soc_value && soc_value <= 20) {
+
+		SaveToUART_TxBuffer(bat15, sizeof(bat15));
+		SaveToUART_TxBuffer(BotRedON, sizeof(BotRedON));
+
+	}
+	if (21 <= soc_value && soc_value <= 25) {
+
+		SaveToUART_TxBuffer(bat20, sizeof(bat20));
+		SaveToUART_TxBuffer(BotOrangeON, sizeof(BotOrangeON));
+
+	}
+	if (26 <= soc_value && soc_value <= 30) {
+		SaveToUART_TxBuffer(bat25, sizeof(bat25));
+		SaveToUART_TxBuffer(BotOrangeON, sizeof(BotOrangeON));
+
+	}
+	if (31 <= soc_value && soc_value <= 35) {
+		SaveToUART_TxBuffer(bat30, sizeof(bat30));
+		SaveToUART_TxBuffer(BotOrangeON, sizeof(BotOrangeON));
+	}
+	if (36 <= soc_value && soc_value <= 40) {
+		SaveToUART_TxBuffer(bat35, sizeof(bat35));
+		SaveToUART_TxBuffer(BotOrangeON, sizeof(BotOrangeON));
+	}
+	if (41 <= soc_value && soc_value <= 45) {
+
+		SaveToUART_TxBuffer(bat40, sizeof(bat40));
+		SaveToUART_TxBuffer(BotGreenON, sizeof(BotGreenON));
+	}
+	if (46 <= soc_value && soc_value <= 50) {
+		SaveToUART_TxBuffer(bat45, sizeof(bat45));
+		SaveToUART_TxBuffer(BotGreenON, sizeof(BotGreenON));
+	}
+	if (51 <= soc_value && soc_value <= 55) {
+
+		SaveToUART_TxBuffer(bat50, sizeof(bat50));
+		SaveToUART_TxBuffer(BotGreenON, sizeof(BotGreenON));
+	}
+	if (56 <= soc_value && soc_value <= 60) {
+		SaveToUART_TxBuffer(bat55, sizeof(bat55));
+		SaveToUART_TxBuffer(BotGreenON, sizeof(BotGreenON));
+	}
+	if (61 <= soc_value && soc_value <= 65) {
+		SaveToUART_TxBuffer(bat60, sizeof(bat60));
+		SaveToUART_TxBuffer(BotGreenON, sizeof(BotGreenON));
+	}
+	if (66 <= soc_value && soc_value <= 70) {
+		SaveToUART_TxBuffer(bat65, sizeof(bat65));
+		SaveToUART_TxBuffer(BotGreenON, sizeof(BotGreenON));
+	}
+	if (71 <= soc_value && soc_value <= 75) {
+		SaveToUART_TxBuffer(bat70, sizeof(bat70));
+		SaveToUART_TxBuffer(BotGreenON, sizeof(BotGreenON));
+	}
+	if (76 <= soc_value && soc_value <= 80) {
+
+		SaveToUART_TxBuffer(bat75, sizeof(bat75));
+		SaveToUART_TxBuffer(BotGreenON, sizeof(BotGreenON));
+	}
+	if (81 <= soc_value && soc_value <= 85) {
+
+		SaveToUART_TxBuffer(bat80, sizeof(bat80));
+		SaveToUART_TxBuffer(BotGreenON, sizeof(BotGreenON));
+	}
+	if (86 <= soc_value && soc_value <= 90) {
+
+		SaveToUART_TxBuffer(bat85, sizeof(bat85));
+		SaveToUART_TxBuffer(BotGreenON, sizeof(BotGreenON));
+	}
+	if (91 <= soc_value && soc_value <= 95) {
+
+		SaveToUART_TxBuffer(bat90, sizeof(bat90));
+		SaveToUART_TxBuffer(BotGreenON, sizeof(BotGreenON));
+	}
+	if (96 <= soc_value && soc_value <= 99) {
+
+		SaveToUART_TxBuffer(bat90, sizeof(bat90));
+		SaveToUART_TxBuffer(BotGreenON, sizeof(BotGreenON));
+	}
+	if (100 == soc_value) {
+
+		SaveToUART_TxBuffer(bat100, sizeof(bat100));
+		SaveToUART_TxBuffer(BotGreenON, sizeof(BotGreenON));
+
+	}
+}
+
 void powerMeter(void) {
 
 	if (rpm_meter == 0) {
@@ -2524,6 +2667,73 @@ void powerMeter(void) {
 	}
 
 }
+void powerMeterQueue(void) {
+	if (rpm_meter == 0) {
+
+		SaveToUART_TxBuffer(eco0, sizeof(eco0));
+
+	}
+
+	if (rpm_meter >= 1) {
+
+		if (power_90 <= power) {
+			SaveToUART_TxBuffer(power5, sizeof(power5));
+		}
+
+		if (power_80 <= power && power < power_90) {
+			SaveToUART_TxBuffer(power4, sizeof(power4));
+		}
+
+		if (power_70 <= power && power < power_80) {
+			SaveToUART_TxBuffer(power3, sizeof(power3));
+		}
+
+		if (power_60 <= power && power < power_70) {
+			SaveToUART_TxBuffer(power2, sizeof(power2));
+		}
+		if (eco_50 <= power && power < power_60) {
+			SaveToUART_TxBuffer(power1, sizeof(power1));
+		}
+
+		if (eco_40 <= power && power < eco_50) {
+			SaveToUART_TxBuffer(eco5, sizeof(eco5));
+		}
+		if (eco_30 <= power && power < eco_40) {
+			SaveToUART_TxBuffer(eco4, sizeof(eco4));
+		}
+
+		if (eco_20 <= power && power < eco_30) {
+			SaveToUART_TxBuffer(eco3, sizeof(eco3));
+		}
+		if (eco_10 <= power && power < eco_20) {
+			SaveToUART_TxBuffer(eco2, sizeof(eco2));
+		}
+
+		if (0 <= power && power < eco_10) {
+			SaveToUART_TxBuffer(eco1, sizeof(eco1));
+		}
+
+		if (-1 >= power && power >= -50) {
+			SaveToUART_TxBuffer(charge1, sizeof(charge1));
+		}
+
+		if (-51 >= power && power >= -101) {
+			SaveToUART_TxBuffer(charge2, sizeof(charge2));
+		}
+
+		if (-102 >= power && power >= -152) {
+			SaveToUART_TxBuffer(charge3, sizeof(charge3));
+		}
+
+		if (-153 >= power && power >= -203) {
+			SaveToUART_TxBuffer(charge4, sizeof(charge4));
+		}
+
+		if (-204 >= power) {
+			SaveToUART_TxBuffer(charge5, sizeof(charge5));
+		}
+	}
+}
 
 
 void gearUpdate(void) {
@@ -2546,6 +2756,7 @@ void gearUpdate(void) {
 }
 
 void bootAnimation() {
+
 	HAL_UART_Transmit(&huart3, SysCheck_lit_IconAll,
 			sizeof(SysCheck_lit_IconAll),
 			HAL_MAX_DELAY);

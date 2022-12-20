@@ -98,6 +98,11 @@ void startUpState(void) {
 	//StartingUp Transmit flag
 	_startingUp = true;
 
+	if (mode) {
+		mode = false;
+		_modeChangeDisabled = true;
+		_modeSelection = 2;
+	}
 	//All clear transmit function called through flag
 	if (!(readytodrive == 1)) {
 		return;

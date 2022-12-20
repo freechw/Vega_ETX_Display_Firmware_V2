@@ -27,7 +27,9 @@ extern void speedUpdate(void);
 extern void startingUp(void);
 extern void gearUpdate(void);
 extern void batteryBar(void);
+extern void batteryBarQueue(void);
 extern void powerMeter(void);
+extern void powerMeterQueue(void);
 
 extern void chargeState(void);
 extern void driveState(void);
@@ -44,7 +46,7 @@ extern void transmitTest(void);
 //Mode Selection
 extern void modeSelection(uimode_t currentMode);
 
-extern void startupModeChange(void);
+//extern void modeChangeUnavailable(void);
 extern void transmit(void);
 extern void bootAnimation(void);
 

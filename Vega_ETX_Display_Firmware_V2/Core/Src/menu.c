@@ -74,7 +74,7 @@ void navigation(void) {
 		}
 		break;
 	case info:
-		_Battery_Info_Page = false;
+		_Battery_Info_Page = true;
 		_Motor_Info_Page = false;
 		_Inverter_Info_Page = false;
 		info_mainPage();
